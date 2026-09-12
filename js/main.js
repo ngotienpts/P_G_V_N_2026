@@ -1,388 +1,364 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Tập hợp tất cả các phần tử cần sử dụng
+    // Cache phần tử dùng chung
     const backTop = document.querySelector("#back-top");
 
-    // xử lý sự kiện chuyển tab
-    function handleChangeTab () {
-        const changTabs = document.querySelectorAll('.js__changeTab')
+    // 1. Xử lý chuyển tab
+    function handleChangeTab() {
+        const changeTabs = document.querySelectorAll('.js__changeTab');
+        if (!changeTabs.length) return;
 
-        if (changTabs.length === 0) return;
+        changeTabs.forEach((changeTab) => {
+            const tabs = changeTab.querySelectorAll(".js__tabItem");
+            const panes = changeTab.querySelectorAll(".js__tabPane");
 
-        changTabs.forEach((changTab)=>{
-            const tabs = changTab.querySelectorAll(".js__tabItem");
-            const panes = changTab.querySelectorAll(".js__tabPane");
+            tabs.forEach((tab, index) => {
+                tab.onclick = function () {
+                    const pane = panes[index]; // Đã thêm 'const' để tránh ô nhiễm global scope
+                    if (!pane) return;
 
-            tabs.forEach((tab,index)=>{
-                tab.onclick = function() {
-                    pane = panes[index]
+                    const activeTab = changeTab.querySelector('.js__tabItem.active');
+                    const activePane = changeTab.querySelector('.js__tabPane.active');
 
-                    changTab.querySelector('.js__tabItem.active').classList.remove('active')
-                    changTab.querySelector('.js__tabPane.active').classList.remove('active')
+                    if (activeTab) activeTab.classList.remove('active');
+                    if (activePane) activePane.classList.remove('active');
 
-                    this.classList.add('active')
-                    pane.classList.add('active')
-                }
-            })
-        })
+                    this.classList.add('active');
+                    pane.classList.add('active');
+                };
+            });
+        });
     }
 
-    // Xử lý video tỉ lệ 16:9
+    // 2. Xử lý video tỉ lệ 16:9
     function handleVideo_16x9() {
         const video169s = document.querySelectorAll(".js__video169");
-        if (video169s.length === 0) return;
+        if (!video169s.length) return;
+
         video169s.forEach((video169) => {
-            var videos = video169.querySelectorAll("iframe");
-            if (videos.length === 0) return;
+            const videos = video169.querySelectorAll("iframe");
             videos.forEach((video) => {
-                var w = video.offsetWidth;
+                const w = video.offsetWidth;
                 video.style.height = (w * 9) / 16 + "px";
             });
         });
     }
 
-    // xử lý sự kiện collapse
-    function handleCollapse () {
+    // 3. Xử lý collapse / accordion
+    function handleCollapse() {
+        const collapseContainers = document.querySelectorAll('.js__collapseContainer');
+        if (!collapseContainers.length) return;
 
-        const collapseContainers = document.querySelectorAll('.js__collapseContainer')
-        if (collapseContainers.length === 0) return;
-        
         let activeItem = null;
-        
-        collapseContainers.forEach((collapseContainer)=>{
-            const collapses = collapseContainer.querySelector('.js__collapse')
-            collapses.onclick = function() {
-                // khi item đang mở
-                if (activeItem === collapseContainer) {
-                    collapseContainer.classList.remove('active'); 
-                    activeItem = null; 
+
+        collapseContainers.forEach((container) => {
+            const collapseBtn = container.querySelector('.js__collapse');
+            if (!collapseBtn) return;
+
+            collapseBtn.onclick = function () {
+                if (activeItem === container) {
+                    container.classList.remove('active');
+                    activeItem = null;
                 } else {
-                    // khi không có item nào mở
                     if (activeItem) {
                         activeItem.classList.remove('active');
                     }
-                    collapseContainer.classList.add('active');
-                    activeItem = collapseContainer; 
-                    
-                }  
-                 
-            }
-           
-        })
-    }
-
-    // Khởi tạo slider với một item
-    function initSliderOneItems() {
-        const oneSlides = document.querySelectorAll(".js__oneSlidesContainer");
-        if (oneSlides) {
-            oneSlides.forEach((item) => {
-                var slider = item.querySelector(".js__oneSlide");
-                var next = item.querySelector(".swiper-button-next");
-                var prev = item.querySelector(".swiper-button-prev");
-                var pagi = item.querySelector(".swiper-pagination");
-
-                new Swiper(slider, {
-                    slidesPerView: 1,
-                    spaceBetween: 10,
-                    slidesPerGroup: 1,
-                    navigation: {
-                        nextEl: next || null,
-                        prevEl: prev || null,
-                    },
-                    pagination: {
-                        el: pagi,
-                        clickable: true,
-                    },
-                    // autoplay: {
-                    //     delay: 3000,
-                    //     disableOnInteraction: false,
-                    // },
-                });
-            });
-        }
-    }
-
-    // khởi tạo slider với 3 item
-    function initSliderThreeItems() {
-        const threeSlides = document.querySelectorAll(".js__threeSlidesContainer");
-        if (threeSlides) {
-            threeSlides.forEach((item) => {
-                var slider = item.querySelector(".js__threeSlide");
-                var next = item.querySelector(".swiper-button-next");
-                var prev = item.querySelector(".swiper-button-prev");
-                var pagi = item.querySelector(".swiper-pagination");
-                new Swiper(slider, {
-                    slidesPerView: 2,
-                    spaceBetween: 15,
-                    slidesPerGroup: 1,
-                    navigation: {
-                        nextEl: next || null,
-                        prevEl: prev || null,
-                    },
-                    pagination: {
-                        el: pagi || null,
-                        clickable: true,
-                    },
-                    // autoplay: {
-                    //     delay: 3000,
-                    //     disableOnInteraction: false,
-                    // },
-                    breakpoints: {
-                        768: {
-                            slidesPerView: 2,
-                        },
-                        1024: {
-                            slidesPerView: 3,
-                            spaceBetween: 15,
-                        }
-                    },
-                });
-            });
-        }
-    }
-
-    // khởi tạo slider với 4 item
-    function initSliderFourItems() {
-        const fourSlides = document.querySelectorAll(".js__fourSlidesContainer");
-        if (fourSlides) {
-            fourSlides.forEach((item) => {
-                var slider = item.querySelector(".js__fourSlide");
-                var next = item.querySelector(".swiper-button-next");
-                var prev = item.querySelector(".swiper-button-prev");
-                var pagi = item.querySelector(".swiper-pagination");
-                new Swiper(slider, {
-                    slidesPerView: 2,
-                    spaceBetween: 15,
-                    slidesPerGroup: 1,
-                    navigation: {
-                        nextEl: next || null,
-                        prevEl: prev || null,
-                    },
-                    pagination: {
-                        el: pagi || null,
-                        clickable: true,
-                    },
-                    // autoplay: {
-                    //     delay: 3000,
-                    //     disableOnInteraction: false,
-                    // },
-                    breakpoints: {
-                        768: {
-                            slidesPerView: 2,
-                        },
-                        1024: {
-                            slidesPerView: 4,
-                            spaceBetween: 15,
-                        }
-                    },
-                });
-            });
-        }
-    }
-
-    // khởi tạo slider với 5 item
-    function initSliderFiveItems() {
-        const fiveSlides = document.querySelectorAll(".js__fiveSlidesContainer");
-        if (fiveSlides) {
-            fiveSlides.forEach((item) => {
-                var slider = item.querySelector(".js__fiveSlide");
-                var next = item.querySelector(".swiper-button-next");
-                var prev = item.querySelector(".swiper-button-prev");
-                var pagi = item.querySelector(".swiper-pagination");
-                new Swiper(slider, {
-                    slidesPerView: 2,
-                    spaceBetween: 0,
-                    slidesPerGroup: 1,
-                    navigation: {
-                        nextEl: next || null,
-                        prevEl: prev || null,
-                    },
-                    pagination: {
-                        el: pagi || null,
-                        clickable: true,
-                    },
-                    // autoplay: {
-                    //     delay: 3000,
-                    //     disableOnInteraction: false,
-                    // },
-                    breakpoints: {
-                        768: {
-                            slidesPerView: 3,
-                        },
-                        1024: {
-                            slidesPerView: 5,
-                            spaceBetween: 10,
-                        }
-                    },
-                });
-            });
-        }
-    }
-
-    // xử lý sự kiện show menu mobile
-    function handleMenuMobile () {
-
-    }
-    // xử lý sự kiện show more menu
-    function handleMoreMenu() {
-        const navbarMoreIcon = document.querySelector('.js__navbarMoreIcon')
-        const navbarMoreContent = document.querySelector('.js__navbarMoreContent')
-        if(!navbarMoreIcon || !navbarMoreContent) return;
-
-        navbarMoreIcon.onclick = function() {
-            this.classList.toggle('active')
-            navbarMoreContent.classList.toggle('active')
-        }
-
-    }
-
-     // xử lý sự kiện show search desk
-     function handleShowSearchDesk () {
-        const searchDesk = document.querySelectorAll('.js__searchDesk');
-
-        if (!searchDesk) return;
-        
-        const searchIconDesk = document.querySelector('.js__searchIconDesk');
-        const searchContentDesk = document.querySelector('.js__searchContentDesk');
-        const searchInputDesk = document.querySelector('.js__searchInputDesk');
-
-        searchIconDesk.onclick = function() {
-            if(searchContentDesk.classList.contains('active')){
-                searchContentDesk.classList.remove('active');
-                searchInputDesk.value = '';
-            }else {
-                searchContentDesk.classList.add('active');
-                searchInputDesk.focus();
-            }
-        }
-         
-        
-    }
-
-     // xử lý sự kiện để show sub menu
-     function handleShowSubMenu() {
-        
-        const subMenu = document.querySelector(".js__clickShowMenuMb");
-        if (!subMenu) return;
-        var closeSubMenu = document.querySelector(".js__closeSubMenu");
-        var overlay = document.querySelector(".js__overlay");
-        var parentBox = subMenu.parentElement;
-
-        subMenu.onclick = function () {
-            this.parentElement.classList.add("active");
-            document.querySelector("body").style.overflow = "hidden";
-        };
-        closeSubMenu.onclick = function () {
-            parentBox.classList.remove("active");
-            document.querySelector("body").style.overflow = "auto";
-        };
-        overlay.onclick = function () {
-            parentBox.classList.remove("active");
-            document.querySelector("body").style.overflow = "auto";
-        };
-    }
-
-    // Xử lý sự kiện để show dropdown submenu
-    function handleShowDropdownSubMenu() {
-        const dropdownSubMenu = document.querySelectorAll(".js__dropDown");
-            if (dropdownSubMenu.length === 0) return;
-            dropdownSubMenu.forEach((item) => {
-                var parent = item.parentElement;
-                var nextEle = parent.parentElement.querySelector(".js__listSubMenu");
-                item.onclick = function () {
-                    parent.classList.toggle("active");
-                    if (nextEle.style.maxHeight) {
-                        nextEle.style.maxHeight = null;
-                    } else {
-                        nextEle.style.maxHeight = nextEle.scrollHeight + "px";
-                    }
-                };
-            });
-    }
-
-    // Xử lý sự kiện show search mb
-    function handleShowSearchMb() {
-        const searchMbs = document.querySelectorAll(".js__searchMb");
-        if (searchMbs.length === 0) return;
-        searchMbs.forEach((searchMb) => {
-            var closeSearchMb =
-                document.querySelector(".js__closeSearchMb");
-            var formSearchMb = document.querySelector(".js__formSearchMb");
-            const focusElement =
-                formSearchMb.querySelector(".js__focusSearchMb");
-            searchMb.onclick = function () {
-                formSearchMb.classList.add("active");
-                focusElement.focus();
-                if (showSearchMb.classList.contains("active")) {
-                    focusElement.value = "";
+                    container.classList.add('active');
+                    activeItem = container;
                 }
-            };
-            closeSearchMb.onclick = function () {
-                formSearchMb.classList.remove("active");
-                focusElement.value = "";
             };
         });
     }
 
+    // 4. Hàm helper khởi tạo Swiper an toàn
+    function createSwiper(containerSelector, slideClass, customConfig = {}) {
+        const containers = document.querySelectorAll(containerSelector);
+        if (!containers.length || typeof Swiper === 'undefined') return;
 
-    // Xử lý thanh header dính
+        containers.forEach((item) => {
+            const slider = item.querySelector(slideClass);
+            if (!slider) return;
+
+            const next = item.querySelector(".swiper-button-next");
+            const prev = item.querySelector(".swiper-button-prev");
+            const pagi = item.querySelector(".swiper-pagination");
+
+            const defaultConfig = {
+                slidesPerView: 1,
+                spaceBetween: 10,
+                slidesPerGroup: 1,
+                navigation: {
+                    nextEl: next || null,
+                    prevEl: prev || null,
+                },
+                pagination: {
+                    el: pagi || null,
+                    clickable: true,
+                },
+            };
+
+            new Swiper(slider, Object.assign(defaultConfig, customConfig));
+        });
+    }
+
+    function initSliders() {
+        // Slider 1 item
+        createSwiper(".js__oneSlidesContainer", ".js__oneSlide");
+
+        // Slider 2 items
+        createSwiper(".js__twoSlidesContainer", ".js__twoSlide", {
+            slidesPerView: 1.2,
+            spaceBetween: 15,
+            breakpoints: {
+                768: { slidesPerView: 1.2 },
+                1024: { slidesPerView: 2, spaceBetween: 24 }
+            }
+        });
+        // Slider 3 items
+        createSwiper(".js__threeSlidesContainer", ".js__threeSlide", {
+            slidesPerView: 2,
+            spaceBetween: 15,
+            breakpoints: {
+                768: { slidesPerView: 2 },
+                1024: { slidesPerView: 3, spaceBetween: 24 }
+            }
+        });
+        // Slider 3 items secondary
+        createSwiper(".js__threeSecondarySlidesContainer", ".js__threeSecondarySlide", {
+            slidesPerView: 1.3,
+            spaceBetween: 15,
+            breakpoints: {
+                768: { slidesPerView: 2 },
+                1024: { slidesPerView: 3, spaceBetween: 24 }
+            }
+        });
+
+        // Slider 4 items
+        createSwiper(".js__fourSlidesContainer", ".js__fourSlide", {
+            slidesPerView: 2,
+            spaceBetween: 15,
+            breakpoints: {
+                768: { slidesPerView: 2 },
+                1024: { slidesPerView: 4, spaceBetween: 15 }
+            }
+        });
+
+        // Slider 5 items
+        createSwiper(".js__fiveSlidesContainer", ".js__fiveSlide", {
+            slidesPerView: 2,
+            spaceBetween: 0,
+            breakpoints: {
+                768: { slidesPerView: 3 },
+                1024: { slidesPerView: 5, spaceBetween: 10 }
+            }
+        });
+        // Slider 5 secondary items
+        createSwiper(".js__fiveSecondarySlidesContainer", ".js__fiveSecondarySlide", {
+            slidesPerView: 2.5,
+            spaceBetween: 20,
+            breakpoints: {
+                768: { slidesPerView: 3 },
+                1024: { slidesPerView: 5, spaceBetween: 24 }
+            }
+        });
+    }
+
+    // 5. Xử lý More Menu
+    function handleMoreMenu() {
+        const navbarMoreIcon = document.querySelector('.js__navbarMoreIcon');
+        const navbarMoreContent = document.querySelector('.js__navbarMoreContent');
+
+        if (!navbarMoreIcon || !navbarMoreContent) return;
+
+        navbarMoreIcon.onclick = function () {
+            this.classList.toggle('active');
+            navbarMoreContent.classList.toggle('active');
+        };
+    }
+
+
+     // Xử lý sự kiện scroll navbar mb
+    function handleNavbarMb() {
+        const navbarMb = document.querySelector(".js__navbarMenuMb");
+        if (!navbarMb) return;
+
+        const container = navbarMb.querySelector(".js__navbarMb");
+        const scrollBtn = navbarMb.querySelector(".js__navbarIcon");
+
+        let scrollAmount = 0;
+        let scrollPosition = 0;
+
+        scrollBtn.addEventListener("click", function () {
+            const scrollDistance = 100;
+            scrollAmount = scrollPosition + scrollDistance;
+            scrollAmount = Math.min(
+                scrollAmount,
+                container.scrollWidth - container.clientWidth
+            );
+            container.scrollTo({
+                left: scrollAmount,
+                behavior: "smooth",
+            });
+            scrollPosition = scrollAmount;
+        });
+    }
+    // 6. Xử lý Search Desktop
+    function handleShowSearchDesk() {
+        const searchIconDesk = document.querySelector('.js__searchIconDesk');
+        const searchContentDesk = document.querySelector('.js__searchContentDesk');
+        const searchInputDesk = document.querySelector('.js__searchInputDesk');
+
+        if (!searchIconDesk || !searchContentDesk || !searchInputDesk) return;
+
+        searchIconDesk.onclick = function () {
+            const isActive = searchContentDesk.classList.contains('active');
+            if (isActive) {
+                searchContentDesk.classList.remove('active');
+                searchInputDesk.value = '';
+            } else {
+                searchContentDesk.classList.add('active');
+                searchInputDesk.focus();
+            }
+        };
+    }
+
+    // 7. Xử lý Sub Menu Mobile
+    function handleShowSubMenu() {
+        const subMenu = document.querySelector(".js__clickShowMenuMb");
+        if (!subMenu) return;
+
+        const closeSubMenu = document.querySelector(".js__closeSubMenu");
+        const overlay = document.querySelector(".js__overlay");
+        const parentBox = subMenu.parentElement;
+
+        if (!parentBox) return;
+
+        subMenu.onclick = function () {
+            parentBox.classList.add("active");
+            document.body.style.overflow = "hidden";
+        };
+
+        if (closeSubMenu) {
+            closeSubMenu.onclick = function () {
+                parentBox.classList.remove("active");
+                document.body.style.overflow = "auto";
+            };
+        }
+
+        if (overlay) {
+            overlay.onclick = function () {
+                parentBox.classList.remove("active");
+                document.body.style.overflow = "auto";
+            };
+        }
+    }
+
+    // 8. Xử lý Dropdown Submenu
+    function handleShowDropdownSubMenu() {
+        const dropdownSubMenu = document.querySelectorAll(".js__dropDown");
+        if (!dropdownSubMenu.length) return;
+
+        dropdownSubMenu.forEach((item) => {
+            const parent = item.parentElement;
+            if (!parent || !parent.parentElement) return;
+
+            const nextEle = parent.parentElement.querySelector(".js__listSubMenu");
+            if (!nextEle) return;
+
+            item.onclick = function () {
+                parent.classList.toggle("active");
+                if (nextEle.style.maxHeight) {
+                    nextEle.style.maxHeight = null;
+                } else {
+                    nextEle.style.maxHeight = nextEle.scrollHeight + "px";
+                }
+            };
+        });
+    }
+
+    // 9. Xử lý Search Mobile
+    function handleShowSearchMb() {
+        const searchMbs = document.querySelectorAll(".js__searchMb");
+        if (!searchMbs.length) return;
+
+        searchMbs.forEach((searchMb) => {
+            const formSearchMb = document.querySelector(".js__formSearchMb");
+            if (!formSearchMb) return;
+
+            const closeSearchMb = document.querySelector(".js__closeSearchMb");
+            const focusElement = formSearchMb.querySelector(".js__focusSearchMb");
+
+            searchMb.onclick = function () {
+                const isActive = formSearchMb.classList.contains("active");
+                formSearchMb.classList.add("active");
+                if (focusElement) {
+                    focusElement.focus();
+                    if (isActive) focusElement.value = "";
+                }
+            };
+
+            if (closeSearchMb) {
+                closeSearchMb.onclick = function () {
+                    formSearchMb.classList.remove("active");
+                    if (focusElement) focusElement.value = "";
+                };
+            }
+        });
+    }
+
+    // 10. Xử lý Sticky Header
     function handleStickyHeader() {
         const stickyHeaderPC = document.querySelector(".js__stickyHeader");
         if (stickyHeaderPC) {
-            const isSticky = scrollY > 300;
-            stickyHeaderPC.classList.toggle("sticky", isSticky);
+            stickyHeaderPC.classList.toggle("sticky", window.scrollY > 300);
         }
     }
 
-    // Xử lý sự kiện khi nhấn nút "back to top"
+    // 11. Xử lý Back To Top
     function handleBackTop() {
-    
         if (!backTop) return;
 
         backTop.onclick = function () {
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
         };
-
     }
 
-    // Xử lý hiển thị nút backTop dựa trên vị trí cuộn trang
     function handleBackTopVisibility() {
-        if (backTop) {
-            if (
-                document.body.scrollTop > 300 ||
-                document.documentElement.scrollTop > 300
-            ) {
-                backTop.style.opacity = 1;
-                backTop.style.visibility = "visible";
-            } else {
-                backTop.style.opacity = 0;
-                backTop.style.visibility = "hidden";
-            }
-        }
+        if (!backTop) return;
+        
+        const isScrolled = (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300);
+        backTop.style.opacity = isScrolled ? "1" : "0";
+        backTop.style.visibility = isScrolled ? "visible" : "hidden";
     }
 
-    // Xử lý sự kiện khi cuộn trang
+    // Event scroll/resize
     function handleWindowScroll() {
         handleStickyHeader();
-        handleBackTopVisibility()
+        handleBackTopVisibility();
     }
 
-    // Khởi tạo tất cả các chức năng
+    // Khởi tạo ứng dụng
     function initApp() {
         handleMoreMenu();
         handleShowSearchDesk();
         handleShowSubMenu();
         handleShowDropdownSubMenu();
         handleShowSearchMb();
-        // slide
-        initSliderThreeItems();
-        // end slide
+        handleNavbarMb();
+        handleVideo_16x9();
+        initSliders();
+        handleCollapse();
         handleBackTop();
         handleChangeTab();
-        window.addEventListener('scroll',handleWindowScroll);
-        window.addEventListener('resize',handleWindowScroll);
+
+        window.addEventListener('scroll', handleWindowScroll);
+        window.addEventListener('resize', handleWindowScroll);
+        
+        // Gọi 1 lần để check trạng thái ban đầu khi load trang
+        handleWindowScroll();
     }
 
-    // Bắt đầu khởi tạo ứng dụng
     initApp();
 });

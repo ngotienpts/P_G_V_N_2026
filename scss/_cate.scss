@@ -1,0 +1,337 @@
+
+
+.breadcrumb-container {
+  margin-bottom: 2px;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: auto;
+  white-space: nowrap;
+}
+.breadcrumb-item:first-child .breadcrumb-link {
+  margin-left: -10px;
+}
+.breadcrumb-item:last-child .breadcrumb-link {
+  color: #993333;
+}
+.breadcrumb-item:last-child .breadcrumb-link::before {
+  content: none;
+}
+.breadcrumb-link {
+  position: relative;
+  display: inline-block;
+  padding: 15px 10px 10px;
+}
+.breadcrumb-link::before {
+  content: "/";
+  position: absolute;
+  right: -3px;
+  color: #993333;
+}
+.breadcrumb-secondary {
+  &__item {
+    position: relative;
+    display: inline-block;
+    padding: 4px;
+    margin-right: 40px;
+    text-align: center;
+
+    &.active,
+    &:hover {
+      color: #993333;
+    }
+
+    &::before {
+      content: "|";
+      position: absolute;
+      right: -20px;
+      color: #A8A8A8;
+    }
+
+    &:last-child {
+      margin-right: 0;
+      &::before {
+        content: none;
+      }
+    }
+  }
+}
+
+.breadcrumb-tertiary {
+    &__container {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    &__item {
+      &.active {
+        .breadcrumb-tertiary__link {
+          background-color: #993333;
+          border-color: #993333;
+          color: #fff;
+        }
+      }
+    }
+    
+    &__link {
+      padding: 10px 30px;
+      border: 1px solid #9f9f9f;
+      background-color: #fff;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #666;
+
+      &:hover {
+        background-color: #993333;
+        border-color: #993333;
+        color: #fff;
+      }
+    }
+
+    &__large {
+      .breadcrumb-tertiary__link {
+        padding: 12px 33px;
+      }
+    }
+    &__small {
+      .breadcrumb-tertiary__link {
+        padding: 11px 20px;
+      }
+    }
+
+}
+
+.breadcrumb-quaternary {
+    &-container {
+        margin-bottom: 2px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__item {
+        &:last-child {
+            .breadcrumb-quaternary-link {
+              // font-weight: 600;
+                &::before {
+                    content: none;
+                  }
+            }
+        }
+
+        &.active {
+            color: #fff;
+        }
+        color: #fff;
+    }
+
+    &-link {
+      position: relative;
+      display: inline-block;
+      padding: 4px;
+      margin-right: 15px;
+
+      &::before {
+        content: "/";
+        position: absolute;
+        right: -10px;
+        color: #fff;
+      }
+    }
+}
+.breadcrumb-quinary {
+    &__container {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    &__item {
+      &.active {
+        .breadcrumb-quinary__link {
+          background-color: #fff;
+          border-color: #fff;
+          color: #993333;
+        }
+      }
+    }
+    
+    &__link {
+      padding: 10px 30px;
+      border: 1px solid #888;
+      background-color: transparent;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+
+      &:hover {
+        background-color: #fff;
+        border-color: #fff;
+        color: #993333;
+      }
+    }
+
+    &__large {
+      .breadcrumb-quinary__link {
+        padding: 12px 33px;
+      }
+    }
+    &__small {
+      .breadcrumb-quinary__link {
+        padding: 11px 20px;
+      }
+    }
+
+}
+
+/*---------------------------------------------------*/ 
+.pagination {
+  flex-wrap: wrap;
+}
+.pagination-item {
+  margin: 4px;
+}
+.pagination-item.active .pagination-link {
+  background-color: #993333;
+  color: #fff;
+}
+.pagination-link {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  border: 1px solid #E9E9E9;
+  background-color: #E9E9E9;
+  transition: all 0.2s;
+}
+.pagination-link:hover {
+  background-color: #993333;
+  color: #fff;
+}
+
+.author-primary {
+  width: 145px;
+}
+.author-primary .avatar img {
+  width: 88px;
+  height: 88px;
+  object-fit: cover;
+  border-radius: 999px;
+}
+
+.author-secondary .avatar img {
+  width: 45px;
+  height: 45px;
+  object-fit: cover;
+  border-radius: 999px;
+}
+
+.featured-topics {
+  background-image: url("../images/patten-4.png");
+  background-size: contain;
+  background-repeat: repeat;
+}
+.featured-topics__content {
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.featured-topics__content .article {
+  width: 33%;
+  margin-top: 30px;
+}
+.featured-topics__content .article-img {
+  width: 27px;
+  height: 27px;
+  background-color: #F1DCDC;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.featured-topics__content .article-img img {
+  width: 16px;
+  height: auto;
+}
+
+.box-author-list-ul {
+  max-height: 530px;
+  overflow: auto;
+}
+.box-author-list .heading-two {
+  border-bottom: 1px dotted #cecece;
+  padding-bottom: 10px;
+}
+
+.pane-item {
+  display: none;
+}
+.pane-item.active {
+  display: block;
+}
+
+.tab-box-primary__container .tabs-block {
+  margin-bottom: 20px;
+}
+.tab-box-primary__container .tabs-block .tab-item {
+  border: 1px solid #CECECE;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  margin-right: 15px;
+}
+.tab-box-primary__container .tabs-block .tab-item:last-child {
+  margin-right: 0;
+}
+.tab-box-primary__container .tabs-block .tab-item.active {
+  border-color: #993333;
+  color: #993333;
+}
+
+.contemplation-primary__container .tab-box-primary {
+  margin-top: 20px;
+  border-top: 1px dotted #cecece;
+}
+
+.contemplation-secondary__container {
+  border-bottom: 1px dotted #cecece;
+  margin-bottom: 30px;
+}
+.contemplation-secondary:last-child .contemplation-secondary__container {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+/*---------------------------------------------------------------------------- danh trinh dat phat*/
+.hanh-trinh-dat-phat-primary {
+  &__container {
+    padding-top: 250px;
+    padding-bottom: 250px;
+  }
+} 
+.hanh-trinh-dat-phat-secondary {
+  margin-top: -180px;
+} 
+.hanh-trinh-dat-phat-quinary {
+  &__slide {
+    .article {
+      justify-content: center;
+
+      &-img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+          max-width: 100%;
+          height: auto;
+          object-fit: contain !important;
+        }
+      }
+    }
+  }
+}
