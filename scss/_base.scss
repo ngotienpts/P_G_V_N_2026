@@ -114,6 +114,11 @@ p {
   width: 100%;
   margin: 0 auto;
 }
+.w-900 {
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+}
 
 .w-1220 {
   max-width: 1220px;
@@ -471,6 +476,9 @@ p {
 .text-gray-77 {
   color: #777;
 }
+.text-gray-88 {
+  color: #888;
+}
 
 .text-gray-9f {
   color: #9F9F9F;
@@ -496,6 +504,9 @@ p {
 .bg-red-993 {
   background-color: #993333;
 }
+.bg-red-993-50 {
+  background-color: rgba($color: #993333, $alpha: 0.5);
+}
 
 .bg-red-ffe65 {
   background-color: #FFEBEB65;
@@ -511,6 +522,9 @@ p {
 
 .bg-gray-4d {
   background-color: #4d4d4d;
+}
+.bg-gray-56 {
+  background-color: #565656;
 }
 .bg-gray-f5 {
   background-color: #F5f5f5;
@@ -531,6 +545,9 @@ p {
 }
 .bg-linear-red-99 {
   background: linear-gradient(180deg,rgba(153, 51, 51, 0.12) 0%,rgba(153, 51, 51, 0.03) 100%);
+}
+.bg-d9-15 {
+  background-color: rgba($color: #d9d9d9, $alpha: 0.15);
 }
 /*=================================================================*/
 .fw-300 {
@@ -1596,6 +1613,9 @@ p {
 }
 .border-b-dotted-ce-50 {
   border-bottom: 1px dotted rgba(206, 206, 206, 0.5);
+}
+.border-b-ff {
+  border-bottom: 1px solid #fff;
 }
 /*=================================================================*/
 .color-inherit:hover {

@@ -222,35 +222,42 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // 7. Xử lý Sub Menu Mobile
+  
     function handleShowSubMenu() {
-        const subMenu = document.querySelector(".js__clickShowMenuMb");
-        if (!subMenu) return;
+        const showBtns = document.querySelectorAll(".js__clickShowMenuMb");
+        const subMenu = document.querySelector(".sub-menu");
+        
+        if (!showBtns.length || !subMenu) return;
 
-        const closeSubMenu = document.querySelector(".js__closeSubMenu");
-        const overlay = document.querySelector(".js__overlay");
-        const parentBox = subMenu.parentElement;
+        const closeSubMenu = subMenu.querySelector(".js__closeSubMenu");
+        const overlay = subMenu.querySelector(".js__overlay");
 
-        if (!parentBox) return;
+        // Bắt sự kiện click cho tất cả các nút icon-bar
+        showBtns.forEach(btn => {
+            btn.onclick = function () {
+                subMenu.classList.add("active");
+                document.body.style.overflow = "hidden";
+            };
+        });
 
-        subMenu.onclick = function () {
-            parentBox.classList.add("active");
-            document.body.style.overflow = "hidden";
-        };
-
+        // Sự kiện đóng menu khi click nút close
         if (closeSubMenu) {
             closeSubMenu.onclick = function () {
-                parentBox.classList.remove("active");
+                subMenu.classList.remove("active");
                 document.body.style.overflow = "auto";
             };
         }
 
+        // Sự kiện đóng menu khi click overlay
         if (overlay) {
             overlay.onclick = function () {
-                parentBox.classList.remove("active");
+                subMenu.classList.remove("active");
                 document.body.style.overflow = "auto";
             };
         }
     }
+
+    
 
     // 8. Xử lý Dropdown Submenu
     function handleShowDropdownSubMenu() {

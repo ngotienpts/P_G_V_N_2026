@@ -25,7 +25,8 @@
   z-index: 9999;
 }
 .header.sticky .header-menu,
-.header.sticky .navbar-menu-mb {
+.header.sticky .navbar-menu-mb,
+.header.sticky .menu-detail-hanh-trinh-dat-phat {
   position: fixed;
   top: 0;
   left: 0;
@@ -167,8 +168,13 @@
   height: 44px;
   width: auto;
 }
-
-.sub-menu .icon-bar {
+.header-mb-detail-hanh-trinh-dat-phat {
+  .navbar-menu-mb {
+    display: none;
+  }
+}
+.sub-menu .icon-bar,
+.menu-detail-hanh-trinh-dat-phat__left .icon-bar {
   width: 38px;
   height: 38px;
   border-radius: 8px;
@@ -176,7 +182,8 @@
   align-items: center;
   justify-content: center;
 }
-.sub-menu .icon-bar img {
+.sub-menu .icon-bar img,
+.menu-detail-hanh-trinh-dat-phat__left .icon-bar img {
   width: 18px;
   height: auto;
 }
@@ -187,7 +194,7 @@
   width: min(100%, 500px);
   height: 100%;
   background-color: #fff;
-  z-index: 100;
+  z-index: 10000;
   box-shadow: 0px 11px 15px -7px rgba(var(--ipt-baseAlt-rgb), 0.2), 0px 24px 38px 3px rgba(var(--ipt-baseAlt-rgb), 0.14), 0px 9px 46px 8px rgba(var(--ipt-baseAlt-rgb), 0.12);
   transform: translateX(-100%);
   transition: all 0.2s ease;
