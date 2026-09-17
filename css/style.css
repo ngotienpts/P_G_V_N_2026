@@ -1768,6 +1768,11 @@ p {
   height: auto;
 }
 
+.icon-100 img {
+  width: 100px;
+  height: auto;
+}
+
 .border-dotted-ce {
   background: -webkit-gradient(linear, left top, right top, color-stop(50%, #CECECE), color-stop(50%, rgba(255, 255, 255, 0))) 0 100%/4px 1px repeat-x;
   background: linear-gradient(to right, #CECECE 50%, rgba(255, 255, 255, 0) 50%) 0 100%/4px 1px repeat-x;
@@ -2294,25 +2299,19 @@ p {
   white-space: nowrap;
   flex-wrap: nowrap;
   /* width */
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
 }
 .navbar-menu-mb .navbar-mb::-webkit-scrollbar {
   width: 0;
   height: 0;
 }
-.navbar-menu-mb .navbar-mb {
-  /* Track */
-}
 .navbar-menu-mb .navbar-mb::-webkit-scrollbar-track {
   background: transparent;
 }
-.navbar-menu-mb .navbar-mb {
-  /* Handle */
-}
 .navbar-menu-mb .navbar-mb::-webkit-scrollbar-thumb {
   background: transparent;
-}
-.navbar-menu-mb .navbar-mb {
-  /* Handle on hover */
 }
 .navbar-menu-mb .navbar-mb::-webkit-scrollbar-thumb:hover {
   background: transparent;
@@ -2966,13 +2965,13 @@ p {
   display: flex;
   flex-wrap: wrap;
 }
+.breadcrumb-quaternary__item {
+  color: #fff;
+}
 .breadcrumb-quaternary__item:last-child .breadcrumb-quaternary-link::before {
   content: none;
 }
 .breadcrumb-quaternary__item.active {
-  color: #fff;
-}
-.breadcrumb-quaternary__item {
   color: #fff;
 }
 .breadcrumb-quaternary-link {
@@ -3765,7 +3764,7 @@ p {
     size: auto !important;
   }
   .no-print,
-  .d-3xl-block.d-md-none {
+.d-3xl-block.d-md-none {
     display: none !important;
   }
   main {
@@ -4054,8 +4053,16 @@ p {
   .fs-md-36 {
     font-size: 36px;
   }
+  .fs-md-48 {
+    font-size: 48px;
+  }
   .fs-md-58 {
     font-size: 58px;
+  }
+  /* ------------------------------------------ */
+  .icon-md-44 img {
+    width: 44px;
+    height: auto;
   }
   /* ------------------------------------------ */
   .bg-md-white {
@@ -4268,16 +4275,16 @@ p {
   }
   /* ------------------------------------------ */
   .swiper-button-primary .swiper-button-next,
-  .swiper-button-primary .swiper-button-prev {
+.swiper-button-primary .swiper-button-prev {
     width: 36px;
     height: 36px;
   }
   .swiper-button-primary .swiper-button-next,
-  .swiper-button-primary .swiper-rtl .swiper-button-prev {
+.swiper-button-primary .swiper-rtl .swiper-button-prev {
     right: 0;
   }
   .swiper-button-primary .swiper-button-prev,
-  .swiper-button-primary .swiper-rtl .swiper-button-next {
+.swiper-button-primary .swiper-rtl .swiper-button-next {
     left: 0;
   }
   /* ------------------------------------------ */
@@ -4585,11 +4592,11 @@ p {
     font-size: 12px !important;
   }
   .swiper-button-primary .swiper-button-next,
-  .swiper-button-primary .swiper-rtl .swiper-button-prev {
+.swiper-button-primary .swiper-rtl .swiper-button-prev {
     right: 0;
   }
   .swiper-button-primary .swiper-button-prev,
-  .swiper-button-primary .swiper-rtl .swiper-button-next {
+.swiper-button-primary .swiper-rtl .swiper-button-next {
     left: 0;
   }
   /* section primary */

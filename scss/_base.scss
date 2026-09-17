@@ -1583,6 +1583,12 @@ p {
   width: 20px;
   height: auto;
 }
+.icon-100 {
+  img {
+    width: 100px;
+    height: auto;
+  }
+}
 
 .border-dotted-ce {
   background: -webkit-gradient(linear, left top, right top, color-stop(50%, #CECECE), color-stop(50%, #ffffff00)) 0 100%/4px 1px repeat-x;
