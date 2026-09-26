@@ -139,6 +139,25 @@
         color: #fff;
       }
     }
+
+    &.text-gray-88 {
+        .breadcrumb-quaternary {
+            &__item {
+              &.active {
+                  color: #888;
+              }
+              color: #888;
+          }
+
+          &-link {
+            &::before {
+              color: #888;
+            }
+          }
+        }
+    }
+
+
 }
 .breadcrumb-quinary {
     &__container {
@@ -321,7 +340,7 @@
   &__slide {
     .article {
       justify-content: center;
-
+      
       &-img {
         display: flex;
         align-items: center;
@@ -335,3 +354,298 @@
     }
   }
 }
+/*---------------------------------------------------------------------------- hanh hương tour*/
+.range-slider-primary {
+  .price-slider-wrapper {
+      position: relative;
+      width: 100%;
+      max-width: 100%;
+      user-select: none;
+  }
+  
+  .price-slider-inner {
+      position: relative;
+      height: 30px;
+  }
+  /* Thanh track xám nền */
+  .slider-track-bg {
+      position: absolute;
+      top: 18px;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background-color: #e5e5e5;
+      border-radius: 4px;
+      z-index: 1;
+      cursor: pointer;
+  }
+  
+  /* Thanh màu đỏ động */
+  .slider-progress-bar {
+      position: absolute;
+      top: 18px;
+      left: 0%;
+      width: 100%;
+      height: 5px;
+      background-color: #993333;
+      border-radius: 4px;
+      z-index: 2;
+      pointer-events: none;
+  }
+  
+  /* Input range */
+  .price-slider-wrapper input[type="range"] {
+      position: absolute;
+      top: 10px; /* Tăng khoảng chạm để dễ bấm trúng */
+      left: 0;
+      width: 100%;
+      height: 20px;
+      -webkit-appearance: none;
+      appearance: none;
+      background: transparent;
+      pointer-events: none;
+      margin: 0;
+      z-index: 3;
+      outline: none;
+  }
+  
+  /* Nút kéo Thumb (Chrome, Safari, Opera, Edge) */
+  .price-slider-wrapper input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: #993333;
+      border: 5px solid #FBE3E3;
+      cursor: grab;
+      pointer-events: auto;
+      box-sizing: border-box;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+      transition: transform 0.1s ease;
+  }
+  
+  .price-slider-wrapper input[type="range"]::-webkit-slider-thumb:active {
+      cursor: grabbing;
+      transform: scale(1.15); /* Phóng to nhẹ khi đang giữ chuột để có cảm giác mượt */
+  }
+  
+  /* Nút kéo Thumb (Firefox) */
+  .price-slider-wrapper input[type="range"]::-moz-range-thumb {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: #993333;
+      border: 5px solid #FBE3E3;
+      cursor: grab;
+      pointer-events: auto;
+      box-sizing: border-box;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+      border: none;
+      transition: transform 0.1s ease;
+  }
+  
+  .price-slider-wrapper input[type="range"]::-moz-range-thumb:active {
+      cursor: grabbing;
+      transform: scale(1.15);
+  }
+  
+}
+
+.arrange-select {
+    background-color: #fff;
+    border: 1px solid #999;
+    border-radius: 8px;
+    padding-right: 16px;
+    overflow: hidden;
+
+  }
+  select {
+    width: 100%;
+    padding: 12px 16px;
+    background-color: transparent;
+    color: #2a2a2a;
+    font-size: 15px;
+  }
+
+  .hanh-huong-tour-secondary {
+    &__content {
+      position: relative;
+    }
+    &__left {
+      position: sticky;
+      top: 50px;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .see-full {
+    width: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.6) 52%, rgba(255, 255, 255, 0.9) 78%, white 100%);
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.popup {
+    &-container {
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 1140px;
+        width: 90%;
+        height: auto;
+        border-radius: 20px;
+        background-color: #fff;
+        z-index: 1000;
+        padding: 20px 50px;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        max-height: calc(100vh - 200px);
+        overflow: auto;
+
+        &.active {
+            display: flex;
+        }
+    }
+
+    .close-popup {
+        position: sticky;
+        width: 50px;
+        height: 50px;
+        border-radius: 999px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #e2e2e2;
+        margin-left: auto;
+        cursor: pointer;
+        flex-shrink: 0;
+
+        &:hover {
+            background-color: #c9c9c9;
+        }
+
+        img {
+            width: 16px;
+            height: auto;
+        }
+    }
+    &-field {
+        max-width: 1140px;
+        width: 100%;
+        margin: auto;
+    }
+
+    &-form {
+        .contact-field {
+            border-radius: 10px;
+            input  {
+                width: 100%;
+                background-color: rgb(255, 255, 255);
+                border: 1px solid #787878;
+                border-radius: 12px;
+                padding: 15px 20px;
+                overflow: hidden;
+                &::placeholder{color: #787878;}
+                font-size: 16px;
+            }
+
+            textarea {
+                width: 100%;
+                border: none;
+                padding: 15px 20px;
+                border-radius: 12px;
+                overflow: hidden;
+                background-color: rgb(255, 255, 255);
+                border: 1px solid #787878;
+                height: 100px;
+                font-size: 16px;
+            }
+
+            &.custom-select {
+                width: 100%;
+                background-color: rgb(255, 255, 255);
+                border: 1px solid #787878;
+                border-radius: 12px;
+                padding-right: 20px;
+                overflow: hidden;
+            }
+            select {
+                width: 100%;
+                padding: 15px 20px;
+                background-color: transparent;
+                font-size: 16px;
+                &::placeholder{color: #9e9e9e;}
+            }
+
+        }
+    }
+}
+.hanh-trinh-dat-phat-senary {
+  .article-large {
+    p + P {
+      margin-top: 15px;
+    }
+      .article-img {
+        
+      }
+
+      .article-title {
+        padding-left: 10px;
+        border-left: 4px solid #d9d9d9;
+      }
+  }
+} 
+/*--------------------------------------------------- gioi thieu chuyen muc*/
+.gioi-thieu-chuyen-muc-primary {
+  &__container {
+    padding-top: 100px;
+    padding-bottom: 500px;
+  }
+} 
+.gioi-thieu-chuyen-muc-secondary {
+  margin-top: -450px;
+  min-height: 450px;
+  .article-large {
+    p + P {
+      margin-top: 15px;
+    }
+      .article-img {
+        position: relative;
+          &__inner {
+            &::before {
+              content: '';
+              left: 0;
+              bottom: 0;
+              right: 40px;
+              top: 40px;
+              background: linear-gradient(to bottom, #DFDFDF 0%, #DFDFDF40 100%);
+              border-radius: 10px;
+              position: absolute;
+            }
+          }
+      }
+
+      .article-title {
+        padding-left: 10px;
+        border-left: 4px solid #d9d9d9;
+      }
+  }
+} 
+.gioi-thieu-chuyen-muc-tertiary {
+  .article-des {
+    p + P {
+      margin-top: 15px;
+    }
+    i {
+      font-style: italic;
+    }
+  }
+} 
+// 

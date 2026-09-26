@@ -101,6 +101,10 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function initSliders() {
+        // slider auto item
+        createSwiper(".js__autoSlidesContainer", ".js__autoSlide", { 
+            slidesPerView: "auto", spaceBetween: 8 
+        });
         // Slider 1 item
         createSwiper(".js__oneSlidesContainer", ".js__oneSlide");
 
@@ -312,6 +316,231 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
+    // range slider
+    function rangeFilterHotel() {
+        const uRangeContainers = document.querySelectorAll('.js__uRangeContainer');
+        if (uRangeContainers.length === 0) return;
+
+        uRangeContainers.forEach((uRangeContainer) => {
+            const minInput = uRangeContainer.querySelector('.js__uRangeInputMin');
+            const maxInput = uRangeContainer.querySelector('.js__uRangeInputMax');
+            const minDisplay = uRangeContainer.querySelector('.js__uRangeMinDisplay');
+            const maxDisplay = uRangeContainer.querySelector('.js__uRangeMaxDisplay');
+            const trackBg = uRangeContainer.querySelector('.js__sliderTrack');
+            const progressBar = uRangeContainer.querySelector('.js__sliderProgress');
+
+            if (!minInput || !maxInput) return;
+
+            function updateSlider() {
+                const val1 = Number(minInput.value) || 0;
+                const val2 = Number(maxInput.value) || 0;
+                const minLimit = Number(minInput.min) || 0;
+                const maxLimit = Number(minInput.max) || 100000000;
+
+                // KÉO TỰ DO 100%: Xác định giá trị cực bé và cực lớn dựa trên vị trí kéo thực tế
+                const currentMinVal = Math.min(val1, val2);
+                const currentMaxVal = Math.max(val1, val2);
+
+                const range = maxLimit - minLimit;
+                if (range <= 0) return;
+
+                const minPercent = ((currentMinVal - minLimit) / range) * 100;
+                const maxPercent = ((currentMaxVal - minLimit) / range) * 100;
+
+                // Cập nhật vị trí và độ rộng thanh màu đỏ mượt mà
+                if (progressBar) {
+                    progressBar.style.left = `${minPercent}%`;
+                    progressBar.style.width = `${maxPercent - minPercent}%`;
+                }
+
+                // Cập nhật hiển thị số tiền ở 2 góc
+                const formatter = new Intl.NumberFormat('vi-VN');
+                if (minDisplay) minDisplay.textContent = `${formatter.format(currentMinVal)}đ`;
+                if (maxDisplay) maxDisplay.textContent = `${formatter.format(currentMaxVal)}đ`;
+            }
+
+            // Tăng tốc và giảm tải xử lý bằng việc dùng Z-Index chủ động khi hover/kéo
+            function handleInteraction(activeInput, inactiveInput) {
+                activeInput.style.zIndex = '4';
+                inactiveInput.style.zIndex = '3';
+            }
+
+            minInput.addEventListener('input', () => {
+                handleInteraction(minInput, maxInput);
+                updateSlider();
+            });
+
+            maxInput.addEventListener('input', () => {
+                handleInteraction(maxInput, minInput);
+                updateSlider();
+            });
+
+            // Xử lý click bất kỳ vị trí nào trên thanh track
+            if (trackBg) {
+                trackBg.addEventListener('mousedown', (e) => {
+                    const rect = trackBg.getBoundingClientRect();
+                    const clickX = e.clientX - rect.left;
+                    const totalWidth = rect.width;
+                    const clickPercent = Math.max(0, Math.min(1, clickX / totalWidth)); // Giới hạn từ [0, 1]
+
+                    const minLimit = Number(minInput.min) || 0;
+                    const maxLimit = Number(minInput.max) || 100000000;
+                    const clickedValue = minLimit + clickPercent * (maxLimit - minLimit);
+
+                    const currentVal1 = Number(minInput.value);
+                    const currentVal2 = Number(maxInput.value);
+
+                    // Click gần nút nào hơn thì di chuyển nhanh nút đó
+                    if (Math.abs(clickedValue - currentVal1) < Math.abs(clickedValue - currentVal2)) {
+                        minInput.value = clickedValue;
+                        handleInteraction(minInput, maxInput);
+                    } else {
+                        maxInput.value = clickedValue;
+                        handleInteraction(maxInput, minInput);
+                    }
+
+                    updateSlider();
+                });
+            }
+
+            // Xử lý cho các sự kiện bắt đầu tương tác chuột/cảm ứng
+            minInput.addEventListener('mousedown', () => handleInteraction(minInput, maxInput));
+            maxInput.addEventListener('mousedown', () => handleInteraction(maxInput, minInput));
+            minInput.addEventListener('touchstart', () => handleInteraction(minInput, maxInput));
+            maxInput.addEventListener('touchstart', () => handleInteraction(maxInput, minInput));
+
+            // Khởi tạo trạng thái ban đầu
+            updateSlider();
+        });
+    }
+
+    // xử lý sự kiện để show full content detail
+    function handleShowFullContentDetail() {
+        const fullContentContainers = document.querySelectorAll(".js__fullContentContainer");
+        
+        if(fullContentContainers.length === 0) return 
+        
+        fullContentContainers.forEach((fullContentContainer)=>{
+            
+            const fullContentDetail = fullContentContainer.querySelector(".js__fullContentDetail");
+            const seeFullContentContainer = fullContentContainer.querySelector(".js__seeFullContentContainer");
+            const seeFullContent = fullContentContainer.querySelector(".js__seeFullContent");
+            
+            seeFullContent.onclick = function() {
+                fullContentDetail.classList.add('full');
+                seeFullContentContainer.style.display = 'none';
+            }
+    
+            })
+
+    }
+
+    
+    // xử lý sự kiện để show popup
+    function handleShowPopup() {
+        const popupContainers = document.querySelectorAll(".js__popupContainer");
+        
+        if(popupContainers.length === 0) return 
+        
+        popupContainers.forEach((popupContainer)=>{
+            
+            const showPopup = popupContainer.querySelector(".js__showPopup");
+            const popupContent = popupContainer.querySelector(".js__popupContent");
+            const closePopup = popupContainer.querySelector(".js__closePopup");
+            const overlay = popupContainer.querySelector(".js__overlay");
+            
+            showPopup.onclick = function() {
+                popupContent.classList.add('active')
+                overlay.classList.add('active')
+                document.querySelector("body").style.overflow = "hidden";
+                document.querySelector("main").style.zIndex = 10000;
+            }
+    
+            closePopup.onclick = function () {
+                document.querySelector("body").style.overflow = "auto";
+                document.querySelector("main").style.zIndex = 10;
+                popupContent.classList.remove('active')
+                overlay.classList.remove('active')
+            };
+    
+            overlay.onclick = function () {
+                this.classList.remove("active");
+                document.querySelector("body").style.overflow = "auto";
+                document.querySelector("main").style.zIndex = 10;
+                popupContent.classList.remove('active');
+            };
+
+            })
+
+    }
+
+    // xử lý sự kiện add active item khi click vào một danh sách
+    function initActiveToggle() {
+        const activeLists = document.querySelectorAll('.js__activeList');
+
+        activeLists.forEach(list => {
+            list.addEventListener('click', function (e) {
+                const item = e.target.closest('.js__activeItem');
+                
+                if (!item) return;
+
+                const currentActiveItems = list.querySelectorAll('.js__activeItem.active');
+                currentActiveItems.forEach(el => el.classList.remove('active'));
+
+                item.classList.add('active');
+            });
+        });
+    }
+
+    // xử lý sự kiện tăng giảm số lượng sản phẩm
+    function handleIncremental() {
+        const incrementals = document.querySelectorAll('.js__incremental')
+        if (incrementals.length === 0) return;
+
+        incrementals.forEach((incremental)=>{
+            let deincrement = incremental.querySelector(".js__deincrement");
+            let increment = incremental.querySelector(".js__increment");
+            let number = incremental.querySelector(".js__numberValue");
+
+            
+            let step = 1;
+            let max = 100;
+            let min = 0;
+            let valueInput = 0;
+            
+            function updateValue(newValue) {
+                valueInput = newValue;
+                console.log("Current value:", valueInput);
+            }
+            
+            number.oninput = function () {
+                number.value = number.value > max ? max : number.value < min ? min : number.value;
+                updateValue(number.value);
+            };
+            
+            increment.addEventListener("click", () => {
+                if (parseInt(number.value) + step >= max) {
+                    number.value = max;
+                } else {
+                    number.value = parseInt(number.value) + step;
+                }
+                updateValue(number.value);
+            });
+            
+            deincrement.addEventListener("click", () => {
+                if (parseInt(number.value) - step <= min) {
+                    number.value = min;
+                } else {
+                    number.value = parseInt(number.value) - step;
+                }
+                updateValue(number.value);
+            });
+
+        })
+
+    }
+
+
     // 10. Xử lý Sticky Header
     function handleStickyHeader() {
         const stickyHeaderPC = document.querySelector(".js__stickyHeader");
@@ -359,6 +588,11 @@ document.addEventListener("DOMContentLoaded", function () {
         handleCollapse();
         handleBackTop();
         handleChangeTab();
+        rangeFilterHotel();
+        handleShowFullContentDetail();
+        handleShowPopup();
+        initActiveToggle();
+        handleIncremental();
 
         window.addEventListener('scroll', handleWindowScroll);
         window.addEventListener('resize', handleWindowScroll);

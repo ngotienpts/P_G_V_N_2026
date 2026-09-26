@@ -120,6 +120,9 @@
   line-height: 1.3 !important;
   color: #555;
 }
+.detail-content i {
+  font-style: italic;
+}
 .detail-content p a {
   color: #ff9222;
   font-style: italic;
@@ -605,52 +608,18 @@
   height: auto;
 }
 
-// @media print {
-//   body, html {
-//     width: 100%;
-//     margin: 0;
-//     padding: 0;
-//     box-sizing: border-box;
-//   }
+/*------------------------------------------------------------ detail hanh huong tour*/
+.detail-hanh-huong-tour-secondary {
+  &__right {
+    position: sticky;
+    top: 50px;
+    width: 100%;
+    height: 100%;
+  }
+}
 
-//   body {
-//     margin-left: 20mm;
-//     visibility: hidden;
-//   }
+/*------------------------------------------------------------ print*/
 
-//   .print-box__container {
-//     visibility: visible;
-//     -webkit-print-color-adjust: exact;
-//     color-adjust: exact;
-//     width: calc(100% - 20mm);
-//     max-width: 100%;
-//     page-break-inside: avoid;
-//     overflow: visible;
-//     margin: 0;
-//     padding: 0;
-//     box-sizing: border-box;
-//   }
-
-//   .print-btn {
-//     display: none;
-//     opacity: 0;
-//     visibility: hidden;
-//   }
-
-//   .detail-content {
-//     width: 100%;
-//     margin: 0;
-//     padding: 0;
-//   }
-
-//   .detail-content, .expNoEdit, .expEdit {
-//     page-break-inside: avoid;
-//   }
-
-//   h1, h2, p, figure {
-//     page-break-inside: avoid;
-//   }
-// }
 @media print {
   @page {
     size: auto !important;
