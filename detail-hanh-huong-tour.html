@@ -1,0 +1,2341 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- favicon -->
+        <link rel="shortcut icon" href="./images/favicon/favicon.png" type="image/gif" sizes="16x16" />
+        <!-- end favicon -->
+        <title>Cổng thông tin Phật giáo thuộc Giáo hội Phật giáo Việt Nam</title>
+        <!-- font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            rel="preload"
+            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Corinthia:wght@400;700&display=swap"
+            as="style" onload="this.rel='stylesheet'"
+        />
+        <!-- end font -->
+        <link rel="stylesheet" href="./lib/swiper/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="./css/style.css" />
+        <script src="./lib/jquery/jquery-3.7.1.min.js"></script>
+    </head>
+
+    <body>
+        
+        <!-- header -->
+        <header id="header" class="header relative z-50 shadow js__stickyHeader">
+            <!-- pc -->
+            <div class="d-3xl-block d-xl-none">
+                <div class="header-desk relative z-20">
+                    <!-- top -->
+                    <div class="header-top bg-white w-wrapper">
+                        <div class="header-top__container py-20 w-1220 d-3xl-flex justify-between">
+                            <!-- left -->
+                            <div class="header-top__left flex-1">
+                                <ul class="cate-hot__list d-3xl-flex items-center">
+                                    <li class="cate-hot__item">
+                                        <a href="#" class="cate-hot__link fs-14 fw-500 text-red-993 capitalize d-3xl-inline-block p-8">Kinh Phật</a>
+                                    </li>
+                                    <li class="cate-hot__item">
+                                        <a href="#" class="cate-hot__link fs-14 fw-500 text-red-993 capitalize d-3xl-inline-block p-8">Vật Phẩm Phật Giáo</a>
+                                    </li>
+                                    <li class="cate-hot__item">
+                                        <a href="#" class="cate-hot__link fs-14 fw-500 text-red-993 capitalize d-3xl-inline-block p-8">Phật Giao Online</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- end left -->
+                            
+                            <!-- center -->
+                            <div class="header-top__center flex-1 d-3xl-flex items-center justify-center">
+                                <a href="#" class="logo">
+                                    <img src="./images/svg/logo.svg" alt="" class="logo-img">
+                                </a>
+                            </div>
+                            <!-- end center -->
+                            
+                            <!-- right -->
+                            <div class="header-top__right flex-1 d-3xl-flex items-center justify-end">
+                                <!-- social -->
+                                <ul class="social d-3xl-flex items-center justify-center">
+                                    <li class="social-item">
+                                        <a href="#" class="social-link">
+                                            <img src="./images/svg/fb-red.svg" alt="" class="social-icon">
+                                        </a>
+                                    </li>
+                                    <li class="social-item">
+                                        <a href="#" class="social-link">
+                                            <img src="./images/svg/insta-red.svg" alt="" class="social-icon">
+                                        </a>
+                                    </li>
+                                    <li class="social-item">
+                                        <a href="#" class="social-link">
+                                            <img src="./images/svg/ytb-red.svg" alt="" class="social-icon">
+                                        </a>
+                                    </li>
+                                    <li class="social-item">
+                                        <a href="#" class="social-link">
+                                            <img src="./images/svg/tiktok-red.svg" alt="" class="social-icon">
+                                        </a>
+                                    </li>
+                                    
+                                </ul>
+                                <!-- end social -->
+                            </div>
+                            <!-- end right -->
+                        </div>
+                    </div>
+                    <!-- end top -->
+
+                    <!-- menu -->
+                    <div class="header-menu bg-white w-wrapper">
+                        <div class="header-menu__container w-1220 d-3xl-flex justify-between">
+                            <!-- navbar -->
+                            <nav class="navbar flex-1">
+                                <ul class="navbar-wrapper d-3xl-flex items-center gap-30 justify-between">
+                                    <li class="navbar-item">
+                                        <a href="#" class="icon-20">
+                                            <img src="./images/svg/home-red.svg" alt="" class="">
+                                        </a>
+                                    </li>
+                                    <li class="navbar-item">
+                                        <div class="navbar-item__heading d-3xl-flex items-center uppercase fw-600 fs-14">
+                                            <a href="#" class="navbar-item__text flex-1 d-3xl-inline-block">Tin tức</a>
+                                            <div class="navbar-item__icon flex-0">
+                                                <img src="./images/svg/arrow-down-gray.svg" alt="">
+                                            </div>
+                                        </div>
+                                        <ul class="navbar-dropdown fs-14 scroll">
+                                            <li class="navbar-dropdown__item">
+                                                <a href="#" class="navbar-dropdown__link">Trong nước</a>
+                                            </li>
+                                            <li class="navbar-dropdown__item">
+                                                <a href="#" class="navbar-dropdown__link">Quốc tế</a>
+                                            </li>
+                                            <li class="navbar-dropdown__item">
+                                                <a href="#" class="navbar-dropdown__link">Tin phật sự</a>
+                                            </li>
+                                            <li class="navbar-dropdown__item">
+                                                <a href="#" class="navbar-dropdown__link">Tin mới</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="navbar-item">
+                                        <div class="navbar-item__heading d-3xl-flex items-center uppercase fw-600 fs-14">
+                                            <a href="#" class="navbar-item__text flex-1 d-3xl-inline-block">Xiển dương phật pháp</a>
+                                            <div class="navbar-item__icon flex-0">
+                                                <img src="./images/svg/arrow-down-gray.svg" alt="">
+                                            </div>
+                                        </div>
+                                        <ul class="navbar-dropdown fs-14 scroll">
+                                            <li class="navbar-dropdown__item">
+                                                <a href="#" class="navbar-dropdown__link">Trong nước</a>
+                                            </li>
+                                            <li class="navbar-dropdown__item">
+                                                <a href="#" class="navbar-dropdown__link">Quốc tế</a>
+                                            </li>
+                                            <li class="navbar-dropdown__item">
+                                                <a href="#" class="navbar-dropdown__link">Tin phật sự</a>
+                                            </li>
+                                            <li class="navbar-dropdown__item">
+                                                <a href="#" class="navbar-dropdown__link">Tin mới</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="navbar-item">
+                                        <div class="navbar-item__heading d-3xl-flex items-center uppercase fw-600 fs-14">
+                                            <a href="#" class="navbar-item__text flex-1 d-3xl-inline-block">Đức phật</a>
+                                        </div>
+                                    </li>
+                                    <li class="navbar-item">
+                                        <div class="navbar-item__heading d-3xl-flex items-center uppercase fw-600 fs-14">
+                                            <a href="#" class="navbar-item__text flex-1 d-3xl-inline-block">Kinh sách</a>
+                                        </div>
+                                    </li>
+                                    <li class="navbar-item">
+                                        <div class="navbar-item__heading d-3xl-flex items-center uppercase fw-600 fs-14">
+                                            <a href="#" class="navbar-item__text flex-1 d-3xl-inline-block">Giáo hội</a>
+                                        </div>
+                                    </li>
+                                    <li class="navbar-item">
+                                        <div class="navbar-item__heading d-3xl-flex items-center uppercase fw-600 fs-14">
+                                            <a href="#" class="navbar-item__text flex-1 d-3xl-inline-block">Media</a>
+                                        </div>
+                                    </li>
+                                    <li class="navbar-item">
+                                        <div class="navbar-item__heading d-3xl-flex items-center uppercase fw-600 fs-14">
+                                            <a href="#" class="navbar-item__text flex-1 d-3xl-inline-block">Môi trường</a>
+                                        </div>
+                                    </li>
+
+                                    <li class="navbar-item navbar-more  js__navbarMore">
+                                        <div class="navbar-more__icon js__navbarMoreIcon">
+                                            <div class="bar">
+                                                <img src="./images/svg/bar.svg" alt="">
+                                            </div>
+                                            <div class="close">
+                                                <img src="./images/svg/close.svg" alt="">
+                                            </div>
+                                        </div>
+                                        
+                                    </li>
+                                </ul>
+                            </nav>
+                            <!-- end navbar -->
+
+                            <!-- extend -->
+                            <div class="navbar-more__content w-wrapper js__navbarMoreContent">
+                                <div class="navbar-more__inner w-1220 scroll">
+                                    <ul class="navbar-more__list d-3xl-grid gap-24">
+                                        <li class="navbar-more__item">
+                                            <div class="navbar-more__title"><a href="#">Cate 1</a></div>
+                                            <ul class="navbar-more__children">
+                                                <li><a href="#">Cate 2</a></li>
+                                                <li><a href="#">Cate 2</a></li>
+                                                <li><a href="#">Cate 2</a></li>
+                                                <li><a href="#">Cate 2</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="navbar-more__item">
+                                            <div class="navbar-more__title"><a href="#">Cate 1</a></div>
+                                            <ul class="navbar-more__children">
+                                                <li><a href="#">Cate 2</a></li>
+                                                <li><a href="#">Cate 2</a></li>
+                                                <li><a href="#">Cate 2</a></li>
+                                                <li><a href="#">Cate 2</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="navbar-more__item">
+                                            <div class="navbar-more__title"><a href="#">Cate 1</a></div>
+                                            <ul class="navbar-more__children">
+                                                <li><a href="#">Cate 2</a></li>
+                                                <li><a href="#">Cate 2</a></li>
+                                                <li><a href="#">Cate 2</a></li>
+                                                <li><a href="#">Cate 2</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="navbar-more__item">
+                                            <div class="navbar-more__title"><a href="#">Cate 1</a></div>
+                                            <ul class="navbar-more__children">
+                                                <li><a href="#">Cate 2</a></li>
+                                                <li><a href="#">Cate 2</a></li>
+                                                <li><a href="#">Cate 2</a></li>
+                                                <li><a href="#">Cate 2</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="navbar-more__item">
+                                            <div class="navbar-more__title"><a href="#">Cate 1</a></div>
+                                            <ul class="navbar-more__children">
+                                                <li><a href="#">Cate 2</a></li>
+                                                <li><a href="#">Cate 2</a></li>
+                                                <li><a href="#">Cate 2</a></li>
+                                                <li><a href="#">Cate 2</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="navbar-more__item">
+                                            <div class="navbar-more__title"><a href="#">Cate 1</a></div>
+                                            <ul class="navbar-more__children">
+                                                <li><a href="#">Cate 2</a></li>
+                                                <li><a href="#">Cate 2</a></li>
+                                                <li><a href="#">Cate 2</a></li>
+                                                <li><a href="#">Cate 2</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- end extend -->
+
+                            <!-- search -->
+                            <div class="search flex-0 d-3xl-flex items-center ml-40 mr-3xl--10 js__searchDesk">
+                                <!-- icon -->
+                                <div class="search-icon icon-20 d-3xl-flex items-center p-10 js__searchIconDesk pointer">
+                                    <img src="./images/svg/search.svg" alt="">
+                                </div>
+                                <!-- end icon -->
+                                <div class="search-content js__searchContentDesk">
+                                    <form action="search-form">
+                                        <div class="search-group">
+                                            <input type="text" class="search-input js__searchInputDesk" placeholder="Tìm kiếm...">
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <!-- end search -->
+                        </div>
+                    </div>
+                    <!-- end menu -->
+                </div>
+            </div>
+            <!-- end pc -->
+             
+            <!-- mb -->
+            <div class="d-3xl-none d-xl-block">
+                <div class="header-mb relative z-10">
+                    <!-- bot -->
+                    <div class="header-mb__bot w-wrapper w-1220 bg-white py-12">
+                        <!-- menu -->
+                        <div class="header-mb__menu d-3xl-flex items-center justify-between">
+                            <!-- left -->
+                            <div class="header-mb__left flex-0">
+                                <!-- submenu -->
+                                <div class="sub-menu">
+                                    <!-- icon bar -->
+                                    <div class="icon-bar js__clickShowMenuMb bg-red-993">
+                                        <img src="./images/svg/bar-w.svg" alt="">
+                                    </div>
+                                    <!-- end icon bar -->
+                                    <!-- content -->
+                                    <div class="sub-menu__content">
+                                        <!-- close -->
+                                        <div class="sub-menu__close js__closeSubMenu d-3xl-flex items-center">
+                                            <img src="./images/svg/close-w.svg" alt="">
+                                        </div>
+                                        <!-- end close -->
+    
+                                        <div class="sub-menu__container">
+                                            <!-- list -->
+                                            <div class="sub-menu__list">
+                                                <!-- item -->
+                                                <div class="sub-menu__item px-20">
+                                                    <!-- heading -->
+                                                    <div class="heading-sub d-3xl-flex items-center justify-between py-8 text-red-993">
+                                                        <h3 class="heading-sub__title fs-14 fw-500 uppercase">
+                                                            <a href="#">Tin tức</a>
+                                                        </h3>
+                                                        <div class="heading-sub__arrow js__dropDown">
+                                                            <img src="./images/svg/arrow-down-gray.svg" alt="">
+                                                        </div>
+                                                    </div>
+                                                    <!-- end heading -->
+    
+                                                    <!-- sub menu list -->
+                                                    <ul class="list-sub js__listSubMenu">
+                                                        <li class="item-sub">
+                                                            <a href="#" class="item-sub__link fs-16">Release calendar</a>
+                                                        </li>
+                                                        <li class="item-sub">
+                                                            <a href="#" class="item-sub__link fs-16">Release calendar</a>
+                                                        </li>
+                                                        <li class="item-sub">
+                                                            <a href="#" class="item-sub__link fs-16">Release calendar</a>
+                                                        </li>
+                                                    </ul>
+                                                    <!-- end sub menu list -->
+                                                </div>
+                                                <!-- end item -->
+                                                <!-- item -->
+                                                <div class="sub-menu__item px-20">
+                                                    <!-- heading -->
+                                                    <div class="heading-sub d-3xl-flex items-center justify-between py-8 text-red-993">
+                                                        <h3 class="heading-sub__title fs-14 fw-500 uppercase">
+                                                            <a href="#">Tin tức</a>
+                                                        </h3>
+                                                        <div class="heading-sub__arrow js__dropDown">
+                                                            <img src="./images/svg/arrow-down-gray.svg" alt="">
+                                                        </div>
+                                                    </div>
+                                                    <!-- end heading -->
+    
+                                                    <!-- sub menu list -->
+                                                    <ul class="list-sub js__listSubMenu">
+                                                        <li class="item-sub">
+                                                            <a href="#" class="item-sub__link fs-16">Release calendar</a>
+                                                        </li>
+                                                        <li class="item-sub">
+                                                            <a href="#" class="item-sub__link fs-16">Release calendar</a>
+                                                        </li>
+                                                        <li class="item-sub">
+                                                            <a href="#" class="item-sub__link fs-16">Release calendar</a>
+                                                        </li>
+                                                    </ul>
+                                                    <!-- end sub menu list -->
+                                                </div>
+                                                <!-- end item -->
+                                                <!-- item -->
+                                                <div class="sub-menu__item px-20">
+                                                    <!-- heading -->
+                                                    <div class="heading-sub d-3xl-flex items-center justify-between py-8 text-red-993">
+                                                        <h3 class="heading-sub__title fs-14 fw-500 uppercase">
+                                                            <a href="#">Tin tức</a>
+                                                        </h3>
+                                                        <div class="heading-sub__arrow js__dropDown">
+                                                            <img src="./images/svg/arrow-down-gray.svg" alt="">
+                                                        </div>
+                                                    </div>
+                                                    <!-- end heading -->
+    
+                                                    <!-- sub menu list -->
+                                                    <ul class="list-sub js__listSubMenu">
+                                                        <li class="item-sub">
+                                                            <a href="#" class="item-sub__link fs-16">Release calendar</a>
+                                                        </li>
+                                                        <li class="item-sub">
+                                                            <a href="#" class="item-sub__link fs-16">Release calendar</a>
+                                                        </li>
+                                                        <li class="item-sub">
+                                                            <a href="#" class="item-sub__link fs-16">Release calendar</a>
+                                                        </li>
+                                                    </ul>
+                                                    <!-- end sub menu list -->
+                                                </div>
+                                                <!-- end item -->
+                                               
+                                               
+                                            </div>
+                                            <!-- end list -->
+                                        </div>
+                                    </div>
+                                    <!-- end content -->
+                                    <div class="overlay js__overlay"></div>
+                                </div>
+                                <!-- end submenu -->
+                            </div>
+                            <!-- end left -->
+                            <!-- center -->
+                            <div class="header-mb__center flex-1 d-3xl-flex items-center justify-center">
+                                <a href="#" class="logo">
+                                    <img src="./images/svg/logo.svg" alt="" class="logo-img">
+                                </a>
+                            </div>
+                            <!-- end center -->
+                            <!-- right -->
+                            <div class="header-mb__right flex-0">
+                                <div class="search-mb">
+                                    <div class="search-mb__icon js__searchMb">
+                                        <img src="./images/svg/search-w.svg" alt="">
+                                    </div>
+                                    <!-- form -->
+                                    <div class="header-search-mb__form h-60 w-full js__formSearchMb">
+                                        <form action="" class="w-full h-full">
+                                            <div class="relative w-full h-full">
+                                                <input type="text" class="header-search-input w-full h-full p-8 fs-16 js__focusSearchMb" placeholder="Search...">
+                                                <div class="header-search-btn absolute h-full d-3xl-flex items-center p-8 js__closeSearchMb icon-20">
+                                                    <img src="./images/svg/close.svg" alt="">
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <!-- end form -->
+                                </div>
+                            </div>
+                            <!-- end right -->
+                        </div>
+                        <!-- end menu -->
+                    </div>
+                    <!-- end bot -->
+
+                    <!-- navbar menu mb -->
+                    <div class="navbar-menu-mb js__navbarMenuMb py-15 pl-15 pr-40 relative d-3xl-none">
+                        <ul class="navbar-mb js__navbarMb d-3xl-flex items-center fs-14 text-gray-33 fw-600 uppercase">
+                            <li class="navbar-item flex-0">
+                                <a href="#" class="icon-16">
+                                    <img src="./images/svg/home-red.svg" alt="">
+                                </a>
+                            </li>
+                            <li class="navbar-item">
+                                <a href="#">Tin tức</a>
+                            </li>
+                            <li class="navbar-item">
+                                <a href="#">Xiển Dương Phật Pháp</a>
+                            </li>
+                            <li class="navbar-item">
+                                <a href="#">Đức Phật</a>
+                            </li>
+                            <li class="navbar-item">
+                                <a href="#">Kinh Sách</a>
+                            </li>
+                            <li class="navbar-item">
+                                <a href="#">Giáo hội</a>
+                            </li>
+                            <li class="navbar-item">
+                                <a href="#">Media</a>
+                            </li>
+                            <li class="navbar-item">
+                                <a href="#">Môi trường</a>
+                            </li>
+                        </ul>
+                        <div class="navbar-scroll-icon js__navbarIcon">
+                            <img src="./images/svg/arrow-next-gray-2.svg" alt="">
+                        </div>
+                    </div>
+                    <!-- end navbar menu mb -->
+                </div>
+            </div>
+            <!-- end mb -->
+
+        </header>
+        <!-- end header -->
+        <!-- main -->
+        <main id="main" class="main">
+            <!-- primary -->
+            <section class="detail-hanh-huong-tour-primary relative z-10 bg-white">
+                <div class="detail-hanh-huong-tour-primary__container w-1220 w-md-500 relative py-20 pt-md-0">
+                    <!-- article -->
+                    <div class="article over-hidden border-10 border-md-0 relative">
+                        <!-- img -->
+                        <div class="article-img">
+                            <!-- pc -->
+                            <div class="d-3xl-block d-md-none">
+                                <img src="./images/bg-5.png" alt="" class="w-full h-auto">
+                            </div>
+                            <!-- end pc -->
+                            <!-- mb -->
+                            <div class="d-3xl-none d-md-block">
+                                <img src="./images/bg-5-mb.png" alt="" class="w-full h-auto">
+                            </div>
+                            <!-- end mb -->
+                        </div>
+                        <!-- end img -->
+                        <!-- content -->
+                        <div class="article-content article-content-bottom absolute inset-0 p-40 p-md-15 relative d-3xl-flex flex-column">
+                            <h1 class="article-title fs-32 fs-md-20 fw-600 text-white">
+                                <span>Bồ Đề Đạo Tràng (Bodh Gaya) – Thánh Địa Thành Đạo Của Đức Phật</span>
+                            </h1>
+                            
+                            <div class="breadcrumb-quaternary fs-14 fs-md-14 text-white mt-15 mt-md-0 pt-md-4">
+                                <ul class="breadcrumb-quaternary-container">
+                                    <li class="breadcrumb-quaternary__item">
+                                        <a href="#" class="breadcrumb-quaternary-link">Trang chủ</a>
+                                    </li>
+                                    <li class="breadcrumb-quaternary__item">
+                                        <a href="#" class="breadcrumb-quaternary-link">Hành trình đất phật</a>
+                                    </li>
+                                    <li class="breadcrumb-quaternary__item">
+                                        <a href="#" class="breadcrumb-quaternary-link">Thông tin hành hương</a>
+                                    </li>
+                                    <li class="breadcrumb-quaternary__item">
+                                        <a href="#" class="breadcrumb-quaternary-link">Gợi ý tour</a>
+                                    </li>
+                                    <li class="breadcrumb-quaternary__item">
+                                        <a href="#" class="breadcrumb-quaternary-link">Đại chiêm bái tứ động tâm: Ấn Độ - Nepal</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- end content -->
+                    </div>
+                    <!-- end article -->
+                </div>
+            </section>
+            <!-- end primary -->
+
+            <!-- secondary -->
+            <section class="detail-hanh-huong-tour-secondary relative z-20 w-wrapper bg-white">
+                <div class="detail-hanh-huong-tour-secondary__container relative z-10 w-1220 w-md-500 py-24 pb-md-20 pt-md-10">
+                    <!-- content -->
+                    <div class="detail-hanh-huong-tour-secondary__content block-tertiary">
+                        <!-- left -->
+                        <div class="detail-hanh-huong-tour-secondary__left block-tertiary__left">
+                            <!-- box seventeen -->
+                            <div class="box-seventeen mb-40 mb-md-30 relative">
+                                <!-- content -->
+                                <div class="box-seventeen__content relative bg-linear-red-993-25 border-10 p-30 py-md-20 px-md-15 js__fullContentContainer">
+                                    <div class="detail-content js__fullContentDetail">
+                                        <div id="explus-editor">
+                                            
+                                            <p>Từ xưa, hình tượng Đức Phật đã là chủ đề trung tâm của nghệ thuật tạo hình Phật giáo trong phong thủy, người Phật tử luôn cần có hình ảnh Ngài để chiêm ngưỡng, đảnh lễ, cúng dường và noi gương. Phải kể đến những hình ảnh quen thuộc như tượng Phật Quan Âm, tượng Phật Di Lặc, tượng Phật Thiên Thủ Thiên Nhãn, tượng Phật Chuẩn Đề,…Tuy nhiên, rất nhiều Phật tử nhầm lẫn giữa hình tượng hai vị Bồ Tát: Chuẩn Đề và Phật Quan Âm Thiên Thủ Thiên Nhãn.</p>
+                                            <p>Dựa trên những kiến thức về Phật giáo, Vật phẩm Phật giáo xin chia sẻ những thông tin và cách phân biệt hai mẫu tượng Phật Chuẩn Đề, tượng Phật Thiên Thủ Thiên Nhãn chính xác nhất.</p>
+                                            <h2>1. Sự khác nhau về hình tướng</h2>
+                                            <p> Thiên Thủ Thiên Nhãn Bồ tát và Chuẩn Đề Bồ tát là hai vị Bồ tát có hình tướng khá tương tự nhau, nếu không hiểu rõ về các Ngài thì rất dễ bị nhầm lẫn. Nhiều người còn cho rằng Thiên Thủ Thiên Nhãn Bồ tát và Chuẩn Đề Bồ tát là một, thế nhưng đây là hai vị Bồ tát khác nhau, chỉ có hình tượng được mô tả khá giống nhau mà thôi.</p>
+                                            <h3>Về phần đầu</h3>
+                                            <p>Tôn tượng Thiên thủ Thiên Nhãn có khuôn mặt đầy đặn, cân đối, mặt tròn, mắt mở 3/4 nhìn xuống, mũi thon thẳng, miệng nhỏ, cổ cao, tóc buông sau lưng, Ngài đội mũ được trang trí cầu kỳ, tinh tế. Phần đầu của Ngài có 11 khuôn mặt, tượng trưng cho 11 quả vị giác ngộ, các khuôn mặt trên tôn tượng được sắp xếp theo 5 tầng, biểu trưng cho ngũ trí Phật. Gồm: Phần trên cùng là tượng trưng của Pháp thân - Đức Phật A Di Đà, biểu tượng cho chính đẳng giác; Tầng thứ hai là Báo Thân - Đức Kim Cương Thủ, biểu thị cho tướng phẫn nộ chính, tức Bất không thành tựu Phật ở Phương Nam; Ba tầng dưới cùng là biểu tượng của Hoá thân, tương ứng với 9 đầu còn lại. Ngài có 9 khuôn mặt: 3 khuôn mặt ở giữa biểu trưng cho Đại viên cảnh trí, tức Đức Phật A Súc Bệ ở phương Đông, ba khuôn mặt này đại từ đại bi, thấy chúng sinh làm thiện mà sinh tâm an lạc. Còn 3 khuôn mặt bên phải thì biểu tượng cho năng lực thuyết pháp của Đức Phật A Di Đà ở Phương Tây. Và cuối cùng là ba khuôn mặt phía bên trái biểu thị cho sự bình đẳng tính trí, hàng phục ngã ác của đức Bảo Sinh Phật ở phương Nam; ba khuôn mặt này tướng phẫn nộ vì thấy chúng sinh làm ác, đồng thời để hàng phục những chúng sinh ngang cường khó độ.<a href="#">least $3 billion.</a></p>
+                                            
+                                            <h2>2. Sự khác nhau về ý nghĩa hình tượng</h2>
+                                            <p> Thiên Thủ Thiên Nhãn Bồ tát và Chuẩn Đề Bồ tát là hai vị Bồ tát có hình tướng khá tương tự nhau, nếu không hiểu rõ về các Ngài thì rất dễ bị nhầm lẫn. Nhiều người còn cho rằng Thiên Thủ Thiên Nhãn Bồ tát và Chuẩn Đề Bồ tát là một, thế nhưng đây là hai vị Bồ tát khác nhau, chỉ có hình tượng được mô tả khá giống nhau mà thôi.</p>
+                                            <h3>Về phần đầu</h3>
+                                            <p>Tôn tượng Thiên thủ Thiên Nhãn có khuôn mặt đầy đặn, cân đối, mặt tròn, mắt mở 3/4 nhìn xuống, mũi thon thẳng, miệng nhỏ, cổ cao, tóc buông sau lưng, Ngài đội mũ được trang trí cầu kỳ, tinh tế. Phần đầu của Ngài có 11 khuôn mặt, tượng trưng cho 11 quả vị giác ngộ, các khuôn mặt trên tôn tượng được sắp xếp theo 5 tầng, biểu trưng cho ngũ trí Phật. Gồm: Phần trên cùng là tượng trưng của Pháp thân - Đức Phật A Di Đà, biểu tượng cho chính đẳng giác; Tầng thứ hai là Báo Thân - Đức Kim Cương Thủ, biểu thị cho tướng phẫn nộ chính, tức Bất không thành tựu Phật ở Phương Nam; Ba tầng dưới cùng là biểu tượng của Hoá thân, tương ứng với 9 đầu còn lại. Ngài có 9 khuôn mặt: 3 khuôn mặt ở giữa biểu trưng cho Đại viên cảnh trí, tức Đức Phật A Súc Bệ ở phương Đông, ba khuôn mặt này đại từ đại bi, thấy chúng sinh làm thiện mà sinh tâm an lạc. Còn 3 khuôn mặt bên phải thì biểu tượng cho năng lực thuyết pháp của Đức Phật A Di Đà ở Phương Tây. Và cuối cùng là ba khuôn mặt phía bên trái biểu thị cho sự bình đẳng tính trí, hàng phục ngã ác của đức Bảo Sinh Phật ở phương Nam; ba khuôn mặt này tướng phẫn nộ vì thấy chúng sinh làm ác, đồng thời để hàng phục những chúng sinh ngang cường khó độ.<a href="#">least $3 billion.</a></p>
+                                            
+    
+                                        </div>
+                                    </div>
+                                    <div class="see-full js__seeFullContentContainer absolute">
+                                        <div class="d-3xl-flex items-center justify-center">
+                                            <div class="btn-tertiary d-3xl-flex items-center justify-center text-gray-4d see-full-content fs-16 fs-md-15 fw-400 uppercase js__seeFullContent p-20 pointer">
+                                                <span>Xem thêm</span>
+                                                <div class="icon flex-0 icon-16 ml-10">
+                                                    <img src="./images/svg/arrow-down-c.svg" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end content -->
+                            </div>
+                            <!-- end box seventeen -->
+
+                            <!-- box nineteen -->
+                            <div class="box-nineteen px-20 pt-10 px-md-15 shadow border-10 over-hidden border-md-0 bg-white mb-40 mb-md-30 mr-md--15 ml-md--15">
+                                <div class="box-nineteen__list js__activeList d-3xl-flex flex-wrap">
+                                    <a href="#box-diem-nhan" class="box-nineteen__link d-3xl-block fs-18 fs-md-16 pb-15 pb-md-4 mt-10 fw-600 text-gray-55 active js__activeItem mr-30 mr-md-20">Điểm nhấn</a>
+                                    <a href="#box-thong-tin-chuyen-di" class="box-nineteen__link d-3xl-block fs-18 fs-md-16 pb-15 pb-md-4 mt-10 fw-600 text-gray-55 js__activeItem mr-30 mr-md-20">Thông tin chuyến đi</a>
+                                    <a href="#box-lich-khoi-hanh" class="box-nineteen__link d-3xl-block fs-18 fs-md-16 pb-15 pb-md-4 mt-10 fw-600 text-gray-55 js__activeItem mr-30 mr-md-20">Lịch khởi hành</a>
+                                    <a href="#box-lich-trinh" class="box-nineteen__link d-3xl-block fs-18 fs-md-16 pb-15 pb-md-4 mt-10 fw-600 text-gray-55 js__activeItem mr-30 mr-md-20">Lịch trình</a>
+                                    <a href="#box-thong-tin-luu-y" class="box-nineteen__link d-3xl-block fs-18 fs-md-16 pb-15 pb-md-4 mt-10 fw-600 text-gray-55 js__activeItem mr-30 mr-md-20">Thông tin lưu ý</a>
+                                </div>
+                            </div>
+                            <!-- end box nineteen -->
+
+                            <!-- box twenty -->
+                            <div class="box-twenty mb-40 mb-md-30 scroll-target" id="box-diem-nhan">
+                                <!-- container -->
+                                <div class="box-twenty__container p-30 p-md-15 border-e4 border-10">
+                                    <!-- heading -->
+                                    <h2 class="box-twenty__heading text-red-ab2 fw-600 fs-26 fs-md-18 uppercase mb-20">ĐIỂM NHẤN NỔI BẬT CỦA HÀNH TRÌNH</h2>
+                                    <!-- end heading -->
+
+                                    <!-- content -->
+                                    <div class="box-twenty__content">
+                                        <div class="content-list-primary fs-17 fs-md-15 text-gray-33">
+                                            <ul>
+                                                <li><strong>Chiêm bái trọn vẹn Tứ Đại Động Tâm: </strong>Hành trình kết nối trọn vẹn 4 thánh địa thiêng liêng nhất gắn liền với cuộc đời Đức Phật (Lâm Tỳ Ni, Bồ Đề Đạo Tràng, Lộc Uyển, Câu Thi Na).</li>
+                                                <li><strong>Trải nghiệm tâm linh sâu sắc: </strong>Dành trọn thời gian tĩnh lặng để đảnh lễ, tọa thiền và cảm nhận nguồn năng lượng an tịnh tại cội Bồ Đề cùng các di tích ngàn năm.</li>
+                                                <li><strong>Lưu trú an tĩnh & tiện nghi: </strong>Hệ thống khách sạn / viện lưu trú đạt chuẩn, vị trí ưu tiên gần các điểm hành hương chính giúp tối ưu thời gian di chuyển và đảm bảo sức khỏe cho Phật tử.</li>
+                                                <li><strong>Ẩm thực chay thanh tịnh: </strong>Thực đơn món chay thuần tịnh, đảm bảo vệ sinh an toàn thực phẩm, được chế biến nhẹ nhàng, hợp khẩu vị người Việt trong suốt chuyến đi.</li>
+                                                <li><strong>Lịch trình thong dong & nguyên bản: </strong>Tối ưu nhịp độ di chuyển, hướng đến giá trị trải nghiệm văn hóa – Phật học chân thực thay vì chạy theo các điểm đến thương mại.</li>
+                                                <li><strong>Nuôi dưỡng bình an nội tâm: </strong>Không chỉ là một chuyến đi địa lý, đây là hành trình quay về bên trong để tìm lại sự thanh thản và chuyển hóa tâm thức.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <!-- end content -->
+                                </div>
+                                <!-- end container -->
+                            </div>
+                            <!-- end box twenty -->
+                            <!-- box twenty-one -->
+                            <div class="box-twenty-one mb-40 mb-md-30 scroll-target" id="box-thong-tin-chuyen-di">
+                                <!-- container -->
+                                <div class="box-twenty-one__container p-30 p-md-15 border-e4 border-10">
+                                    <!-- heading -->
+                                    <h2 class="box-twenty-one__heading text-red-ab2 fw-600 fs-26 fs-md-18 uppercase mb-20">Thông tin chuyến đi</h2>
+                                    <!-- end heading -->
+
+                                    <!-- content -->
+                                    <div class="box-twenty-one__content mt-30 mt-md-20">
+                                        <!-- article list -->
+                                        <div class="article-list d-3xl-grid col-3 col-md-2 gap-30 gap-md-20">
+                                            <!-- article -->
+                                            <div class="article flex-1 text-center d-3xl-flex flex-column items-center justify-center">
+                                                <!-- img -->
+                                                <a href="#" class="article-img mx-auto flex-0 w-80px w-md-60px over-hidden bg-white d-3xl-flex items-center justify-center">
+                                                    <img src="./images/svg/icon-red-circle-1.svg" alt="" class="">
+                                                </a>
+                                                <!-- end img -->
+                                                <!-- content -->
+                                                <div class="article-content mt-10 text-center">
+                                                    <h3 class="article-title fs-17 fs-md-16 text-gray-33 fw-600 text-center">
+                                                        <span>Thời gian</span>
+                                                    </h3>
+                                                    <div class="article-des fs-17 fs-md-15 text-gray-33 fw-400 text-center pt-4">
+                                                        <p>10 ngày 9 đêm (nhịp độ thong dong, phù hợp sức khỏe)</p>
+                                                    </div>
+                                                </div>
+                                                <!-- end content -->
+                                            </div>
+                                            <!-- end article -->
+                                            <!-- article -->
+                                            <div class="article flex-1 text-center d-3xl-flex flex-column items-center justify-center">
+                                                <!-- img -->
+                                                <a href="#" class="article-img mx-auto flex-0 w-80px w-md-60px over-hidden bg-white d-3xl-flex items-center justify-center">
+                                                    <img src="./images/svg/icon-red-circle-2.svg" alt="" class="">
+                                                </a>
+                                                <!-- end img -->
+                                                <!-- content -->
+                                                <div class="article-content mt-10 text-center">
+                                                    <h3 class="article-title fs-17 fs-md-16 text-gray-33 fw-600 text-center">
+                                                        <span>Điểm đến</span>
+                                                    </h3>
+                                                    <div class="article-des fs-17 fs-md-15 text-gray-33 fw-400 text-center pt-4">
+                                                        <p>Tứ Đại Động Tâm (Lâm Tỳ Ni, Bồ Đề Đạo Tràng, Lộc Uyển, Câu Thi Na) và các thánh địa lân cận.</p>
+                                                    </div>
+                                                </div>
+                                                <!-- end content -->
+                                            </div>
+                                            <!-- end article -->
+                                            <!-- article -->
+                                            <div class="article flex-1 text-center d-3xl-flex flex-column items-center justify-center">
+                                                <!-- img -->
+                                                <a href="#" class="article-img mx-auto flex-0 w-80px w-md-60px over-hidden bg-white d-3xl-flex items-center justify-center">
+                                                    <img src="./images/svg/icon-red-circle-3.svg" alt="" class="">
+                                                </a>
+                                                <!-- end img -->
+                                                <!-- content -->
+                                                <div class="article-content mt-10 text-center">
+                                                    <h3 class="article-title fs-17 fs-md-16 text-gray-33 fw-600 text-center">
+                                                        <span>Phương tiện</span>
+                                                    </h3>
+                                                    <div class="article-des fs-17 fs-md-15 text-gray-33 fw-400 text-center pt-4">
+                                                        <p>Máy bay khứ hồi kết hợp xe du lịch máy lạnh đời mới suốt hành trình.</p>
+                                                    </div>
+                                                </div>
+                                                <!-- end content -->
+                                            </div>
+                                            <!-- end article -->
+                                            <!-- article -->
+                                            <div class="article flex-1 text-center d-3xl-flex flex-column items-center justify-center">
+                                                <!-- img -->
+                                                <a href="#" class="article-img mx-auto flex-0 w-80px w-md-60px over-hidden bg-white d-3xl-flex items-center justify-center">
+                                                    <img src="./images/svg/icon-red-circle-4.svg" alt="" class="">
+                                                </a>
+                                                <!-- end img -->
+                                                <!-- content -->
+                                                <div class="article-content mt-10 text-center">
+                                                    <h3 class="article-title fs-17 fs-md-16 text-gray-33 fw-600 text-center">
+                                                        <span>Lưu trú</span>
+                                                    </h3>
+                                                    <div class="article-des fs-17 fs-md-15 text-gray-33 fw-400 text-center pt-4">
+                                                        <p>Khách sạn / Viện lưu trú 3–4 sao thanh tĩnh, ưu tiên gần các tâm điểm tâm linh</p>
+                                                    </div>
+                                                </div>
+                                                <!-- end content -->
+                                            </div>
+                                            <!-- end article -->
+                                            <!-- article -->
+                                            <div class="article flex-1 text-center d-3xl-flex flex-column items-center justify-center">
+                                                <!-- img -->
+                                                <a href="#" class="article-img mx-auto flex-0 w-80px w-md-60px over-hidden bg-white d-3xl-flex items-center justify-center">
+                                                    <img src="./images/svg/icon-red-circle-5.svg" alt="" class="">
+                                                </a>
+                                                <!-- end img -->
+                                                <!-- content -->
+                                                <div class="article-content mt-10 text-center">
+                                                    <h3 class="article-title fs-17 fs-md-16 text-gray-33 fw-600 text-center">
+                                                        <span>Ẩm thực</span>
+                                                    </h3>
+                                                    <div class="article-des fs-17 fs-md-15 text-gray-33 fw-400 text-center pt-4">
+                                                        <p>100% bữa ăn chay thuần tịnh, đảm bảo vệ sinh và hợp khẩu vị người Việt.</p>
+                                                    </div>
+                                                </div>
+                                                <!-- end content -->
+                                            </div>
+                                            <!-- end article -->
+                                            <!-- article -->
+                                            <div class="article flex-1 text-center d-3xl-flex flex-column items-center justify-center">
+                                                <!-- img -->
+                                                <a href="#" class="article-img mx-auto flex-0 w-80px w-md-60px over-hidden bg-white d-3xl-flex items-center justify-center">
+                                                    <img src="./images/svg/icon-red-circle-6.svg" alt="" class="">
+                                                </a>
+                                                <!-- end img -->
+                                                <!-- content -->
+                                                <div class="article-content mt-10 text-center">
+                                                    <h3 class="article-title fs-17 fs-md-16 text-gray-33 fw-600 text-center">
+                                                        <span>Trải nghiệm</span>
+                                                    </h3>
+                                                    <div class="article-des fs-17 fs-md-15 text-gray-33 fw-400 text-center pt-4">
+                                                        <p>Hành hương chuyên sâu - không chèn các điểm mua sắm hay dịch vụ thương mại.</p>
+                                                    </div>
+                                                </div>
+                                                <!-- end content -->
+                                            </div>
+                                            <!-- end article -->
+                                        </div>
+                                        <!-- end article list -->
+                                    </div>
+                                    <!-- end content -->
+                                </div>
+                                <!-- end container -->
+                            </div>
+                            <!-- end box twenty-one -->
+                            <!-- box twenty-two -->
+                            <div class="box-twenty-two mb-40 mb-md-30 scroll-target" id="box-lich-khoi-hanh">
+                                <!-- container -->
+                                <div class="box-twenty-two__container">
+                                    <!-- heading -->
+                                    <h2 class="box-twenty-two__heading text-red-ab2 fw-600 fs-26 fs-md-18 uppercase mb-20">Lịch trình chuyến đi</h2>
+                                    <!-- end heading -->
+
+                                    <!-- content -->
+                                    <div class="box-twenty-two__content d-3xl-flex d-md-block mt-30 mt-md-20 over-hidden border-10 border-cc">
+                                        <!-- left -->
+                                        <div class="box-twenty-two__left border-r-cc px-20 py-40 p-md-15 flex-0 w-20 w-md-full border-r-md-0 d-md-none">
+                                            <!-- list month -->
+                                            <div class="calendar-month">
+                                                <!-- item -->
+                                                <div class="calendar-month__item js__calendarMonthItem fs-16 fw-500 text-gray-33 mb-16 text-center active">10/2026</div>
+                                                <!-- end item -->
+                                                <!-- item -->
+                                                <div class="calendar-month__item js__calendarMonthItem fs-16 fw-500 text-gray-33 mb-16 text-center">11/2026</div>
+                                                <!-- end item -->
+                                                <!-- item -->
+                                                <div class="calendar-month__item js__calendarMonthItem fs-16 fw-500 text-gray-33 mb-16 text-center">12/2026</div>
+                                                <!-- end item -->
+                                                <!-- item -->
+                                                <div class="calendar-month__item js__calendarMonthItem fs-16 fw-500 text-gray-33 mb-16 text-center">01/2027</div>
+                                                <!-- end item -->
+                                                <!-- item -->
+                                                <div class="calendar-month__item js__calendarMonthItem fs-16 fw-500 text-gray-33 mb-16 text-center">02/2027</div>
+                                                <!-- end item -->
+                                            </div>
+                                            <!-- end list month -->
+                                        </div>
+                                        <!-- end left -->
+                                        <!-- right -->
+                                        <div class="box-twenty-two__right flex-1">
+                                            <!-- calendar box -->
+                                            <div class="calendar-box px-24 px-md-15 py-30 py-md-20 border-b-cc">
+                                                <!-- header -->
+                                                <div class="calendar-header d-3xl-flex items-center justify-center gap-40 gap-md-14">
+                                                    <!-- prev -->
+                                                    <div class="calendar-prev calendar-btn js__calendarPrev">
+                                                        <img src="./images/svg/arrow-prev-gray-3.svg" alt="">
+                                                    </div>
+                                                    <!-- end prev -->
+                                                    <div class="calendar-heade__title bg-red-ab2 py-15 py-md-10 px-40 px-md-30 border-8 border-md-999 uppercase text-white fw-600 text-center flex-0">
+                                                        10 Tháng 10/2026 
+                                                    </div>
+                                                    <!-- next -->
+                                                    <div class="calendar-next calendar-btn  js__calendarPrev">
+                                                        <img src="./images/svg/arrow-next-gray-3.svg" alt="">
+                                                    </div>
+                                                    <!-- end next -->
+                                                </div>
+                                                <!-- end header -->
+                                                <!-- weekdays -->
+                                                <div class="weekdays my-24 d-3xl-grid col-7 gap-8">
+                                                    <div class="weekday-item js__weekdayItem text-red-ab2 fw-600 fs-18 fs-md-16 p-8 text-center d-3xl-flex items-center justify-center">T2</div>
+                                                    <div class="weekday-item js__weekdayItem text-red-ab2 fw-600 fs-18 fs-md-16 p-8 text-center d-3xl-flex items-center justify-center">T3</div>
+                                                    <div class="weekday-item js__weekdayItem text-red-ab2 fw-600 fs-18 fs-md-16 p-8 text-center d-3xl-flex items-center justify-center">T4</div>
+                                                    <div class="weekday-item js__weekdayItem text-red-ab2 fw-600 fs-18 fs-md-16 p-8 text-center d-3xl-flex items-center justify-center">T5</div>
+                                                    <div class="weekday-item js__weekdayItem text-red-ab2 fw-600 fs-18 fs-md-16 p-8 text-center d-3xl-flex items-center justify-center">T6</div>
+                                                    <div class="weekday-item js__weekdayItem text-red-ab2 fw-600 fs-18 fs-md-16 p-8 text-center d-3xl-flex items-center justify-center">T7</div>
+                                                    <div class="weekday-item js__weekdayItem text-red-ab2 fw-600 fs-18 fs-md-16 p-8 text-center d-3xl-flex items-center justify-center">CN</div>
+                                                </div>
+                                                <!-- end weekdays -->
+
+                                                <!-- days box -->
+                                                <div class="days-box d-3xl-grid col-7 gap-8">
+                                                    <!-- day cell -->
+                                                    <div class="day-cell other-month">
+                                                        <span class="day-num">28</span>
+                                                    </div>
+                                                    <!-- end day cell -->
+                                                    <!-- day cell -->
+                                                    <div class="day-cell other-month">
+                                                        <span class="day-num">29</span>
+                                                    </div>
+                                                    <!-- end day cell -->
+                                                    <!-- day cell -->
+                                                    <div class="day-cell other-month">
+                                                        <span class="day-num">30</span>
+                                                    </div>
+                                                    <!-- end day cell -->
+                                                    <!-- day cell -->
+                                                    <div class="day-cell normal-day">
+                                                        <span class="day-num normal-day">1</span>
+                                                    </div>
+                                                    <!-- end day cell -->
+                                                    <!-- day cell -->
+                                                    <div class="day-cell normal-day">
+                                                        <span class="day-num">2</span>
+                                                    </div>
+                                                    <!-- end day cell -->
+                                                    <!-- day cell -->
+                                                    <div class="day-cell normal-day">
+                                                        <span class="day-num">3</span>
+                                                    </div>
+                                                    <!-- end day cell -->
+                                                    <!-- day cell -->
+                                                    <div class="day-cell normal-day">
+                                                        <span class="day-num">4</span>
+                                                    </div>
+                                                    <!-- end day cell -->
+                                                    <!-- day cell -->
+                                                    <div class="day-cell normal-day">
+                                                        <span class="day-num">5</span>
+                                                    </div>
+                                                    <!-- end day cell -->
+                                                    <!-- day cell -->
+                                                    <div class="day-cell normal-day">
+                                                        <span class="day-num">6</span>
+                                                    </div>
+                                                    <!-- end day cell -->
+                                                    <!-- day cell -->
+                                                    <div class="day-cell normal-day">
+                                                        <span class="day-num">7</span>
+                                                    </div>
+                                                    <!-- end day cell -->
+                                                    <!-- day cell -->
+                                                    <div class="day-cell normal-day">
+                                                        <span class="day-num">8</span>
+                                                    </div>
+                                                    <!-- end day cell -->
+                                                    <!-- day cell -->
+                                                    <div class="day-cell normal-day">
+                                                        <span class="day-num">9</span>
+                                                    </div>
+                                                    <!-- end day cell -->
+                                                    <!-- day cell -->
+                                                    <div class="day-cell has-price active">
+                                                        <span class="day-num">10</span>
+                                                        <span class="price-tag">38.900k</span>
+                                                    </div>
+                                                    <!-- end day cell -->
+                                                    <!-- day cell -->
+                                                    <div class="day-cell normal-day">
+                                                        <span class="day-num">11</span>
+                                                    </div>
+                                                    <!-- end day cell -->
+                                                    <!-- day cell -->
+                                                    <div class="day-cell normal-day">
+                                                        <span class="day-num">12</span>
+                                                    </div>
+                                                    <!-- end day cell -->
+                                                    <!-- day cell -->
+                                                    <div class="day-cell normal-day">
+                                                        <span class="day-num">13</span>
+                                                    </div>
+                                                    <!-- end day cell -->
+                                                    <!-- day cell -->
+                                                    <div class="day-cell normal-day">
+                                                        <span class="day-num">14</span>
+                                                    </div>
+                                                    <!-- end day cell -->
+                                                    <!-- day cell -->
+                                                    <div class="day-cell normal-day">
+                                                        <span class="day-num">15</span>
+                                                    </div>
+                                                    <!-- end day cell -->
+                                                    <!-- day cell -->
+                                                    <div class="day-cell normal-day">
+                                                        <span class="day-num">16</span>
+                                                    </div>
+                                                    <!-- end day cell -->
+                                                    <!-- day cell -->
+                                                    <div class="day-cell normal-day">
+                                                        <span class="day-num">17</span>
+                                                    </div>
+                                                    <!-- end day cell -->
+                                                    <!-- day cell -->
+                                                    <div class="day-cell normal-day">
+                                                        <span class="day-num">18</span>
+                                                    </div>
+                                                    <!-- end day cell -->
+                                                    <!-- day cell -->
+                                                    <div class="day-cell normal-day">
+                                                        <span class="day-num">19</span>
+                                                    </div>
+                                                    <!-- end day cell -->
+                                                    <!-- day cell -->
+                                                    <div class="day-cell has-price">
+                                                        <span class="day-num">20</span>
+                                                        <span class="price-tag">38.900k</span>
+                                                    </div>
+                                                    <!-- end day cell -->
+                                                    <!-- day cell -->
+                                                    <div class="day-cell normal-day">
+                                                        <span class="day-num">21</span>
+                                                    </div>
+                                                    <!-- end day cell -->
+                                                    <!-- day cell -->
+                                                    <div class="day-cell normal-day">
+                                                        <span class="day-num">22</span>
+                                                    </div>
+                                                    <!-- end day cell -->
+                                                    <!-- day cell -->
+                                                    <div class="day-cell normal-day">
+                                                        <span class="day-num">23</span>
+                                                    </div>
+                                                    <!-- end day cell -->
+                                                    <!-- day cell -->
+                                                    <div class="day-cell normal-day">
+                                                        <span class="day-num">24</span>
+                                                    </div>
+                                                    <!-- end day cell -->
+                                                    <!-- day cell -->
+                                                    <div class="day-cell normal-day">
+                                                        <span class="day-num">25</span>
+                                                    </div>
+                                                    <!-- end day cell -->
+                                                    <!-- day cell -->
+                                                    <div class="day-cell normal-day">
+                                                        <span class="day-num">26</span>
+                                                    </div>
+                                                    <!-- end day cell -->
+                                                    <!-- day cell -->
+                                                    <div class="day-cell normal-day">
+                                                        <span class="day-num">27</span>
+                                                    </div>
+                                                    <!-- end day cell -->
+                                                    <!-- day cell -->
+                                                    <div class="day-cell normal-day">
+                                                        <span class="day-num">28</span>
+                                                    </div>
+                                                    <!-- end day cell -->
+                                                    <!-- day cell -->
+                                                    <div class="day-cell normal-day">
+                                                        <span class="day-num">29</span>
+                                                    </div>
+                                                    <!-- end day cell -->
+                                                    <!-- day cell -->
+                                                    <div class="day-cell has-price">
+                                                        <span class="day-num">30</span>
+                                                        <span class="price-tag">38.900k</span>
+                                                    </div>
+                                                    <!-- end day cell -->
+                                                    <!-- day cell -->
+                                                    <div class="day-cell normal-day">
+                                                        <span class="day-num">31</span>
+                                                    </div>
+                                                    <!-- end day cell -->
+                                                    <!-- day cell -->
+                                                    <div class="day-cell other-month">
+                                                        <span class="day-num">1</span>
+                                                    </div>
+                                                    <!-- end day cell -->
+                                                </div>
+                                                <!-- end days box -->
+                                            </div>
+                                            <!-- end calendar box -->
+
+                                            <!-- quantity human -->
+                                            <div class="quantity-human-box px-24 px-md-15 py-30 pt-md-20 pb-md-12 border-b-cc">
+                                                <div class="quantity-human-box__list d-3xl-grid col-2 gap-16 d-md-block">
+                                                    <!-- item -->
+                                                    <div class="quantity-human-box__item border-8 over-hidden bg-gray-f5 px-20 py-16 py-md-10 px-md-15 d-3xl-flex items-center justify-between gap-20 mb-md-12">
+                                                        <!-- left -->
+                                                        <div class="item-left flex-1">
+                                                            <span class="d-3xl-block fs-17 fs-md-16 text-gray-33 fw-600">Người lớn</span>
+                                                            <span class="d-3xl-block fs-14 fs-md-13 text-gray-33 fw-400 mt-4">Trên 12 tuổi</span>
+                                                        </div>
+                                                        <!-- end left -->
+                                                        <!-- right -->
+                                                        <div class="item-right flex-0">
+                                                            <div class="quantity-wrap js__incremental">
+                                                                <button class="increment js__increment">+</button>
+                                                                <input type="number" value="0" class="number js__numberValue" min="0" max="100">
+                                                                <button class="deincrement js__deincrement">-</button>
+                                                            </div>
+                                                        </div>
+                                                        <!-- end right -->
+                                                    </div>
+                                                    <!-- end item -->
+                                                    <!-- item -->
+                                                    <div class="quantity-human-box__item border-8 over-hidden bg-gray-f5 px-20 py-16 py-md-10 px-md-15 d-3xl-flex items-center justify-between gap-20 mb-md-12">
+                                                        <!-- left -->
+                                                        <div class="item-left flex-1">
+                                                            <span class="d-3xl-block fs-17 fs-md-16 text-gray-33 fw-600">Trẻ em</span>
+                                                            <span class="d-3xl-block fs-14 fs-md-13 text-gray-33 fw-400 mt-4">Từ 5 đến 11 tuổi</span>
+                                                        </div>
+                                                        <!-- end left -->
+                                                        <!-- right -->
+                                                        <div class="item-right flex-0">
+                                                            <div class="quantity-wrap js__incremental">
+                                                                <button class="increment js__increment">+</button>
+                                                                <input type="number" value="0" class="number js__numberValue" min="0" max="100">
+                                                                <button class="deincrement js__deincrement">-</button>
+                                                            </div>
+                                                        </div>
+                                                        <!-- end right -->
+                                                    </div>
+                                                    <!-- end item -->
+                                                    <!-- item -->
+                                                    <div class="quantity-human-box__item border-8 over-hidden bg-gray-f5 px-20 py-16 py-md-10 px-md-15 d-3xl-flex items-center justify-between gap-20 mb-md-12">
+                                                        <!-- left -->
+                                                        <div class="item-left flex-1">
+                                                            <span class="d-3xl-block fs-17 fs-md-16 text-gray-33 fw-600">Trẻ nhỏ</span>
+                                                            <span class="d-3xl-block fs-14 fs-md-13 text-gray-33 fw-400 mt-4">Từ 2 đến 5 tuổi</span>
+                                                        </div>
+                                                        <!-- end left -->
+                                                        <!-- right -->
+                                                        <div class="item-right flex-0">
+                                                            <div class="quantity-wrap js__incremental">
+                                                                <button class="increment js__increment">+</button>
+                                                                <input type="number" value="0" class="number js__numberValue" min="0" max="100">
+                                                                <button class="deincrement js__deincrement">-</button>
+                                                            </div>
+                                                        </div>
+                                                        <!-- end right -->
+                                                    </div>
+                                                    <!-- end item -->
+                                                    <!-- item -->
+                                                    <div class="quantity-human-box__item border-8 over-hidden bg-gray-f5 px-20 py-16 py-md-10 px-md-15 d-3xl-flex items-center justify-between gap-20 mb-md-12">
+                                                        <!-- left -->
+                                                        <div class="item-left flex-1">
+                                                            <span class="d-3xl-block fs-17 fs-md-16 text-gray-33 fw-600">Em bé</span>
+                                                            <span class="d-3xl-block fs-14 fs-md-13 text-gray-33 fw-400 mt-4">Dưới 2 tuổi</span>
+                                                        </div>
+                                                        <!-- end left -->
+                                                        <!-- right -->
+                                                        <div class="item-right flex-0">
+                                                            <div class="quantity-wrap js__incremental">
+                                                                <button class="increment js__increment">+</button>
+                                                                <input type="number" value="0" class="number js__numberValue" min="0" max="100">
+                                                                <button class="deincrement js__deincrement">-</button>
+                                                            </div>
+                                                        </div>
+                                                        <!-- end right -->
+                                                    </div>
+                                                    <!-- end item -->
+                                                </div>
+                                            </div>
+                                            <!-- end quantity human -->
+                                            <!-- Flight information -->
+                                            <div class="flight-information-box px-24 px-md-15 py-30 py-md-20">
+                                                <h3 class="text-gray-33 fs-20 fs-md-16 fw-bold uppercase mb-12">Thông tin chuyến đi</h3>
+                                                <div class="flight-information-box__content mt-12">
+                                                    <!-- list -->
+                                                    <div class="flight-information-box__list d-3xl-grid col-2 gap-40 d-md-block">
+                                                        <!-- item -->
+                                                        <div class="flight-information-box__item mt-md-20">
+                                                            <h3 class="flight-information-box__title fs-17 fs-md-16 text-gray-33"><strong>Ngày đi:</strong> 20/08/2026</h3>
+                                                            <div class="flight-information-box__item-list d-3xl-flex items-center gap-10 mt-10">
+                                                                <div class="list-time flex-0">
+                                                                    <span class="time-one d-3xl-block fs-17 fs-md-16 text-red-ab2 fw-400">23:00</span>
+                                                                    <span class="time-two d-3xl-block fs-17 fs-md-14 text-red-ab2 fw-400">SGN</span>
+                                                                </div>
+                                                                <div class="list-turn flex-1">
+                                                                    <span class="turn-one d-3xl-block border-b-dashed-ab2 my-8"></span>
+                                                                    <span class="turn-two d-3xl-block fs-17 fs-md-14 text-gray-33 text-center fw-400">VJ828</span>
+                                                                </div>
+                                                                <div class="list-time flex-0">
+                                                                    <span class="time-one d-3xl-block fs-17 fs-md-16 text-red-ab2 fw-400">07:40 (+1)</span>
+                                                                    <span class="time-two d-3xl-block fs-17 fs-md-14 text-red-ab2 fw-400">BKR</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- end item -->
+                                                        <!-- item -->
+                                                        <div class="flight-information-box__item mt-md-20">
+                                                            <h3 class="flight-information-box__title fs-17 fs-md-16 text-gray-33"><strong>Ngày đi:</strong> 20/08/2026</h3>
+                                                            <div class="flight-information-box__item-list d-3xl-flex items-center gap-10 mt-10">
+                                                                <div class="list-time flex-0">
+                                                                    <span class="time-one d-3xl-block fs-17 fs-md-16 text-red-ab2 fw-400">23:00</span>
+                                                                    <span class="time-two d-3xl-block fs-17 fs-md-14 text-red-ab2 fw-400">SGN</span>
+                                                                </div>
+                                                                <div class="list-turn flex-1">
+                                                                    <span class="turn-one d-3xl-block border-b-dashed-ab2 my-8"></span>
+                                                                    <span class="turn-two d-3xl-block fs-17 fs-md-14 text-gray-33 text-center fw-400">VJ828</span>
+                                                                </div>
+                                                                <div class="list-time flex-0">
+                                                                    <span class="time-one d-3xl-block fs-17 fs-md-16 text-red-ab2 fw-400">07:40 (+1)</span>
+                                                                    <span class="time-two d-3xl-block fs-17 fs-md-14 text-red-ab2 fw-400">BKR</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- end item -->
+                                                    </div>
+                                                    <!-- end list -->
+                                                </div>
+                                            </div>
+                                            <!-- end Flight information -->
+                                        </div>
+                                        <!-- end right -->
+                                    </div>
+                                    <!-- end content -->
+                                </div>
+                                <!-- end container -->
+                            </div>
+                            <!-- end box twenty-two -->
+                            <!-- box twenty-three -->
+                            <div class="box-twenty-three mb-40 mb-md-30 scroll-target" id="box-lich-trinh">
+                                <!-- container -->
+                                <div class="box-twenty-three__container">
+                                    <!-- heading -->
+                                    <h2 class="box-twenty-three__heading text-red-ab2 fw-600 fs-26 fs-md-18 uppercase mb-20">Lịch trình</h2>
+                                    <!-- end heading -->
+
+                                    <!-- content -->
+                                    <div class="box-twenty-three__content mt-30 mt-md-20">
+                                        <!-- article list -->
+                                        <div class="article-list">
+                                            <!-- article -->
+                                            <div class="article article-collapse js__collapseContainer mb-15 active">
+                                                <!-- heading -->
+                                                <div class="article-heading d-3xl-flex items-center justify-between gap-20 px-30 py-20 p-md-15 border-10 border-ab2 over-hidden pointer js__collapse">
+                                                    <!-- title -->
+                                                    <h3 class="article-title flex-1 fs-17 fs-md-15 text-gray-33 fw-400 uppercase">
+                                                        <span><strong>NGÀY 1:</strong> TP.HCM / Hà Nội – Delhi – Varanasi (Khởi hành)</span>
+                                                    </h3>
+                                                    <!-- end title -->
+                                                    <div class="article-icon flex-0">
+                                                        <img src="./images/svg/arrow-down-gray.svg" alt="">
+                                                    </div>
+                                                </div>
+                                                <!-- end heading -->
+
+                                                <!-- content -->
+                                                <div class="article-content p-30 p-md-15 border-10 over-hidden border-cc mt-15">
+                                                    <div class="article-des text-gray-33 fs-17 fs-md-15"></div>
+                                                    <p>Quý khách tập trung tại sân bay làm thủ tục đáp chuyến bay sang Ấn Độ. Đến nơi, xe và hướng dẫn viên đón đoàn về khách sạn nhận phòng nghỉ ngơi, chuẩn bị năng lượng cho hành trình chiêm bái thiêng liêng.</p>
+                                                </div>
+                                                <!-- end content -->
+                                            </div>
+                                            <!-- end article -->
+                                            <!-- article -->
+                                            <div class="article article-collapse js__collapseContainer mb-15">
+                                                <!-- heading -->
+                                                <div class="article-heading d-3xl-flex items-center justify-between gap-20 px-30 py-20 p-md-15 border-10 border-ab2 over-hidden pointer js__collapse">
+                                                    <!-- title -->
+                                                    <h3 class="article-title flex-1 fs-17 fs-md-15 text-gray-33 fw-400 uppercase">
+                                                        <span><strong>NGÀY 1:</strong> TP.HCM / Hà Nội – Delhi – Varanasi (Khởi hành)</span>
+                                                    </h3>
+                                                    <!-- end title -->
+                                                    <div class="article-icon flex-0">
+                                                        <img src="./images/svg/arrow-down-gray.svg" alt="">
+                                                    </div>
+                                                </div>
+                                                <!-- end heading -->
+
+                                                <!-- content -->
+                                                <div class="article-content p-30 p-md-15 border-10 over-hidden border-cc mt-15">
+                                                    <div class="article-des text-gray-33 fs-17 fs-md-15"></div>
+                                                    <p>Quý khách tập trung tại sân bay làm thủ tục đáp chuyến bay sang Ấn Độ. Đến nơi, xe và hướng dẫn viên đón đoàn về khách sạn nhận phòng nghỉ ngơi, chuẩn bị năng lượng cho hành trình chiêm bái thiêng liêng.</p>
+                                                </div>
+                                                <!-- end content -->
+                                            </div>
+                                            <!-- end article -->
+                                            <!-- article -->
+                                            <div class="article article-collapse js__collapseContainer mb-15">
+                                                <!-- heading -->
+                                                <div class="article-heading d-3xl-flex items-center justify-between gap-20 px-30 py-20 p-md-15 border-10 border-ab2 over-hidden pointer js__collapse">
+                                                    <!-- title -->
+                                                    <h3 class="article-title flex-1 fs-17 fs-md-15 text-gray-33 fw-400 uppercase">
+                                                        <span><strong>NGÀY 1:</strong> TP.HCM / Hà Nội – Delhi – Varanasi (Khởi hành)</span>
+                                                    </h3>
+                                                    <!-- end title -->
+                                                    <div class="article-icon flex-0">
+                                                        <img src="./images/svg/arrow-down-gray.svg" alt="">
+                                                    </div>
+                                                </div>
+                                                <!-- end heading -->
+
+                                                <!-- content -->
+                                                <div class="article-content p-30 p-md-15 border-10 over-hidden border-cc mt-15">
+                                                    <div class="article-des text-gray-33 fs-17 fs-md-15"></div>
+                                                    <p>Quý khách tập trung tại sân bay làm thủ tục đáp chuyến bay sang Ấn Độ. Đến nơi, xe và hướng dẫn viên đón đoàn về khách sạn nhận phòng nghỉ ngơi, chuẩn bị năng lượng cho hành trình chiêm bái thiêng liêng.</p>
+                                                </div>
+                                                <!-- end content -->
+                                            </div>
+                                            <!-- end article -->
+                                            <!-- article -->
+                                            <div class="article article-collapse js__collapseContainer mb-15">
+                                                <!-- heading -->
+                                                <div class="article-heading d-3xl-flex items-center justify-between gap-20 px-30 py-20 p-md-15 border-10 border-ab2 over-hidden pointer js__collapse">
+                                                    <!-- title -->
+                                                    <h3 class="article-title flex-1 fs-17 fs-md-15 text-gray-33 fw-400 uppercase">
+                                                        <span><strong>NGÀY 1:</strong> TP.HCM / Hà Nội – Delhi – Varanasi (Khởi hành)</span>
+                                                    </h3>
+                                                    <!-- end title -->
+                                                    <div class="article-icon flex-0">
+                                                        <img src="./images/svg/arrow-down-gray.svg" alt="">
+                                                    </div>
+                                                </div>
+                                                <!-- end heading -->
+
+                                                <!-- content -->
+                                                <div class="article-content p-30 p-md-15 border-10 over-hidden border-cc mt-15">
+                                                    <div class="article-des text-gray-33 fs-17 fs-md-15"></div>
+                                                    <p>Quý khách tập trung tại sân bay làm thủ tục đáp chuyến bay sang Ấn Độ. Đến nơi, xe và hướng dẫn viên đón đoàn về khách sạn nhận phòng nghỉ ngơi, chuẩn bị năng lượng cho hành trình chiêm bái thiêng liêng.</p>
+                                                </div>
+                                                <!-- end content -->
+                                            </div>
+                                            <!-- end article -->
+                                            <!-- article -->
+                                            <div class="article article-collapse js__collapseContainer mb-15">
+                                                <!-- heading -->
+                                                <div class="article-heading d-3xl-flex items-center justify-between gap-20 px-30 py-20 p-md-15 border-10 border-ab2 over-hidden pointer js__collapse">
+                                                    <!-- title -->
+                                                    <h3 class="article-title flex-1 fs-17 fs-md-15 text-gray-33 fw-400 uppercase">
+                                                        <span><strong>NGÀY 1:</strong> TP.HCM / Hà Nội – Delhi – Varanasi (Khởi hành)</span>
+                                                    </h3>
+                                                    <!-- end title -->
+                                                    <div class="article-icon flex-0">
+                                                        <img src="./images/svg/arrow-down-gray.svg" alt="">
+                                                    </div>
+                                                </div>
+                                                <!-- end heading -->
+
+                                                <!-- content -->
+                                                <div class="article-content p-30 p-md-15 border-10 over-hidden border-cc mt-15">
+                                                    <div class="article-des text-gray-33 fs-17 fs-md-15"></div>
+                                                    <p>Quý khách tập trung tại sân bay làm thủ tục đáp chuyến bay sang Ấn Độ. Đến nơi, xe và hướng dẫn viên đón đoàn về khách sạn nhận phòng nghỉ ngơi, chuẩn bị năng lượng cho hành trình chiêm bái thiêng liêng.</p>
+                                                </div>
+                                                <!-- end content -->
+                                            </div>
+                                            <!-- end article -->
+                                            <!-- article -->
+                                            <div class="article article-collapse js__collapseContainer mb-15">
+                                                <!-- heading -->
+                                                <div class="article-heading d-3xl-flex items-center justify-between gap-20 px-30 py-20 p-md-15 border-10 border-ab2 over-hidden pointer js__collapse">
+                                                    <!-- title -->
+                                                    <h3 class="article-title flex-1 fs-17 fs-md-15 text-gray-33 fw-400 uppercase">
+                                                        <span><strong>NGÀY 1:</strong> TP.HCM / Hà Nội – Delhi – Varanasi (Khởi hành)</span>
+                                                    </h3>
+                                                    <!-- end title -->
+                                                    <div class="article-icon flex-0">
+                                                        <img src="./images/svg/arrow-down-gray.svg" alt="">
+                                                    </div>
+                                                </div>
+                                                <!-- end heading -->
+
+                                                <!-- content -->
+                                                <div class="article-content p-30 p-md-15 border-10 over-hidden border-cc mt-15">
+                                                    <div class="article-des text-gray-33 fs-17 fs-md-15"></div>
+                                                    <p>Quý khách tập trung tại sân bay làm thủ tục đáp chuyến bay sang Ấn Độ. Đến nơi, xe và hướng dẫn viên đón đoàn về khách sạn nhận phòng nghỉ ngơi, chuẩn bị năng lượng cho hành trình chiêm bái thiêng liêng.</p>
+                                                </div>
+                                                <!-- end content -->
+                                            </div>
+                                            <!-- end article -->
+                                            <!-- article -->
+                                            <div class="article article-collapse js__collapseContainer mb-15">
+                                                <!-- heading -->
+                                                <div class="article-heading d-3xl-flex items-center justify-between gap-20 px-30 py-20 p-md-15 border-10 border-ab2 over-hidden pointer js__collapse">
+                                                    <!-- title -->
+                                                    <h3 class="article-title flex-1 fs-17 fs-md-15 text-gray-33 fw-400 uppercase">
+                                                        <span><strong>NGÀY 1:</strong> TP.HCM / Hà Nội – Delhi – Varanasi (Khởi hành)</span>
+                                                    </h3>
+                                                    <!-- end title -->
+                                                    <div class="article-icon flex-0">
+                                                        <img src="./images/svg/arrow-down-gray.svg" alt="">
+                                                    </div>
+                                                </div>
+                                                <!-- end heading -->
+
+                                                <!-- content -->
+                                                <div class="article-content p-30 p-md-15 border-10 over-hidden border-cc mt-15">
+                                                    <div class="article-des text-gray-33 fs-17 fs-md-15"></div>
+                                                    <p>Quý khách tập trung tại sân bay làm thủ tục đáp chuyến bay sang Ấn Độ. Đến nơi, xe và hướng dẫn viên đón đoàn về khách sạn nhận phòng nghỉ ngơi, chuẩn bị năng lượng cho hành trình chiêm bái thiêng liêng.</p>
+                                                </div>
+                                                <!-- end content -->
+                                            </div>
+                                            <!-- end article -->
+                                            <!-- article -->
+                                            <div class="article article-collapse js__collapseContainer mb-15">
+                                                <!-- heading -->
+                                                <div class="article-heading d-3xl-flex items-center justify-between gap-20 px-30 py-20 p-md-15 border-10 border-ab2 over-hidden pointer js__collapse">
+                                                    <!-- title -->
+                                                    <h3 class="article-title flex-1 fs-17 fs-md-15 text-gray-33 fw-400 uppercase">
+                                                        <span><strong>NGÀY 1:</strong> TP.HCM / Hà Nội – Delhi – Varanasi (Khởi hành)</span>
+                                                    </h3>
+                                                    <!-- end title -->
+                                                    <div class="article-icon flex-0">
+                                                        <img src="./images/svg/arrow-down-gray.svg" alt="">
+                                                    </div>
+                                                </div>
+                                                <!-- end heading -->
+
+                                                <!-- content -->
+                                                <div class="article-content p-30 p-md-15 border-10 over-hidden border-cc mt-15">
+                                                    <div class="article-des text-gray-33 fs-17 fs-md-15"></div>
+                                                    <p>Quý khách tập trung tại sân bay làm thủ tục đáp chuyến bay sang Ấn Độ. Đến nơi, xe và hướng dẫn viên đón đoàn về khách sạn nhận phòng nghỉ ngơi, chuẩn bị năng lượng cho hành trình chiêm bái thiêng liêng.</p>
+                                                </div>
+                                                <!-- end content -->
+                                            </div>
+                                            <!-- end article -->
+                                            <!-- article -->
+                                            <div class="article article-collapse js__collapseContainer mb-15">
+                                                <!-- heading -->
+                                                <div class="article-heading d-3xl-flex items-center justify-between gap-20 px-30 py-20 p-md-15 border-10 border-ab2 over-hidden pointer js__collapse">
+                                                    <!-- title -->
+                                                    <h3 class="article-title flex-1 fs-17 fs-md-15 text-gray-33 fw-400 uppercase">
+                                                        <span><strong>NGÀY 1:</strong> TP.HCM / Hà Nội – Delhi – Varanasi (Khởi hành)</span>
+                                                    </h3>
+                                                    <!-- end title -->
+                                                    <div class="article-icon flex-0">
+                                                        <img src="./images/svg/arrow-down-gray.svg" alt="">
+                                                    </div>
+                                                </div>
+                                                <!-- end heading -->
+
+                                                <!-- content -->
+                                                <div class="article-content p-30 p-md-15 border-10 over-hidden border-cc mt-15">
+                                                    <div class="article-des text-gray-33 fs-17 fs-md-15"></div>
+                                                    <p>Quý khách tập trung tại sân bay làm thủ tục đáp chuyến bay sang Ấn Độ. Đến nơi, xe và hướng dẫn viên đón đoàn về khách sạn nhận phòng nghỉ ngơi, chuẩn bị năng lượng cho hành trình chiêm bái thiêng liêng.</p>
+                                                </div>
+                                                <!-- end content -->
+                                            </div>
+                                            <!-- end article -->
+                                            <!-- article -->
+                                            <div class="article article-collapse js__collapseContainer mb-15">
+                                                <!-- heading -->
+                                                <div class="article-heading d-3xl-flex items-center justify-between gap-20 px-30 py-20 p-md-15 border-10 border-ab2 over-hidden pointer js__collapse">
+                                                    <!-- title -->
+                                                    <h3 class="article-title flex-1 fs-17 fs-md-15 text-gray-33 fw-400 uppercase">
+                                                        <span><strong>NGÀY 1:</strong> TP.HCM / Hà Nội – Delhi – Varanasi (Khởi hành)</span>
+                                                    </h3>
+                                                    <!-- end title -->
+                                                    <div class="article-icon flex-0">
+                                                        <img src="./images/svg/arrow-down-gray.svg" alt="">
+                                                    </div>
+                                                </div>
+                                                <!-- end heading -->
+
+                                                <!-- content -->
+                                                <div class="article-content p-30 p-md-15 border-10 over-hidden border-cc mt-15">
+                                                    <div class="article-des text-gray-33 fs-17 fs-md-15"></div>
+                                                    <p>Quý khách tập trung tại sân bay làm thủ tục đáp chuyến bay sang Ấn Độ. Đến nơi, xe và hướng dẫn viên đón đoàn về khách sạn nhận phòng nghỉ ngơi, chuẩn bị năng lượng cho hành trình chiêm bái thiêng liêng.</p>
+                                                </div>
+                                                <!-- end content -->
+                                            </div>
+                                            <!-- end article -->
+                                            <!-- article -->
+                                            <div class="article article-collapse js__collapseContainer mb-15">
+                                                <!-- heading -->
+                                                <div class="article-heading d-3xl-flex items-center justify-between gap-20 px-30 py-20 p-md-15 border-10 border-ab2 over-hidden pointer js__collapse">
+                                                    <!-- title -->
+                                                    <h3 class="article-title flex-1 fs-17 fs-md-15 text-gray-33 fw-400 uppercase">
+                                                        <span><strong>NGÀY 1:</strong> TP.HCM / Hà Nội – Delhi – Varanasi (Khởi hành)</span>
+                                                    </h3>
+                                                    <!-- end title -->
+                                                    <div class="article-icon flex-0">
+                                                        <img src="./images/svg/arrow-down-gray.svg" alt="">
+                                                    </div>
+                                                </div>
+                                                <!-- end heading -->
+
+                                                <!-- content -->
+                                                <div class="article-content p-30 p-md-15 border-10 over-hidden border-cc mt-15">
+                                                    <div class="article-des text-gray-33 fs-17 fs-md-15"></div>
+                                                    <p>Quý khách tập trung tại sân bay làm thủ tục đáp chuyến bay sang Ấn Độ. Đến nơi, xe và hướng dẫn viên đón đoàn về khách sạn nhận phòng nghỉ ngơi, chuẩn bị năng lượng cho hành trình chiêm bái thiêng liêng.</p>
+                                                </div>
+                                                <!-- end content -->
+                                            </div>
+                                            <!-- end article -->
+                                        </div>
+                                        <!-- end article list -->
+                                    </div>
+                                    <!-- end content -->
+                                </div>
+                                <!-- end container -->
+                            </div>
+                            <!-- end box twenty-three -->
+                            <!-- box twenty-four -->
+                            <div class="box-twenty-four mb-40 mb-md-30 scroll-target" id="box-thong-tin-luu-y">
+                                <!-- container -->
+                                <div class="box-twenty-four__container">
+                                    <!-- heading -->
+                                    <h2 class="box-twenty-four__heading text-red-ab2 fw-600 fs-26 fs-md-18 uppercase mb-20">Thông tin lưu ý</h2>
+                                    <!-- end heading -->
+
+                                    <!-- content -->
+                                    <div class="box-twenty-four__content mt-30 mt-md-20">
+                                        <!-- twenty-four-primary -->
+                                        <div class="twenty-four-primary p-30 px-md-15 py-md-20 bg-blue-e9 border-10 over-hidden mb-30">
+                                            <h3 class="fs-22 fs-md-18 text-gray-33 fw-600 mb-15">Dịch vụ đã bao gồm</h3>
+                                            <div class="content-list-primary fs-17 fs-md-15 text-gray-33">
+                                                <ul>
+                                                    <li>Xe liên vận 3 nước theo chương trình</li>
+                                                    <li>Ăn sáng & Phí xuất nhập cảnh 2 nước Việt Nam – Ấn Độ - Nepal</li>
+                                                    <li>Ăn uống: Ăn chay</li>
+                                                    <li>Phí tham quan 1 lần theo chương trình</li>
+                                                    <li>Khách sạn 3 -4  sao tại Ấn Độ - Nepal</li>
+                                                    <li>Bảo hiểm ngộ độc thực phẩm & tai nạn du lịch mức 220.00.000 đ/ vụ (không áp dụng cho các bệnh lý đã có trước)</li>
+                                                </ul>
+                                                <p><strong>Lưu ý: </strong>Người từ đủ 80 tuổi trở lên không mua được bảo hiểm (Theo quy định của luật bảo hiểm)</p>
+                                            </div>
+                                        </div>
+                                        <!-- end twenty-four-primary -->
+                                        <!-- twenty-four-primary -->
+                                        <div class="twenty-four-primary p-30 px-md-15 py-md-20 bg-red-ffeaea border-10 over-hidden mb-30">
+                                            <h3 class="fs-22 fs-md-18 text-gray-33 fw-600 mb-15">Dịch vụ chưa bao gồm</h3>
+                                            <div class="content-list-primary fs-17 fs-md-15 text-gray-33">
+                                                <ul>
+                                                    <li><strong>TIP cho tổ phục vụ: </strong>$4/khách/ngày (Qui định)</li>
+                                                    <li><strong>Visa nhập cảnh Ấn Độ - Nepal đối với người nước ngoài: </strong>$35/visa</li>
+                                                    <li>Visa tái nhập Việt Nam (E-visa) đối với người nước ngoài</li>
+                                                    <li>Các chi phí khác ngoài phần đã bao gồm</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <!-- end twenty-four-primary -->
+                                        <!-- article list -->
+                                        <div class="article-list">
+                                            <!-- article -->
+                                            <div class="article article-collapse js__collapseContainer mb-15">
+                                                <!-- heading -->
+                                                <div class="article-heading d-3xl-flex items-center justify-between gap-20 px-30 py-20 p-md-15 border-10 border-ab2 over-hidden pointer js__collapse">
+                                                    <!-- title -->
+                                                    <h3 class="article-title flex-1 fs-17 fs-md-15 text-gray-33 fw-400 uppercase">
+                                                        <span><strong>Lưu ý về trẻ em</strong></span>
+                                                    </h3>
+                                                    <!-- end title -->
+                                                    <div class="article-icon flex-0">
+                                                        <img src="./images/svg/arrow-down-gray.svg" alt="">
+                                                    </div>
+                                                </div>
+                                                <!-- end heading -->
+
+                                                <!-- content -->
+                                                <div class="article-content p-30 p-md-15 border-10 over-hidden border-cc mt-15">
+                                                    <div class="article-des text-gray-33 fs-17 fs-md-15"></div>
+                                                    <p>Quý khách tập trung tại sân bay làm thủ tục đáp chuyến bay sang Ấn Độ. Đến nơi, xe và hướng dẫn viên đón đoàn về khách sạn nhận phòng nghỉ ngơi, chuẩn bị năng lượng cho hành trình chiêm bái thiêng liêng.</p>
+                                                </div>
+                                                <!-- end content -->
+                                            </div>
+                                            <!-- end article -->
+                                            <!-- article -->
+                                            <div class="article article-collapse js__collapseContainer mb-15">
+                                                <!-- heading -->
+                                                <div class="article-heading d-3xl-flex items-center justify-between gap-20 px-30 py-20 p-md-15 border-10 border-ab2 over-hidden pointer js__collapse">
+                                                    <!-- title -->
+                                                    <h3 class="article-title flex-1 fs-17 fs-md-15 text-gray-33 fw-400 uppercase">
+                                                        <span><strong>Lưu ý về trẻ em</strong></span>
+                                                    </h3>
+                                                    <!-- end title -->
+                                                    <div class="article-icon flex-0">
+                                                        <img src="./images/svg/arrow-down-gray.svg" alt="">
+                                                    </div>
+                                                </div>
+                                                <!-- end heading -->
+
+                                                <!-- content -->
+                                                <div class="article-content p-30 p-md-15 border-10 over-hidden border-cc mt-15">
+                                                    <div class="article-des text-gray-33 fs-17 fs-md-15"></div>
+                                                    <p>Quý khách tập trung tại sân bay làm thủ tục đáp chuyến bay sang Ấn Độ. Đến nơi, xe và hướng dẫn viên đón đoàn về khách sạn nhận phòng nghỉ ngơi, chuẩn bị năng lượng cho hành trình chiêm bái thiêng liêng.</p>
+                                                </div>
+                                                <!-- end content -->
+                                            </div>
+                                            <!-- end article -->
+                                            <!-- article -->
+                                            <div class="article article-collapse js__collapseContainer mb-15">
+                                                <!-- heading -->
+                                                <div class="article-heading d-3xl-flex items-center justify-between gap-20 px-30 py-20 p-md-15 border-10 border-ab2 over-hidden pointer js__collapse">
+                                                    <!-- title -->
+                                                    <h3 class="article-title flex-1 fs-17 fs-md-15 text-gray-33 fw-400 uppercase">
+                                                        <span><strong>Lưu ý về trẻ em</strong></span>
+                                                    </h3>
+                                                    <!-- end title -->
+                                                    <div class="article-icon flex-0">
+                                                        <img src="./images/svg/arrow-down-gray.svg" alt="">
+                                                    </div>
+                                                </div>
+                                                <!-- end heading -->
+
+                                                <!-- content -->
+                                                <div class="article-content p-30 p-md-15 border-10 over-hidden border-cc mt-15">
+                                                    <div class="article-des text-gray-33 fs-17 fs-md-15"></div>
+                                                    <p>Quý khách tập trung tại sân bay làm thủ tục đáp chuyến bay sang Ấn Độ. Đến nơi, xe và hướng dẫn viên đón đoàn về khách sạn nhận phòng nghỉ ngơi, chuẩn bị năng lượng cho hành trình chiêm bái thiêng liêng.</p>
+                                                </div>
+                                                <!-- end content -->
+                                            </div>
+                                            <!-- end article -->
+                                            <!-- article -->
+                                            <div class="article article-collapse js__collapseContainer mb-15">
+                                                <!-- heading -->
+                                                <div class="article-heading d-3xl-flex items-center justify-between gap-20 px-30 py-20 p-md-15 border-10 border-ab2 over-hidden pointer js__collapse">
+                                                    <!-- title -->
+                                                    <h3 class="article-title flex-1 fs-17 fs-md-15 text-gray-33 fw-400 uppercase">
+                                                        <span><strong>Lưu ý về trẻ em</strong></span>
+                                                    </h3>
+                                                    <!-- end title -->
+                                                    <div class="article-icon flex-0">
+                                                        <img src="./images/svg/arrow-down-gray.svg" alt="">
+                                                    </div>
+                                                </div>
+                                                <!-- end heading -->
+
+                                                <!-- content -->
+                                                <div class="article-content p-30 p-md-15 border-10 over-hidden border-cc mt-15">
+                                                    <div class="article-des text-gray-33 fs-17 fs-md-15"></div>
+                                                    <p>Quý khách tập trung tại sân bay làm thủ tục đáp chuyến bay sang Ấn Độ. Đến nơi, xe và hướng dẫn viên đón đoàn về khách sạn nhận phòng nghỉ ngơi, chuẩn bị năng lượng cho hành trình chiêm bái thiêng liêng.</p>
+                                                </div>
+                                                <!-- end content -->
+                                            </div>
+                                            <!-- end article -->
+                                           
+                                        </div>
+                                        <!-- end article list -->
+                                    </div>
+                                    <!-- end content -->
+                                </div>
+                                <!-- end container -->
+                            </div>
+                            <!-- end box twenty-four -->
+                        </div>
+                        <!-- end left -->
+                        <!-- right -->
+                        <div class="detail-hanh-huong-tour-secondary__right block-tertiary__right">
+                            <!-- twenty-five -->
+                            <div class="box-twenty-five mb-15 border-10 border-md-0 bg-red-ab2 over-hidden p-20 p-md-12 js__collapseContainer">
+                                <!-- down -->
+                                <div class="box-twenty-five__icon-down d-3xl-none d-md-flex items-center justify-center js__collapse">
+                                    <img src="./images/svg/arrow-down-gray.svg" alt="">
+                                </div>
+                                <!-- end down -->
+
+                                <!-- heading -->
+                                <h2 class="box-twenty-five__heading d-3xl-flex items-center gap-10 flex-wrap pb-20 mb-20 mb-md-0 pb-md-10 border-b-w-35 border-b-md-none">
+                                    <span class="fs-20 fs-md-16 text-white fw-400">Giá từ</span>
+                                    <span class="fs-28 fs-md-20 text-white fw-bold">38.900.000đ</span>
+                                </h2>
+                                <!-- end heading -->
+                                <!-- content -->
+                                <div class="box-twenty-five__content">
+                                    <!-- row-one -->
+                                    <div class="box-twenty-five__row-one">
+                                        <!-- info list -->
+                                        <div class="box-twenty-five__info-list">
+                                            <!-- item -->
+                                            <div class="box-twenty-five__info-item d-3xl-flex items-center justify-between gap-20 mb-10">
+                                                <span class="fw-500 text-white fs-16">Mã tour</span>
+                                                <span class="fw-bold text-white fs-16 uppercase">NNTNG6342</span>
+                                            </div>
+                                            <!-- end item -->
+                                        </div>
+                                        <!-- end info list -->
+                                    </div>
+                                    <!-- end row-one -->
+                                    <!-- row-two -->
+                                    <div class="box-twenty-five__row-two pb-15 mb-15 border-b-w-35">
+                                        <!-- info list -->
+                                        <div class="box-twenty-five__info-list">
+                                            <!-- item -->
+                                            <div class="box-twenty-five__info-item d-3xl-flex items-center justify-between gap-20 mb-10">
+                                                <span class="fw-500 text-white fs-16">Nơi khởi hành</span>
+                                                <span class="fw-bold text-white fs-16 uppercase">TP Hồ Chí Minh</span>
+                                            </div>
+                                            <!-- end item -->
+                                            <!-- item -->
+                                            <div class="box-twenty-five__info-item d-3xl-flex items-center justify-between gap-20 mb-10">
+                                                <span class="fw-500 text-white fs-16">Thời gian</span>
+                                                <span class="fw-bold text-white fs-16 uppercase">10 Ngày 9 đêm</span>
+                                            </div>
+                                            <!-- end item -->
+                                            <!-- item -->
+                                            <div class="box-twenty-five__info-item d-3xl-flex items-center justify-between gap-20 mb-10">
+                                                <span class="fw-500 text-white fs-16">Ngày khởi hành</span>
+                                                <span class="fw-bold text-white fs-16 uppercase">10/10/2026</span>
+                                            </div>
+                                            <!-- end item -->
+                                        </div>
+                                        <!-- end info list -->
+                                    </div>
+                                    <!-- end row-two -->
+                                    <!-- row-three -->
+                                    <div class="box-twenty-five__row-three pb-15 mb-15 border-b-w-35">
+                                        <h3 class="fs-18 text-white fw-bold uppercase mb-10">Giá tour</h3>
+                                        <!-- info list -->
+                                        <div class="box-twenty-five__info-list">
+                                            <!-- item -->
+                                            <div class="box-twenty-five__info-item d-3xl-flex items-center justify-between gap-20 mb-10">
+                                                <div class="d-3xl-flex flex-column">
+                                                    <span class="fw-500 text-white fs-16 d-3xl-block">Người lớn</span>
+                                                    <span class="fw-400 text-white fs-14 d-3xl-block">Từ 12 tuổi trở lên</span>
+                                                </div>
+                                                <span class="fw-bold text-white fs-16 uppercase">26.900.000đ</span>
+                                            </div>
+                                            <!-- end item -->
+                                            <!-- item -->
+                                            <div class="box-twenty-five__info-item d-3xl-flex items-center justify-between gap-20 mb-10">
+                                                <div class="d-3xl-flex flex-column">
+                                                    <span class="fw-400 text-white fs-16 d-3xl-block">Phụ thu phòng đơn</span>
+                                                </div>
+                                                <span class="fw-bold text-white fs-16 uppercase">26.900.000đ</span>
+                                            </div>
+                                            <!-- end item -->
+                                        </div>
+                                        <!-- end info list -->
+                                    </div>
+                                    <!-- end row-three -->
+                                    <!-- row-four -->
+                                    <div class="box-twenty-five__row-four w-full">
+                                        <a href="#" class="fs-16 fs-md-15 fw-500 text-red-ab2 uppercase border-10 border-md-999 p-12 w-full bg-white d-3xl-flex items-center justify-center">Đặt tour</a>
+                                    </div>
+                                    <!-- end row-four -->
+                                    <!-- row-five -->
+                                    <div class="box-twenty-five__row-five d-md-none mt-20">
+                                        <h3 class="fs-18 text-white fw-bold uppercase mb-10">Hotline</h3>
+                                        <!-- info list -->
+                                        <div class="box-twenty-five__info-list">
+                                            <!-- item -->
+                                            <div class="box-twenty-five__info-item d-3xl-flex items-center justify-between gap-20 mb-10">
+                                                <div class="d-3xl-flex flex-column">
+                                                    <span class="fw-bold text-white fs-16 d-3xl-block">(028)1234 1234</span>
+                                                    <span class="fw-400 text-white fs-14 d-3xl-block">TP. Hồ Chí Minh</span>
+                                                </div>
+                                                <div class="d-3xl-flex flex-column">
+                                                    <span class="fw-bold text-white fs-16 d-3xl-block">(028)1234 1234</span>
+                                                    <span class="fw-400 text-white fs-14 d-3xl-block">TP. Hồ Chí Minh</span>
+                                                </div>
+                                            </div>
+                                            <!-- end item -->
+                                        </div>
+                                        <!-- end info list -->
+                                    </div>
+                                    <!-- end row-five -->
+
+                                </div>
+                                <!-- end content -->
+                            </div>
+                            <!-- end twenty-five -->
+                            <!-- twenty-six -->
+                            <div class="box-twenty-six"></div>
+                            <!-- end twenty-six -->
+                        </div>
+                        <!-- end right -->
+                    </div>
+                    <!-- end content -->
+                </div>
+            </section>
+            <!-- end secondary -->
+
+            <!-- tertiary -->
+            <section class="detail-hanh-huong-tour-tertiary relative z-20 over-hidden w-wrapper bg-gray-f5">
+                <div class="detail-hanh-huong-tour-tertiary__container relative z-10 w-1220 w-md-500 py-3xl-60 py-md-30">
+                    <!-- content -->
+                    <div class="detail-hanh-huong-tour-tertiary__content relative">
+                        <!-- box ten -->
+                        <div class="box-ten">
+                            <!-- container -->
+                            <div class="box-ten__container">
+                                <!-- heading -->
+                                <div class="box-ten__heading pb-10 border-b-md-dotted-ce d-3xl-flex items-center justify-between gap-20 flex-wrap">
+                                    <h2 class="fs-32 fs-md-20 text-gray-33 fw-bold">Tham khảo tour khác</h2>
+                                </div>
+                                <!-- end heading -->
+                                <!-- content pc-->
+                                <div class="box-ten__content pb-20 d-3xl-block d-md-none">
+                                    <!-- slide -->
+                                    <div class="box-ten__slide swiper-button-primary same-height w-full relative js__twoSlidesContainer mt-24">
+                                        <div class="swiper js__twoSlide">
+                                            <div class="swiper-wrapper">
+                                                <!-- slide -->
+                                                <div class="swiper-slide">
+                                                    <!-- article -->
+                                                    <div class="article">
+                                                        <!-- img -->
+                                                        <div class="article-img">
+                                                            <a href="#" class="ratio-2x1 over-hidden border-10 border-sm-5">
+                                                                <img src="./images/2.jpg" alt="">
+                                                            </a>
+                                                        </div>
+                                                        <!-- end img -->
+                                                        <!-- content -->
+                                                        <div class="article-content pt-15">
+                                                            <!-- title -->
+                                                            <h3 class="article-title fs-20 fs-md-16 fw-600 text-red-993">
+                                                                <a href="#">Đại Chiêm Bái Tứ Động Tâm: Ấn Độ - Nepal (10N9Đ)</a>
+                                                            </h3>
+                                                            <!-- end title -->
+                                                            <!-- info -->
+                                                            <div class="article-info mt-10">
+                                                                <ul>
+                                                                    <li>Thuyết pháp, tụng kinh & thỉnh chuông cùng Sư thầy dẫn đoàn</li>
+                                                                    <li>Phục vụ ăn chay 100% suốt hành trình</li>
+                                                                    <li>Bay thẳng Vietnam Airlines | Khách sạn 4 sao tiêu chuẩn</li>
+                                                                </ul>
+                                                            </div>
+                                                            <!-- end info -->
+                                                            <!-- additional -->
+                                                            <div class="article-additional mt-12">
+                                                                <!-- item -->
+                                                                <div class="additional-item my-4 d-3xl-flex items-center gap-8">
+                                                                    <div class="flex-0 icon">
+                                                                        <img src="./images/svg/icon-house-gray.svg" alt="">
+                                                                    </div>
+                                                                    <div class="flex-1 text fs-17 fs-md-15 text-gray-33">
+                                                                        <span>Đơn vị tổ chức: </span>
+                                                                        <strong>Vietravel</strong>
+                                                                    </div>
+                                                                </div>
+                                                                <!-- end item -->
+                                                                <!-- item -->
+                                                                <div class="additional-item my-4 d-3xl-flex items-center gap-8">
+                                                                    <div class="flex-0 icon">
+                                                                        <img src="./images/svg/icon-$-gray.svg" alt="">
+                                                                    </div>
+                                                                    <div class="flex-1 text fs-17 fs-md-15 text-gray-33">
+                                                                        <span>Giá trọn gói: </span>
+                                                                        <strong>38.500.000 VNĐ</strong>
+                                                                    </div>
+                                                                </div>
+                                                                <!-- end item -->
+                                                            </div>
+                                                            <!-- end additional -->
+
+                                                            <!-- btn -->
+                                                            <div class="article-btn d-3xl-flex items-center justify-between gap-24 gap-md-12 mt-20">
+                                                                <a href="#" class="article-btn__link flex-1 d-3xl-flex items-center btn btn-secondary fs-17 fs-md-14">
+                                                                    <span class="text flex-1 d-3xl-inline-block">Xem lịch trình chi tiết</span>
+                                                                </a>
+                                                                <a href="#" class="article-btn__link flex-1 d-3xl-flex items-center btn fs-17 fs-md-14">
+                                                                    <span class="text flex-1 d-3xl-inline-block">Tư vấn qua SĐT/Zalo</span>
+                                                                </a>
+                                                            </div>
+                                                            <!-- end btn -->
+                                                        </div>
+                                                        <!-- end content -->
+                                                    </div>
+                                                    <!-- end article -->
+                                                </div>
+                                                <!-- end slide -->
+                                                <!-- slide -->
+                                                <div class="swiper-slide">
+                                                    <!-- article -->
+                                                    <div class="article">
+                                                        <!-- img -->
+                                                        <div class="article-img">
+                                                            <a href="#" class="ratio-2x1 over-hidden border-10 border-sm-5">
+                                                                <img src="./images/2.jpg" alt="">
+                                                            </a>
+                                                        </div>
+                                                        <!-- end img -->
+                                                        <!-- content -->
+                                                        <div class="article-content pt-15">
+                                                            <!-- title -->
+                                                            <h3 class="article-title fs-20 fs-md-16 fw-600 text-red-993">
+                                                                <a href="#">Đại Chiêm Bái Tứ Động Tâm: Ấn Độ - Nepal (10N9Đ)</a>
+                                                            </h3>
+                                                            <!-- end title -->
+                                                            <!-- info -->
+                                                            <div class="article-info mt-10">
+                                                                <ul>
+                                                                    <li>Thuyết pháp, tụng kinh & thỉnh chuông cùng Sư thầy dẫn đoàn</li>
+                                                                    <li>Phục vụ ăn chay 100% suốt hành trình</li>
+                                                                    <li>Bay thẳng Vietnam Airlines | Khách sạn 4 sao tiêu chuẩn</li>
+                                                                </ul>
+                                                            </div>
+                                                            <!-- end info -->
+                                                            <!-- additional -->
+                                                            <div class="article-additional mt-12">
+                                                                <!-- item -->
+                                                                <div class="additional-item my-4 d-3xl-flex items-center gap-8">
+                                                                    <div class="flex-0 icon">
+                                                                        <img src="./images/svg/icon-house-gray.svg" alt="">
+                                                                    </div>
+                                                                    <div class="flex-1 text fs-17 fs-md-15 text-gray-33">
+                                                                        <span>Đơn vị tổ chức: </span>
+                                                                        <strong>Vietravel</strong>
+                                                                    </div>
+                                                                </div>
+                                                                <!-- end item -->
+                                                                <!-- item -->
+                                                                <div class="additional-item my-4 d-3xl-flex items-center gap-8">
+                                                                    <div class="flex-0 icon">
+                                                                        <img src="./images/svg/icon-$-gray.svg" alt="">
+                                                                    </div>
+                                                                    <div class="flex-1 text fs-17 fs-md-15 text-gray-33">
+                                                                        <span>Giá trọn gói: </span>
+                                                                        <strong>38.500.000 VNĐ</strong>
+                                                                    </div>
+                                                                </div>
+                                                                <!-- end item -->
+                                                            </div>
+                                                            <!-- end additional -->
+
+                                                            <!-- btn -->
+                                                            <div class="article-btn d-3xl-flex items-center justify-between gap-24 gap-md-12 mt-20">
+                                                                <a href="#" class="article-btn__link flex-1 d-3xl-flex items-center btn btn-secondary fs-17 fs-md-14">
+                                                                    <span class="text flex-1 d-3xl-inline-block">Xem lịch trình chi tiết</span>
+                                                                </a>
+                                                                <a href="#" class="article-btn__link flex-1 d-3xl-flex items-center btn fs-17 fs-md-14">
+                                                                    <span class="text flex-1 d-3xl-inline-block">Tư vấn qua SĐT/Zalo</span>
+                                                                </a>
+                                                            </div>
+                                                            <!-- end btn -->
+                                                        </div>
+                                                        <!-- end content -->
+                                                    </div>
+                                                    <!-- end article -->
+                                                </div>
+                                                <!-- end slide -->
+                                                <!-- slide -->
+                                                <div class="swiper-slide">
+                                                    <!-- article -->
+                                                    <div class="article">
+                                                        <!-- img -->
+                                                        <div class="article-img">
+                                                            <a href="#" class="ratio-2x1 over-hidden border-10 border-sm-5">
+                                                                <img src="./images/2.jpg" alt="">
+                                                            </a>
+                                                        </div>
+                                                        <!-- end img -->
+                                                        <!-- content -->
+                                                        <div class="article-content pt-15">
+                                                            <!-- title -->
+                                                            <h3 class="article-title fs-20 fs-md-16 fw-600 text-red-993">
+                                                                <a href="#">Đại Chiêm Bái Tứ Động Tâm: Ấn Độ - Nepal (10N9Đ)</a>
+                                                            </h3>
+                                                            <!-- end title -->
+                                                            <!-- info -->
+                                                            <div class="article-info mt-10">
+                                                                <ul>
+                                                                    <li>Thuyết pháp, tụng kinh & thỉnh chuông cùng Sư thầy dẫn đoàn</li>
+                                                                    <li>Phục vụ ăn chay 100% suốt hành trình</li>
+                                                                    <li>Bay thẳng Vietnam Airlines | Khách sạn 4 sao tiêu chuẩn</li>
+                                                                </ul>
+                                                            </div>
+                                                            <!-- end info -->
+                                                            <!-- additional -->
+                                                            <div class="article-additional mt-12">
+                                                                <!-- item -->
+                                                                <div class="additional-item my-4 d-3xl-flex items-center gap-8">
+                                                                    <div class="flex-0 icon">
+                                                                        <img src="./images/svg/icon-house-gray.svg" alt="">
+                                                                    </div>
+                                                                    <div class="flex-1 text fs-17 fs-md-15 text-gray-33">
+                                                                        <span>Đơn vị tổ chức: </span>
+                                                                        <strong>Vietravel</strong>
+                                                                    </div>
+                                                                </div>
+                                                                <!-- end item -->
+                                                                <!-- item -->
+                                                                <div class="additional-item my-4 d-3xl-flex items-center gap-8">
+                                                                    <div class="flex-0 icon">
+                                                                        <img src="./images/svg/icon-$-gray.svg" alt="">
+                                                                    </div>
+                                                                    <div class="flex-1 text fs-17 fs-md-15 text-gray-33">
+                                                                        <span>Giá trọn gói: </span>
+                                                                        <strong>38.500.000 VNĐ</strong>
+                                                                    </div>
+                                                                </div>
+                                                                <!-- end item -->
+                                                            </div>
+                                                            <!-- end additional -->
+
+                                                            <!-- btn -->
+                                                            <div class="article-btn d-3xl-flex items-center justify-between gap-24 gap-md-12 mt-20">
+                                                                <a href="#" class="article-btn__link flex-1 d-3xl-flex items-center btn btn-secondary fs-17 fs-md-14">
+                                                                    <span class="text flex-1 d-3xl-inline-block">Xem lịch trình chi tiết</span>
+                                                                </a>
+                                                                <a href="#" class="article-btn__link flex-1 d-3xl-flex items-center btn fs-17 fs-md-14">
+                                                                    <span class="text flex-1 d-3xl-inline-block">Tư vấn qua SĐT/Zalo</span>
+                                                                </a>
+                                                            </div>
+                                                            <!-- end btn -->
+                                                        </div>
+                                                        <!-- end content -->
+                                                    </div>
+                                                    <!-- end article -->
+                                                </div>
+                                                <!-- end slide -->
+                                            </div>
+                                        </div>
+                                        <div class="swiper-button-next"></div>
+                                        <div class="swiper-button-prev"></div>
+                                    </div>
+                                    <!-- end slide -->
+                                </div>
+                                <!-- end content pc-->
+
+                                <!-- content mb -->
+                                <div class="box-ten__content d-3xl-none d-md-block pb-40 pagi-primary pagi-primary--gray js__twoSlidesContainer relative">
+                                    <!-- slide -->
+                                    <div class="box-ten__slide swiper-button-primary swiper-button-primary--30 same-height w-full relative mt-24">
+                                        <div class="swiper js__twoSlide">
+                                            <div class="swiper-wrapper">
+                                                <!-- slide -->
+                                                <div class="swiper-slide">
+                                                    <!-- article -->
+                                                    <div class="article">
+                                                        <!-- img -->
+                                                        <div class="article-img">
+                                                            <a href="#" class="ratio-15x9 over-hidden border-10 border-sm-5">
+                                                                <img src="./images/2.jpg" alt="">
+                                                            </a>
+                                                        </div>
+                                                        <!-- end img -->
+                                                        <!-- content -->
+                                                        <div class="article-content pt-15">
+                                                            <!-- title -->
+                                                            <h3 class="article-title fs-20 fs-md-16 fw-600 text-red-993">
+                                                                <a href="#">Đại Chiêm Bái Tứ Động Tâm: Ấn Độ - Nepal (10N9Đ)</a>
+                                                            </h3>
+                                                            <!-- end title -->
+                                                            <!-- info -->
+                                                            <div class="article-info mt-10">
+                                                                <ul>
+                                                                    <li>Thuyết pháp, tụng kinh & thỉnh chuông cùng Sư thầy dẫn đoàn</li>
+                                                                    <li>Phục vụ ăn chay 100% suốt hành trình</li>
+                                                                    <li>Bay thẳng Vietnam Airlines | Khách sạn 4 sao tiêu chuẩn</li>
+                                                                </ul>
+                                                            </div>
+                                                            <!-- end info -->
+                                                            <!-- additional -->
+                                                            <div class="article-additional mt-12">
+                                                                <!-- item -->
+                                                                <div class="additional-item my-4 d-3xl-flex items-center gap-8">
+                                                                    <div class="flex-0 icon">
+                                                                        <img src="./images/svg/icon-house-gray.svg" alt="">
+                                                                    </div>
+                                                                    <div class="flex-1 text fs-17 fs-md-15 text-gray-33">
+                                                                        <span>Đơn vị tổ chức: </span>
+                                                                        <strong>Vietravel</strong>
+                                                                    </div>
+                                                                </div>
+                                                                <!-- end item -->
+                                                                <!-- item -->
+                                                                <div class="additional-item my-4 d-3xl-flex items-center gap-8">
+                                                                    <div class="flex-0 icon">
+                                                                        <img src="./images/svg/icon-$-gray.svg" alt="">
+                                                                    </div>
+                                                                    <div class="flex-1 text fs-17 fs-md-15 text-gray-33">
+                                                                        <span>Giá trọn gói: </span>
+                                                                        <strong>38.500.000 VNĐ</strong>
+                                                                    </div>
+                                                                </div>
+                                                                <!-- end item -->
+                                                            </div>
+                                                            <!-- end additional -->
+
+                                                            <!-- btn -->
+                                                            <div class="article-btn d-3xl-flex items-center justify-between gap-24 gap-md-12 mt-20">
+                                                                <a href="#" class="article-btn__link flex-1 d-3xl-flex items-center btn btn-secondary fs-17 fs-md-14">
+                                                                    <span class="text flex-1 d-3xl-inline-block">Xem lịch trình chi tiết</span>
+                                                                </a>
+                                                                <a href="#" class="article-btn__link flex-1 d-3xl-flex items-center btn fs-17 fs-md-14">
+                                                                    <span class="text flex-1 d-3xl-inline-block">Tư vấn qua SĐT/Zalo</span>
+                                                                </a>
+                                                            </div>
+                                                            <!-- end btn -->
+                                                        </div>
+                                                        <!-- end content -->
+                                                    </div>
+                                                    <!-- end article -->
+                                                </div>
+                                                <!-- end slide -->
+                                                <!-- slide -->
+                                                <div class="swiper-slide">
+                                                    <!-- article -->
+                                                    <div class="article">
+                                                        <!-- img -->
+                                                        <div class="article-img">
+                                                            <a href="#" class="ratio-15x9 over-hidden border-10 border-sm-5">
+                                                                <img src="./images/2.jpg" alt="">
+                                                            </a>
+                                                        </div>
+                                                        <!-- end img -->
+                                                        <!-- content -->
+                                                        <div class="article-content pt-15">
+                                                            <!-- title -->
+                                                            <h3 class="article-title fs-20 fs-md-16 fw-600 text-red-993">
+                                                                <a href="#">Đại Chiêm Bái Tứ Động Tâm: Ấn Độ - Nepal (10N9Đ)</a>
+                                                            </h3>
+                                                            <!-- end title -->
+                                                            <!-- info -->
+                                                            <div class="article-info mt-10">
+                                                                <ul>
+                                                                    <li>Thuyết pháp, tụng kinh & thỉnh chuông cùng Sư thầy dẫn đoàn</li>
+                                                                    <li>Phục vụ ăn chay 100% suốt hành trình</li>
+                                                                    <li>Bay thẳng Vietnam Airlines | Khách sạn 4 sao tiêu chuẩn</li>
+                                                                </ul>
+                                                            </div>
+                                                            <!-- end info -->
+                                                            <!-- additional -->
+                                                            <div class="article-additional mt-12">
+                                                                <!-- item -->
+                                                                <div class="additional-item my-4 d-3xl-flex items-center gap-8">
+                                                                    <div class="flex-0 icon">
+                                                                        <img src="./images/svg/icon-house-gray.svg" alt="">
+                                                                    </div>
+                                                                    <div class="flex-1 text fs-17 fs-md-15 text-gray-33">
+                                                                        <span>Đơn vị tổ chức: </span>
+                                                                        <strong>Vietravel</strong>
+                                                                    </div>
+                                                                </div>
+                                                                <!-- end item -->
+                                                                <!-- item -->
+                                                                <div class="additional-item my-4 d-3xl-flex items-center gap-8">
+                                                                    <div class="flex-0 icon">
+                                                                        <img src="./images/svg/icon-$-gray.svg" alt="">
+                                                                    </div>
+                                                                    <div class="flex-1 text fs-17 fs-md-15 text-gray-33">
+                                                                        <span>Giá trọn gói: </span>
+                                                                        <strong>38.500.000 VNĐ</strong>
+                                                                    </div>
+                                                                </div>
+                                                                <!-- end item -->
+                                                            </div>
+                                                            <!-- end additional -->
+
+                                                            <!-- btn -->
+                                                            <div class="article-btn d-3xl-flex items-center justify-between gap-24 gap-md-12 mt-20">
+                                                                <a href="#" class="article-btn__link flex-1 d-3xl-flex items-center btn btn-secondary fs-17 fs-md-14">
+                                                                    <span class="text flex-1 d-3xl-inline-block">Xem lịch trình chi tiết</span>
+                                                                </a>
+                                                                <a href="#" class="article-btn__link flex-1 d-3xl-flex items-center btn fs-17 fs-md-14">
+                                                                    <span class="text flex-1 d-3xl-inline-block">Tư vấn qua SĐT/Zalo</span>
+                                                                </a>
+                                                            </div>
+                                                            <!-- end btn -->
+                                                        </div>
+                                                        <!-- end content -->
+                                                    </div>
+                                                    <!-- end article -->
+                                                </div>
+                                                <!-- end slide -->
+                                                <!-- slide -->
+                                                <div class="swiper-slide">
+                                                    <!-- article -->
+                                                    <div class="article">
+                                                        <!-- img -->
+                                                        <div class="article-img">
+                                                            <a href="#" class="ratio-15x9 over-hidden border-10 border-sm-5">
+                                                                <img src="./images/2.jpg" alt="">
+                                                            </a>
+                                                        </div>
+                                                        <!-- end img -->
+                                                        <!-- content -->
+                                                        <div class="article-content pt-15">
+                                                            <!-- title -->
+                                                            <h3 class="article-title fs-20 fs-md-16 fw-600 text-red-993">
+                                                                <a href="#">Đại Chiêm Bái Tứ Động Tâm: Ấn Độ - Nepal (10N9Đ)</a>
+                                                            </h3>
+                                                            <!-- end title -->
+                                                            <!-- info -->
+                                                            <div class="article-info mt-10">
+                                                                <ul>
+                                                                    <li>Thuyết pháp, tụng kinh & thỉnh chuông cùng Sư thầy dẫn đoàn</li>
+                                                                    <li>Phục vụ ăn chay 100% suốt hành trình</li>
+                                                                    <li>Bay thẳng Vietnam Airlines | Khách sạn 4 sao tiêu chuẩn</li>
+                                                                </ul>
+                                                            </div>
+                                                            <!-- end info -->
+                                                            <!-- additional -->
+                                                            <div class="article-additional mt-12">
+                                                                <!-- item -->
+                                                                <div class="additional-item my-4 d-3xl-flex items-center gap-8">
+                                                                    <div class="flex-0 icon">
+                                                                        <img src="./images/svg/icon-house-gray.svg" alt="">
+                                                                    </div>
+                                                                    <div class="flex-1 text fs-17 fs-md-15 text-gray-33">
+                                                                        <span>Đơn vị tổ chức: </span>
+                                                                        <strong>Vietravel</strong>
+                                                                    </div>
+                                                                </div>
+                                                                <!-- end item -->
+                                                                <!-- item -->
+                                                                <div class="additional-item my-4 d-3xl-flex items-center gap-8">
+                                                                    <div class="flex-0 icon">
+                                                                        <img src="./images/svg/icon-$-gray.svg" alt="">
+                                                                    </div>
+                                                                    <div class="flex-1 text fs-17 fs-md-15 text-gray-33">
+                                                                        <span>Giá trọn gói: </span>
+                                                                        <strong>38.500.000 VNĐ</strong>
+                                                                    </div>
+                                                                </div>
+                                                                <!-- end item -->
+                                                            </div>
+                                                            <!-- end additional -->
+
+                                                            <!-- btn -->
+                                                            <div class="article-btn d-3xl-flex items-center justify-between gap-24 gap-md-12 mt-20">
+                                                                <a href="#" class="article-btn__link flex-1 d-3xl-flex items-center btn btn-secondary fs-17 fs-md-14">
+                                                                    <span class="text flex-1 d-3xl-inline-block">Xem lịch trình chi tiết</span>
+                                                                </a>
+                                                                <a href="#" class="article-btn__link flex-1 d-3xl-flex items-center btn fs-17 fs-md-14">
+                                                                    <span class="text flex-1 d-3xl-inline-block">Tư vấn qua SĐT/Zalo</span>
+                                                                </a>
+                                                            </div>
+                                                            <!-- end btn -->
+                                                        </div>
+                                                        <!-- end content -->
+                                                    </div>
+                                                    <!-- end article -->
+                                                </div>
+                                                <!-- end slide -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-pagination"></div>
+                                    <!-- end slide -->
+                                </div>
+                                <!-- end content mb -->
+                            </div>
+                            <!-- container -->
+                        </div>
+                        <!-- end box ten -->
+                    </div>
+                    <!-- end content -->
+                </div>
+            </section>
+            <!-- end tertiary -->
+
+        </main>
+        <!-- end main -->
+        <!-- footer -->
+        <footer id="footer" class="footer">
+            <!-- back top -->
+            <div id="back-top">
+                <img src="./images/svg/arrow-top-w.svg" alt="">
+            </div>
+            <!-- end back top -->
+
+            <!-- footer top -->
+            <div class="footer-top w-wrapper relative z-20">
+                <div class="footer-top__container w-1220">
+                    <!-- logo -->
+                    <div class="footer-logo d-3xl-flex items-center justify-center pb-40">
+                        <a href="#" class="logo">
+                            <img src="./images/svg/logo-w.svg" alt="" class="logo-img">
+                        </a>
+                    </div>
+                    <!-- end logo -->
+
+                    <!-- content -->
+                    <div class="footer-top__content d-3xl-grid col-3 d-md-block">
+                        <!-- left -->
+                        <div class="footer-top__left">
+                            <h2 class="title fs-18 text-white fw-700 uppercase mb-16">Cổng thông tin Phật giáo thuộc Giáo hội Phật giáo Việt Nam</h2>
+
+                            <div class="text">
+                                <ul class="text-list text-white fs-14">
+                                    <li class="mb-10">Chủ quản: <strong>Ban Thông tin Truyền thông Trung ương</strong></li>
+                                    <li class="mb-10">Chịu trách nhiệm nội dung: <strong>Hoà thượng. TS Thích Gia Quang</strong></li>
+                                    <li class="mb-10">Trưởng Ban Biên tập: <strong>Thiện Đức (thienduc@phatgiao.org.vn)</strong></li>
+                                </ul>
+                                <ul class="text-link text-white-80 fs-14 d-3xl-flex items-center justify-between mt-20">
+                                    <li><a href="#" class="color-inherit">Tài thí PGVN</a></li>
+                                    <li><a href="#" class="color-inherit">Kiến thức</a></li>
+                                    <li><a href="#" class="color-inherit">Về chúng tôi</a></li>
+                                    <li><a href="#" class="color-inherit">Sống đẹp</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- end left -->
+                        <!-- center -->
+                        <div class="footer-top__center">
+                            <ul class="list-info fs-14 text-white">
+                                <li class="item-info d-3xl-flex mb-15">
+                                    <div class="item-info__icon flex-0 icon-16">
+                                        <img src="./images/svg/home-80-w.svg" alt="">
+                                    </div>
+                                    <p class="item-info__text flex-1 pl-15"><strong>Trụ sở: </strong>Toà nhà Sannam, số 78 Duy Tân, P. Dịch Vọng Hậu, Q. Cầu Giấy, TP. Hà Nội</p>
+                                </li>
+                                <li class="item-info d-3xl-flex mb-15">
+                                    <div class="item-info__icon flex-0 icon-16">
+                                        <img src="./images/svg/home-80-w.svg" alt="">
+                                    </div>
+                                    <p class="item-info__text flex-1 pl-15"><strong>Văn phòng TW Giáo hội PGVN: </strong>P216 Chùa Quán Sứ, 73 Quán Sứ, Hoàn Kiếm, Hà Nội</p>
+                                </li>
+                                <li class="item-info d-3xl-flex mb-15">
+                                    <div class="item-info__icon flex-0 icon-16">
+                                        <img src="./images/svg/home-80-w.svg" alt="">
+                                    </div>
+                                    <p class="item-info__text flex-1 pl-15"><strong>Văn phòng đại diện phía Nam: </strong>Văn phòng 2 TƯ Giáo hội PGVN, Thiền viện Quảng Đức, số 294 Nam Kỳ Khởi Nghĩa, Q3, TP. HCM</p>
+                                </li>
+                                <li class="item-info d-3xl-flex mb-15">
+                                    <div class="item-info__icon flex-0 icon-16">
+                                        <img src="./images/svg/phone-w.svg" alt="">
+                                    </div>
+                                    <p class="item-info__text flex-1 pl-15"><strong>Hotline: </strong>0332345847</p>
+                                </li>
+                                <li class="item-info d-3xl-flex mb-15">
+                                    <div class="item-info__icon flex-0 icon-16">
+                                        <img src="./images/svg/email-w.svg" alt="">
+                                    </div>
+                                    <p class="item-info__text flex-1 pl-15"><strong>Email: </strong> info@phatgiao.org.vn</p>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                        <!-- end center -->
+                        <!-- right -->
+                        <div class="footer-top__right">
+                            <h2 class="title fs-18 text-white fw-700 uppercase mb-16">Theo dõi chúng tôi</h2>
+                            <ul class="social d-3xl-flex items-center">
+                                <li class="social-item">
+                                    <a href="#" class="social-link">
+                                        <img src="./images/svg/fb-red.svg" alt="" class="social-icon">
+                                    </a>
+                                </li>
+                                <li class="social-item">
+                                    <a href="#" class="social-link">
+                                        <img src="./images/svg/insta-red.svg" alt="" class="social-icon">
+                                    </a>
+                                </li>
+                                <li class="social-item">
+                                    <a href="#" class="social-link">
+                                        <img src="./images/svg/ytb-red.svg" alt="" class="social-icon">
+                                    </a>
+                                </li>
+                                <li class="social-item">
+                                    <a href="#" class="social-link">
+                                        <img src="./images/svg/tiktok-red.svg" alt="" class="social-icon">
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                        <!-- end right -->
+                    </div>
+                    <!-- end content -->
+                    
+                    <!-- menu -->
+                    <ul class="footer-menu__list d-3xl-grid col-4 pb-40">
+                        <li class="footer-menu__item fs-14 text-white uppercase fw-500">
+                            <a href="#" class="color-inherit">Chùa trực tuyến</a>
+                        </li>
+                        <li class="footer-menu__item fs-14 text-white uppercase fw-500">
+                            <a href="#" class="color-inherit">Chùa trực tuyến</a>
+                        </li>
+                        <li class="footer-menu__item fs-14 text-white uppercase fw-500">
+                            <a href="#" class="color-inherit">Chùa trực tuyến</a>
+                        </li>
+                        <li class="footer-menu__item fs-14 text-white uppercase fw-500">
+                            <a href="#" class="color-inherit">Chùa trực tuyến</a>
+                        </li>
+                        <li class="footer-menu__item fs-14 text-white uppercase fw-500">
+                            <a href="#" class="color-inherit">Chùa trực tuyến</a>
+                        </li>
+                        <li class="footer-menu__item fs-14 text-white uppercase fw-500">
+                            <a href="#" class="color-inherit">Chùa trực tuyến</a>
+                        </li>
+                        <li class="footer-menu__item fs-14 text-white uppercase fw-500">
+                            <a href="#" class="color-inherit">Chùa trực tuyến</a>
+                        </li>
+                        <li class="footer-menu__item fs-14 text-white uppercase fw-500">
+                            <a href="#" class="color-inherit">Chùa trực tuyến</a>
+                        </li>
+                    </ul>
+                    <!-- end menu -->
+
+                    <div class="footer-note text-center fs-14 text-white mb-16">
+                        <p>Mọi sự copy, sao chép từ <a href="#" class="fw-700 color-inherit">Phatgiao.org.vn</a> đều không cần trích dẫn và được hoan nghênh!</p>
+                        <p>@Phát triển và vận hành bởi VBmedia.org</p>
+                    </div>
+
+                    <div class="dcma d-3xl-flex items-center justify-center mb-16">
+                        <a href="#">
+                            <img src="./images/dmca.png" alt="" style="height: 40px;width: auto;">
+                        </a>
+                    </div>
+
+                    <div class="download-app d-3xl-flex items-center justify-center flex-column text-white fs-14">
+                        <h3>TẢI ỨNG DỤNG PHẬT GIÁO</h3>
+                        <div class="d-3xl-flex items-center justify-center gap-24 mt-16">
+                            <a href="#">
+                                <img src="./images/svg/ios.svg" alt="" style="height: 36px;width: auto;">
+                            </a>
+                            <a href="#">
+                                <img src="./images/svg/android.svg" alt="" style="height: 36px;width: auto;">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end footer top -->
+
+            <!-- footer bot -->
+            <div class="footer-bot w-wrapper relative z-20">
+                <div class="footer-bot__container w-1220">
+                    <ul class="list d-3xl-flex items-center justify-center gap-24">
+                        <li class="item fs-14 text-white">
+                            <a href="#" class="link color-inherit py-10 px-8 d-3xl-inline-block">Trải nghiệm du lịch tâm linh</a>
+                        </li>
+                        <li class="item fs-14 text-white">
+                            <a href="#" class="link color-inherit py-10 px-8 d-3xl-inline-block">An cung hoàn</a>
+                        </li>
+                        <li class="item fs-14 text-white">
+                            <a href="#" class="link color-inherit py-10 px-8 d-3xl-inline-block">Vật phẩm Phật Giáo</a>
+                        </li>
+                        <li class="item fs-14 text-white">
+                            <a href="#" class="link color-inherit py-10 px-8 d-3xl-inline-block">Đạo Phật trong trái tim tôi</a>
+                        </li>
+                        <li class="item fs-14 text-white">
+                            <a href="#" class="link color-inherit py-10 px-8 d-3xl-inline-block">Phật giáo Lá Bối</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- end footer bot -->
+
+
+        </footer>
+        <!-- end footer -->
+        <script src="./lib/swiper/swiper-bundle.min.js"></script>
+        <script src="./js/main.js"></script>
+    </body>
+</html>

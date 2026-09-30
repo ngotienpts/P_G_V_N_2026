@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- favicon -->
+        <link rel="shortcut icon" href="./images/favicon/favicon.png" type="image/gif" sizes="16x16" />
+        <!-- end favicon -->
+        <title>Cổng thông tin Phật giáo thuộc Giáo hội Phật giáo Việt Nam</title>
+        <!-- font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            rel="preload"
+            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Corinthia:wght@400;700&display=swap"
+            as="style" onload="this.rel='stylesheet'"
+        />
+        <!-- end font -->
+        <link rel="stylesheet" href="./lib/swiper/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="./css/style.css" />
+        <script src="./lib/jquery/jquery-3.7.1.min.js"></script>
+    </head>
+
+    <body>
+        
+        <!-- header -->
+        <header id="header" class="header relative z-50 shadow js__stickyHeader">
+            <!-- pc -->
+            <div class="d-3xl-block d-xl-none">
+                <div class="header-desk relative z-20">
+                    <!-- top -->
+                    <div class="header-top bg-white w-wrapper">
+                        <div class="header-top__container py-20 w-1220 d-3xl-flex justify-between">
+                            <!-- left -->
+                            <div class="header-top__left flex-1">
+                                <ul class="cate-hot__list d-3xl-flex items-center">
+                                    <li class="cate-hot__item">
+                                        <a href="#" class="cate-hot__link fs-14 fw-500 text-red-993 capitalize d-3xl-inline-block p-8">Kinh Phật</a>
+                                    </li>
+                                    <li class="cate-hot__item">
+                                        <a href="#" class="cate-hot__link fs-14 fw-500 text-red-993 capitalize d-3xl-inline-block p-8">Vật Phẩm Phật Giáo</a>
+                                    </li>
+                                    <li class="cate-hot__item">
+                                        <a href="#" class="cate-hot__link fs-14 fw-500 text-red-993 capitalize d-3xl-inline-block p-8">Phật Giao Online</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- end left -->
+                            
+                            <!-- center -->
+                            <div class="header-top__center flex-1 d-3xl-flex items-center justify-center">
+                                <a href="#" class="logo">
+                                    <img src="./images/svg/logo.svg" alt="" class="logo-img">
+                                </a>
+                            </div>
+                            <!-- end center -->
+                            
+                            <!-- right -->
+                            <div class="header-top__right flex-1 d-3xl-flex items-center justify-end">
+                                <!-- social -->
+                                <ul class="social d-3xl-flex items-center justify-center">
+                                    <li class="social-item">
+                                        <a href="#" class="social-link">
+                                            <img src="./images/svg/fb-red.svg" alt="" class="social-icon">
+                                        </a>
+                                    </li>
+                                    <li class="social-item">
+                                        <a href="#" class="social-link">
+                                            <img src="./images/svg/insta-red.svg" alt="" class="social-icon">
+                                        </a>
+                                    </li>
+                                    <li class="social-item">
+                                        <a href="#" class="social-link">
+                                            <img src="./images/svg/ytb-red.svg" alt="" class="social-icon">
+                                        </a>
+                                    </li>
+                                    <li class="social-item">
+                                        <a href="#" class="social-link">
+                                            <img src="./images/svg/tiktok-red.svg" alt="" class="social-icon">
+                                        </a>
+                                    </li>
+                                    
+                                </ul>
+                                <!-- end social -->
+                            </div>
+                            <!-- end right -->
+                        </div>
+                    </div>
+                    <!-- end top -->
+
+                    <!-- menu -->
+                    <div class="header-menu bg-white w-wrapper">
+                        <div class="header-menu__container w-1220 d-3xl-flex justify-between">
+                            <!-- navbar -->
+                            <nav class="navbar flex-1">
+                                <ul class="navbar-wrapper d-3xl-flex items-center gap-30 justify-between">
+                                    <li class="navbar-item">
+                                        <a href="#" class="icon-20">
+                                            <img src="./images/svg/home-red.svg" alt="" class="">
+                                        </a>
+                                    </li>
+                                    <li class="navbar-item">
+                                        <div class="navbar-item__heading d-3xl-flex items-center uppercase fw-600 fs-14">
+                                            <a href="#" class="navbar-item__text flex-1 d-3xl-inline-block">Tin tức</a>
+                                            <div class="navbar-item__icon flex-0">
+                                                <img src="./images/svg/arrow-down-gray.svg" alt="">
+                                            </div>
+                                        </div>
+                                        <ul class="navbar-dropdown fs-14 scroll">
+                                            <li class="navbar-dropdown__item">
+                                                <a href="#" class="navbar-dropdown__link">Trong nước</a>
+                                            </li>
+                                            <li class="navbar-dropdown__item">
+                                                <a href="#" class="navbar-dropdown__link">Quốc tế</a>
+                                            </li>
+                                            <li class="navbar-dropdown__item">
+                                                <a href="#" class="navbar-dropdown__link">Tin phật sự</a>
+                                            </li>
+                                            <li class="navbar-dropdown__item">
+                                                <a href="#" class="navbar-dropdown__link">Tin mới</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="navbar-item">
+                                        <div class="navbar-item__heading d-3xl-flex items-center uppercase fw-600 fs-14">
+                                            <a href="#" class="navbar-item__text flex-1 d-3xl-inline-block">Xiển dương phật pháp</a>
+                                            <div class="navbar-item__icon flex-0">
+                                                <img src="./images/svg/arrow-down-gray.svg" alt="">
+                                            </div>
+                                        </div>
+                                        <ul class="navbar-dropdown fs-14 scroll">
+                                            <li class="navbar-dropdown__item">
+                                                <a href="#" class="navbar-dropdown__link">Trong nước</a>
+                                            </li>
+                                            <li class="navbar-dropdown__item">
+                                                <a href="#" class="navbar-dropdown__link">Quốc tế</a>
+                                            </li>
+                                            <li class="navbar-dropdown__item">
+                                                <a href="#" class="navbar-dropdown__link">Tin phật sự</a>
+                                            </li>
+                                            <li class="navbar-dropdown__item">
+                                                <a href="#" class="navbar-dropdown__link">Tin mới</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="navbar-item">
+                                        <div class="navbar-item__heading d-3xl-flex items-center uppercase fw-600 fs-14">
+                                            <a href="#" class="navbar-item__text flex-1 d-3xl-inline-block">Đức phật</a>
+                                        </div>
+                                    </li>
+                                    <li class="navbar-item">
+                                        <div class="navbar-item__heading d-3xl-flex items-center uppercase fw-600 fs-14">
+                                            <a href="#" class="navbar-item__text flex-1 d-3xl-inline-block">Kinh sách</a>
+                                        </div>
+                                    </li>
+                                    <li class="navbar-item">
+                                        <div class="navbar-item__heading d-3xl-flex items-center uppercase fw-600 fs-14">
+                                            <a href="#" class="navbar-item__text flex-1 d-3xl-inline-block">Giáo hội</a>
+                                        </div>
+                                    </li>
+                                    <li class="navbar-item">
+                                        <div class="navbar-item__heading d-3xl-flex items-center uppercase fw-600 fs-14">
+                                            <a href="#" class="navbar-item__text flex-1 d-3xl-inline-block">Media</a>
+                                        </div>
+                                    </li>
+                                    <li class="navbar-item">
+                                        <div class="navbar-item__heading d-3xl-flex items-center uppercase fw-600 fs-14">
+                                            <a href="#" class="navbar-item__text flex-1 d-3xl-inline-block">Môi trường</a>
+                                        </div>
+                                    </li>
+
+                                    <li class="navbar-item navbar-more  js__navbarMore">
+                                        <div class="navbar-more__icon js__navbarMoreIcon">
+                                            <div class="bar">
+                                                <img src="./images/svg/bar.svg" alt="">
+                                            </div>
+                                            <div class="close">
+                                                <img src="./images/svg/close.svg" alt="">
+                                            </div>
+                                        </div>
+                                        
+                                    </li>
+                                </ul>
+                            </nav>
+                            <!-- end navbar -->
+
+                            <!-- extend -->
+                            <div class="navbar-more__content w-wrapper js__navbarMoreContent">
+                                <div class="navbar-more__inner w-1220 scroll">
+                                    <ul class="navbar-more__list d-3xl-grid gap-24">
+                                        <li class="navbar-more__item">
+                                            <div class="navbar-more__title"><a href="#">Cate 1</a></div>
+                                            <ul class="navbar-more__children">
+                                                <li><a href="#">Cate 2</a></li>
+                                                <li><a href="#">Cate 2</a></li>
+                                                <li><a href="#">Cate 2</a></li>
+                                                <li><a href="#">Cate 2</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="navbar-more__item">
+                                            <div class="navbar-more__title"><a href="#">Cate 1</a></div>
+                                            <ul class="navbar-more__children">
+                                                <li><a href="#">Cate 2</a></li>
+                                                <li><a href="#">Cate 2</a></li>
+                                                <li><a href="#">Cate 2</a></li>
+                                                <li><a href="#">Cate 2</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="navbar-more__item">
+                                            <div class="navbar-more__title"><a href="#">Cate 1</a></div>
+                                            <ul class="navbar-more__children">
+                                                <li><a href="#">Cate 2</a></li>
+                                                <li><a href="#">Cate 2</a></li>
+                                                <li><a href="#">Cate 2</a></li>
+                                                <li><a href="#">Cate 2</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="navbar-more__item">
+                                            <div class="navbar-more__title"><a href="#">Cate 1</a></div>
+                                            <ul class="navbar-more__children">
+                                                <li><a href="#">Cate 2</a></li>
+                                                <li><a href="#">Cate 2</a></li>
+                                                <li><a href="#">Cate 2</a></li>
+                                                <li><a href="#">Cate 2</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="navbar-more__item">
+                                            <div class="navbar-more__title"><a href="#">Cate 1</a></div>
+                                            <ul class="navbar-more__children">
+                                                <li><a href="#">Cate 2</a></li>
+                                                <li><a href="#">Cate 2</a></li>
+                                                <li><a href="#">Cate 2</a></li>
+                                                <li><a href="#">Cate 2</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="navbar-more__item">
+                                            <div class="navbar-more__title"><a href="#">Cate 1</a></div>
+                                            <ul class="navbar-more__children">
+                                                <li><a href="#">Cate 2</a></li>
+                                                <li><a href="#">Cate 2</a></li>
+                                                <li><a href="#">Cate 2</a></li>
+                                                <li><a href="#">Cate 2</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- end extend -->
+
+                            <!-- search -->
+                            <div class="search flex-0 d-3xl-flex items-center ml-40 mr-3xl--10 js__searchDesk">
+                                <!-- icon -->
+                                <div class="search-icon icon-20 d-3xl-flex items-center p-10 js__searchIconDesk pointer">
+                                    <img src="./images/svg/search.svg" alt="">
+                                </div>
+                                <!-- end icon -->
+                                <div class="search-content js__searchContentDesk">
+                                    <form action="search-form">
+                                        <div class="search-group">
+                                            <input type="text" class="search-input js__searchInputDesk" placeholder="Tìm kiếm...">
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <!-- end search -->
+                        </div>
+                    </div>
+                    <!-- end menu -->
+                </div>
+            </div>
+            <!-- end pc -->
+             
+            <!-- mb -->
+            <div class="d-3xl-none d-xl-block">
+                <div class="header-mb relative z-10">
+                    <!-- bot -->
+                    <div class="header-mb__bot w-wrapper w-1220 bg-white py-12">
+                        <!-- menu -->
+                        <div class="header-mb__menu d-3xl-flex items-center justify-between">
+                            <!-- left -->
+                            <div class="header-mb__left flex-0">
+                                <!-- submenu -->
+                                <div class="sub-menu">
+                                    <!-- icon bar -->
+                                    <div class="icon-bar js__clickShowMenuMb bg-red-993">
+                                        <img src="./images/svg/bar-w.svg" alt="">
+                                    </div>
+                                    <!-- end icon bar -->
+                                    <!-- content -->
+                                    <div class="sub-menu__content">
+                                        <!-- close -->
+                                        <div class="sub-menu__close js__closeSubMenu d-3xl-flex items-center">
+                                            <img src="./images/svg/close-w.svg" alt="">
+                                        </div>
+                                        <!-- end close -->
+    
+                                        <div class="sub-menu__container">
+                                            <!-- list -->
+                                            <div class="sub-menu__list">
+                                                <!-- item -->
+                                                <div class="sub-menu__item px-20">
+                                                    <!-- heading -->
+                                                    <div class="heading-sub d-3xl-flex items-center justify-between py-8 text-red-993">
+                                                        <h3 class="heading-sub__title fs-14 fw-500 uppercase">
+                                                            <a href="#">Tin tức</a>
+                                                        </h3>
+                                                        <div class="heading-sub__arrow js__dropDown">
+                                                            <img src="./images/svg/arrow-down-gray.svg" alt="">
+                                                        </div>
+                                                    </div>
+                                                    <!-- end heading -->
+    
+                                                    <!-- sub menu list -->
+                                                    <ul class="list-sub js__listSubMenu">
+                                                        <li class="item-sub">
+                                                            <a href="#" class="item-sub__link fs-16">Release Calender</a>
+                                                        </li>
+                                                        <li class="item-sub">
+                                                            <a href="#" class="item-sub__link fs-16">Release Calender</a>
+                                                        </li>
+                                                        <li class="item-sub">
+                                                            <a href="#" class="item-sub__link fs-16">Release Calender</a>
+                                                        </li>
+                                                    </ul>
+                                                    <!-- end sub menu list -->
+                                                </div>
+                                                <!-- end item -->
+                                                <!-- item -->
+                                                <div class="sub-menu__item px-20">
+                                                    <!-- heading -->
+                                                    <div class="heading-sub d-3xl-flex items-center justify-between py-8 text-red-993">
+                                                        <h3 class="heading-sub__title fs-14 fw-500 uppercase">
+                                                            <a href="#">Tin tức</a>
+                                                        </h3>
+                                                        <div class="heading-sub__arrow js__dropDown">
+                                                            <img src="./images/svg/arrow-down-gray.svg" alt="">
+                                                        </div>
+                                                    </div>
+                                                    <!-- end heading -->
+    
+                                                    <!-- sub menu list -->
+                                                    <ul class="list-sub js__listSubMenu">
+                                                        <li class="item-sub">
+                                                            <a href="#" class="item-sub__link fs-16">Release Calender</a>
+                                                        </li>
+                                                        <li class="item-sub">
+                                                            <a href="#" class="item-sub__link fs-16">Release Calender</a>
+                                                        </li>
+                                                        <li class="item-sub">
+                                                            <a href="#" class="item-sub__link fs-16">Release Calender</a>
+                                                        </li>
+                                                    </ul>
+                                                    <!-- end sub menu list -->
+                                                </div>
+                                                <!-- end item -->
+                                                <!-- item -->
+                                                <div class="sub-menu__item px-20">
+                                                    <!-- heading -->
+                                                    <div class="heading-sub d-3xl-flex items-center justify-between py-8 text-red-993">
+                                                        <h3 class="heading-sub__title fs-14 fw-500 uppercase">
+                                                            <a href="#">Tin tức</a>
+                                                        </h3>
+                                                        <div class="heading-sub__arrow js__dropDown">
+                                                            <img src="./images/svg/arrow-down-gray.svg" alt="">
+                                                        </div>
+                                                    </div>
+                                                    <!-- end heading -->
+    
+                                                    <!-- sub menu list -->
+                                                    <ul class="list-sub js__listSubMenu">
+                                                        <li class="item-sub">
+                                                            <a href="#" class="item-sub__link fs-16">Release Calender</a>
+                                                        </li>
+                                                        <li class="item-sub">
+                                                            <a href="#" class="item-sub__link fs-16">Release Calender</a>
+                                                        </li>
+                                                        <li class="item-sub">
+                                                            <a href="#" class="item-sub__link fs-16">Release Calender</a>
+                                                        </li>
+                                                    </ul>
+                                                    <!-- end sub menu list -->
+                                                </div>
+                                                <!-- end item -->
+                                               
+                                               
+                                            </div>
+                                            <!-- end list -->
+                                        </div>
+                                    </div>
+                                    <!-- end content -->
+                                    <div class="overlay js__overlay"></div>
+                                </div>
+                                <!-- end submenu -->
+                            </div>
+                            <!-- end left -->
+                            <!-- center -->
+                            <div class="header-mb__center flex-1 d-3xl-flex items-center justify-center">
+                                <a href="#" class="logo">
+                                    <img src="./images/svg/logo.svg" alt="" class="logo-img">
+                                </a>
+                            </div>
+                            <!-- end center -->
+                            <!-- right -->
+                            <div class="header-mb__right flex-0">
+                                <div class="search-mb">
+                                    <div class="search-mb__icon js__searchMb">
+                                        <img src="./images/svg/search-w.svg" alt="">
+                                    </div>
+                                    <!-- form -->
+                                    <div class="header-search-mb__form h-60 w-full js__formSearchMb">
+                                        <form action="" class="w-full h-full">
+                                            <div class="relative w-full h-full">
+                                                <input type="text" class="header-search-input w-full h-full p-8 fs-16 js__focusSearchMb" placeholder="Search...">
+                                                <div class="header-search-btn absolute h-full d-3xl-flex items-center p-8 js__closeSearchMb icon-20">
+                                                    <img src="./images/svg/close.svg" alt="">
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <!-- end form -->
+                                </div>
+                            </div>
+                            <!-- end right -->
+                        </div>
+                        <!-- end menu -->
+                    </div>
+                    <!-- end bot -->
+
+                    <!-- navbar menu mb -->
+                    <div class="navbar-menu-mb js__navbarMenuMb py-15 pl-15 pr-40 relative d-3xl-none">
+                        <ul class="navbar-mb js__navbarMb d-3xl-flex items-center fs-14 text-gray-33 fw-600 uppercase">
+                            <li class="navbar-item flex-0">
+                                <a href="#" class="icon-16">
+                                    <img src="./images/svg/home-red.svg" alt="">
+                                </a>
+                            </li>
+                            <li class="navbar-item">
+                                <a href="#">Tin tức</a>
+                            </li>
+                            <li class="navbar-item">
+                                <a href="#">Xiển Dương Phật Pháp</a>
+                            </li>
+                            <li class="navbar-item">
+                                <a href="#">Đức Phật</a>
+                            </li>
+                            <li class="navbar-item">
+                                <a href="#">Kinh Sách</a>
+                            </li>
+                            <li class="navbar-item">
+                                <a href="#">Giáo hội</a>
+                            </li>
+                            <li class="navbar-item">
+                                <a href="#">Media</a>
+                            </li>
+                            <li class="navbar-item">
+                                <a href="#">Môi trường</a>
+                            </li>
+                        </ul>
+                        <div class="navbar-scroll-icon js__navbarIcon">
+                            <img src="./images/svg/arrow-next-gray-2.svg" alt="">
+                        </div>
+                    </div>
+                    <!-- end navbar menu mb -->
+                </div>
+            </div>
+            <!-- end mb -->
+
+        </header>
+        <!-- end header -->
+        <!-- main -->
+        <main id="main" class="main">
+
+            <!-- primary -->
+            <section class="gioi-thieu-chuyen-muc-primary relative z-20 over-hidden w-wrapper bg-white">
+                <!-- bg -->
+                <div class="gioi-thieu-chuyen-muc-primary__bg absolute inset-0">
+                    <img src="./images/bg-6-pc.png" alt="" class="d-3xl-block d-md-none w-full">
+                    <img src="./images/bg-6-mb.png" alt="" class="d-md-none d-md-block w-full">
+                </div>
+                <!-- end bg -->
+                <div class="gioi-thieu-chuyen-muc-primary__container relative z-10 w-1220 w-md-500 py-3xl-60">
+                    <!-- heading -->
+                    <div class="gioi-thieu-chuyen-muc-primary__heading d-3xl-flex flex-column items-center justify-center">
+                        <div class="flex-0 w-140px w-md-90px mx-auto">
+                            <img src="./images/svg/logo-3.svg" alt="">
+                        </div>
+                        <h1 class="heading-title text-white fs-130 fs-md-50 font-corinthia text-center fw-400"><span>Hành Trình  Đất Phật</span></h1>
+                    </div>
+                    <!-- end heading -->
+                </div>
+            </section>
+            <!-- end primary -->
+            <!-- secondary -->
+            <section class="gioi-thieu-chuyen-muc-secondary relative z-20 over-hidden w-wrapper">
+                <div class="gioi-thieu-chuyen-muc-secondary__container relative z-10 w-1220 w-md-500">
+                    <!-- content -->
+                    <div class="gioi-thieu-chuyen-muc-secondary__content relative bg-white border-15 border-md-8 over-hidden px-30 py-40 px-md-15 py-md-24">
+                        <!-- heading -->
+                        <h2 class="gioi-thieu-chuyen-muc-secondary__heading fs-32 fs-md-20 text-gray-33 fw-bold">Về Hành Trình Đất Phật</h2>
+                        <!-- end heading -->
+
+                        <!-- article -->
+                        <div class="article-large d-3xl-flex over-hidden flex-md-column gap-40 gap-md-20 mt-30 mt-md-20">
+                            <!-- img  -->
+                            <div class="article-img w-39 w-md-full flex-0 order-md-2">
+                                <div class="article-img__inner pl-40 pb-40 pl-md-20 pb-md-20 border-10 over-hidden w-full relative">
+                                    <a href="#" class="ratio-4x3 relative border-10 over-hidden">
+                                        <img loading="lazy" class="article-inner__img relative" src="./images/2.jpg" width="" height="" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- end img -->
+
+                            <!-- content -->
+                            <div class="article-content pt-md-12 flex-1 bg-white order-md-1">
+                                <div class="article-des text-gray-33 fs-16 fs-md-15">
+                                    <p>Hành trình Đất Phật là chuyên mục khám phá những miền đất, thánh tích và hành trình gắn với lịch sử, văn hóa và đời sống Phật giáo. Chuyên mục kết nối thông tin điểm đến, câu chuyện và trải nghiệm hành hương, giúp độc giả hiểu hơn về nơi mình sẽ đến trước khi bắt đầu hành trình.</p>
+                                    <p>Nội dung được xây dựng theo hai lớp: “Điểm đến” cung cấp nền tảng thông tin về địa danh, lịch sử, giá trị và những điều cần biết; “Hành trình & trải nghiệm” phát triển thành các tuyến hành hương, lịch trình, kinh nghiệm và câu chuyện thực tế.</p>
+                                    <p>Bên cạnh đó, các nội dung Cẩm nang, Ký sự và Theo mùa được cập nhật theo từng thời điểm, mang đến những thông tin thiết thực và góc nhìn đa dạng cho người đọc.</p>
+                                </div>
+                                <h2 class="article-title fs-16 text-gray-33 fw-bold mt-20 d-md-none">
+                                    <span>Từ hiểu một điểm đến đến trải nghiệm một hành trình - Hành trình Đất Phật đồng hành cùng bạn trên mỗi bước đường tìm về những miền đất Phật.</span>
+                                </h2>
+                            </div>
+                            <!-- end content -->
+
+                            <!-- title mb -->
+                            <h2 class="article-title fs-16 text-gray-33 fw-bold d-3xl-none d-md-block order-md-3">
+                                <span>Từ hiểu một điểm đến đến trải nghiệm một hành trình - Hành trình Đất Phật đồng hành cùng bạn trên mỗi bước đường tìm về những miền đất Phật.</span>
+                            </h2>
+                            <!-- end title mb -->
+                        </div>
+                        <!-- end article -->
+                    </div>
+                    <!-- end content -->
+                </div>
+            </section>
+            <!-- end secondary -->
+
+            <!-- tertiary -->
+            <section class="gioi-thieu-chuyen-muc-tertiary relative z-20 over-hidden w-wrapper bg-white">
+                <div class="gioi-thieu-chuyen-muc-tertiary__container relative z-10 w-1220 w-md-500 py-3xl-60 py-md-30">
+                    <!-- heading -->
+                    <h2 class="gioi-thieu-chuyen-muc-secondary__heading fs-32 fs-md-20 text-gray-33 fw-bold">Phụ Trách Nội Dung Chuyên Mục</h2>
+                    <!-- end heading -->
+
+                    <!-- content -->
+                    <div class="gioi-thieu-chuyen-muc-tertiary__content mt-30 mt-md-20">
+                        <!-- article list -->
+                        <div class="article-list d-3xl-grid col-3 gap-30 d-md-block">
+                            <!-- article -->
+                            <div class="article mb-md-30">
+                                <div class="article-top d-3xl-flex flex-column flex-md-row items-center gap-20 gap-md-12">
+                                    <!-- img  -->
+                                    <div class="article-img w-140px w-md-100px flex-0">
+                                        <div class="article-img__inner border-999 over-hidden">
+                                            <a href="#" class="ratio-1x1">
+                                                <img loading="lazy" class="article-inner__img" src="./images/2.jpg" width="" height="" alt="">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- end img -->
+                                    <!-- name -->
+                                    <h2 class="article-title fs-20 fs-md-16 text-gray-33 fw-bold text-center">
+                                        <a href="#">Cư sĩ Lưu Đình Long</a>
+                                    </h2>
+                                    <!-- end name -->
+                                </div>
+                                <!-- content -->
+                                <div class="article-content mt-20 py-20 px-30 px-md-14 border-8 over-hidden flex-1 bg-linear-red-99">
+                                    <div class="article-des fs-16 text-gray-33">
+                                        <p><strong>Thông tin:</strong> Sinh năm 1985 tại Quảng Nam.</p>
+                                        <p><strong>Chuyên môn:</strong> Cư sĩ/ Nhà văn Lưu Đình Long là nhà báo, cư sĩ, từng làm công tác tòa soạn tại báo Giác Ngộ. Tác giả của nhiều đầu sách: <i>Lắng nghe hơi thở, Tâm kinh mình thuyết cho mình, Như mây thong dong, Như gió an lành, Bình an mà sống, Sống tích cực, thương chân thành, Càng hiểu càng thương, Mẹ hiểu, cha thương, rộng đường con bước.</i></p>
+                                        <p>Ông là gương mặt quen thuộc chuyên mục Góc nhìn, Tân điểm trên báo VNExpress và Dân trí. Có thể nói ông Lưu Đình Long là tác giả 'ăn khách' trên các báo điện tử Việt Nam khi bình luận các sự kiện đời sống qua góc nhìn Phật giáo.</p>
+                                    </div>
+                                </div>
+                                <!-- end content -->
+                            </div>
+                            <!-- end article -->
+                            <!-- article -->
+                            <div class="article mb-md-30">
+                                <div class="article-top d-3xl-flex flex-column flex-md-row items-center gap-20 gap-md-12">
+                                    <!-- img  -->
+                                    <div class="article-img w-140px w-md-100px flex-0">
+                                        <div class="article-img__inner border-999 over-hidden">
+                                            <a href="#" class="ratio-1x1">
+                                                <img loading="lazy" class="article-inner__img" src="./images/2.jpg" width="" height="" alt="">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- end img -->
+                                    <!-- name -->
+                                    <h2 class="article-title fs-20 fs-md-16 text-gray-33 fw-bold text-center">
+                                        <a href="#">Cư sĩ Lưu Đình Long</a>
+                                    </h2>
+                                    <!-- end name -->
+                                </div>
+                                <!-- content -->
+                                <div class="article-content mt-20 py-20 px-30 px-md-14 border-8 over-hidden flex-1 bg-linear-red-99">
+                                    <div class="article-des fs-16 text-gray-33">
+                                        <p><strong>Thông tin:</strong> Sinh năm 1985 tại Quảng Nam.</p>
+                                        <p><strong>Chuyên môn:</strong> Cư sĩ/ Nhà văn Lưu Đình Long là nhà báo, cư sĩ, từng làm công tác tòa soạn tại báo Giác Ngộ. Tác giả của nhiều đầu sách: <i>Lắng nghe hơi thở, Tâm kinh mình thuyết cho mình, Như mây thong dong, Như gió an lành, Bình an mà sống, Sống tích cực, thương chân thành, Càng hiểu càng thương, Mẹ hiểu, cha thương, rộng đường con bước.</i></p>
+                                        <p>Ông là gương mặt quen thuộc chuyên mục Góc nhìn, Tân điểm trên báo VNExpress và Dân trí. Có thể nói ông Lưu Đình Long là tác giả 'ăn khách' trên các báo điện tử Việt Nam khi bình luận các sự kiện đời sống qua góc nhìn Phật giáo.</p>
+                                    </div>
+                                </div>
+                                <!-- end content -->
+                            </div>
+                            <!-- end article -->
+                            <!-- article -->
+                            <div class="article mb-md-30">
+                                <div class="article-top d-3xl-flex flex-column flex-md-row items-center gap-20 gap-md-12">
+                                    <!-- img  -->
+                                    <div class="article-img w-140px w-md-100px flex-0">
+                                        <div class="article-img__inner border-999 over-hidden">
+                                            <a href="#" class="ratio-1x1">
+                                                <img loading="lazy" class="article-inner__img" src="./images/2.jpg" width="" height="" alt="">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- end img -->
+                                    <!-- name -->
+                                    <h2 class="article-title fs-20 fs-md-16 text-gray-33 fw-bold text-center">
+                                        <a href="#">Cư sĩ Lưu Đình Long</a>
+                                    </h2>
+                                    <!-- end name -->
+                                </div>
+                                <!-- content -->
+                                <div class="article-content mt-20 py-20 px-30 px-md-14 border-8 over-hidden flex-1 bg-linear-red-99">
+                                    <div class="article-des fs-16 text-gray-33">
+                                        <p><strong>Thông tin:</strong> Sinh năm 1985 tại Quảng Nam.</p>
+                                        <p><strong>Chuyên môn:</strong> Cư sĩ/ Nhà văn Lưu Đình Long là nhà báo, cư sĩ, từng làm công tác tòa soạn tại báo Giác Ngộ. Tác giả của nhiều đầu sách: <i>Lắng nghe hơi thở, Tâm kinh mình thuyết cho mình, Như mây thong dong, Như gió an lành, Bình an mà sống, Sống tích cực, thương chân thành, Càng hiểu càng thương, Mẹ hiểu, cha thương, rộng đường con bước.</i></p>
+                                        <p>Ông là gương mặt quen thuộc chuyên mục Góc nhìn, Tân điểm trên báo VNExpress và Dân trí. Có thể nói ông Lưu Đình Long là tác giả 'ăn khách' trên các báo điện tử Việt Nam khi bình luận các sự kiện đời sống qua góc nhìn Phật giáo.</p>
+                                    </div>
+                                </div>
+                                <!-- end content -->
+                            </div>
+                            <!-- end article -->
+                        </div>
+                        <!-- end article list -->
+                    </div>
+                    <!-- end content -->
+                </div>
+            </section>
+            <!-- end tertiary -->
+        </main>
+        <!-- end main -->
+        <!-- footer -->
+        <footer id="footer" class="footer">
+            <!-- back top -->
+            <div id="back-top">
+                <img src="./images/svg/arrow-top-w.svg" alt="">
+            </div>
+            <!-- end back top -->
+
+            <!-- footer top -->
+            <div class="footer-top w-wrapper relative z-20">
+                <div class="footer-top__container w-1220">
+                    <!-- logo -->
+                    <div class="footer-logo d-3xl-flex items-center justify-center pb-40">
+                        <a href="#" class="logo">
+                            <img src="./images/svg/logo-w.svg" alt="" class="logo-img">
+                        </a>
+                    </div>
+                    <!-- end logo -->
+
+                    <!-- content -->
+                    <div class="footer-top__content d-3xl-grid col-3 d-md-block">
+                        <!-- left -->
+                        <div class="footer-top__left">
+                            <h2 class="title fs-18 text-white fw-700 uppercase mb-16">Cổng thông tin Phật giáo thuộc Giáo hội Phật giáo Việt Nam</h2>
+
+                            <div class="text">
+                                <ul class="text-list text-white fs-14">
+                                    <li class="mb-10">Chủ quản: <strong>Ban Thông tin Truyền thông Trung ương</strong></li>
+                                    <li class="mb-10">Chịu trách nhiệm nội dung: <strong>Hoà thượng. TS Thích Gia Quang</strong></li>
+                                    <li class="mb-10">Trưởng Ban Biên tập: <strong>Thiện Đức (thienduc@phatgiao.org.vn)</strong></li>
+                                </ul>
+                                <ul class="text-link text-white-80 fs-14 d-3xl-flex items-center justify-between mt-20">
+                                    <li><a href="#" class="color-inherit">Tài thí PGVN</a></li>
+                                    <li><a href="#" class="color-inherit">Kiến thức</a></li>
+                                    <li><a href="#" class="color-inherit">Về chúng tôi</a></li>
+                                    <li><a href="#" class="color-inherit">Sống đẹp</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- end left -->
+                        <!-- center -->
+                        <div class="footer-top__center">
+                            <ul class="list-info fs-14 text-white">
+                                <li class="item-info d-3xl-flex mb-15">
+                                    <div class="item-info__icon flex-0 icon-16">
+                                        <img src="./images/svg/home-80-w.svg" alt="">
+                                    </div>
+                                    <p class="item-info__text flex-1 pl-15"><strong>Trụ sở: </strong>Toà nhà Sannam, số 78 Duy Tân, P. Dịch Vọng Hậu, Q. Cầu Giấy, TP. Hà Nội</p>
+                                </li>
+                                <li class="item-info d-3xl-flex mb-15">
+                                    <div class="item-info__icon flex-0 icon-16">
+                                        <img src="./images/svg/home-80-w.svg" alt="">
+                                    </div>
+                                    <p class="item-info__text flex-1 pl-15"><strong>Văn phòng TW Giáo hội PGVN: </strong>P216 Chùa Quán Sứ, 73 Quán Sứ, Hoàn Kiếm, Hà Nội</p>
+                                </li>
+                                <li class="item-info d-3xl-flex mb-15">
+                                    <div class="item-info__icon flex-0 icon-16">
+                                        <img src="./images/svg/home-80-w.svg" alt="">
+                                    </div>
+                                    <p class="item-info__text flex-1 pl-15"><strong>Văn phòng đại diện phía Nam: </strong>Văn phòng 2 TƯ Giáo hội PGVN, Thiền viện Quảng Đức, số 294 Nam Kỳ Khởi Nghĩa, Q3, TP. HCM</p>
+                                </li>
+                                <li class="item-info d-3xl-flex mb-15">
+                                    <div class="item-info__icon flex-0 icon-16">
+                                        <img src="./images/svg/phone-w.svg" alt="">
+                                    </div>
+                                    <p class="item-info__text flex-1 pl-15"><strong>Hotline: </strong>0332345847</p>
+                                </li>
+                                <li class="item-info d-3xl-flex mb-15">
+                                    <div class="item-info__icon flex-0 icon-16">
+                                        <img src="./images/svg/email-w.svg" alt="">
+                                    </div>
+                                    <p class="item-info__text flex-1 pl-15"><strong>Email: </strong> info@phatgiao.org.vn</p>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                        <!-- end center -->
+                        <!-- right -->
+                        <div class="footer-top__right">
+                            <h2 class="title fs-18 text-white fw-700 uppercase mb-16">Theo dõi chúng tôi</h2>
+                            <ul class="social d-3xl-flex items-center">
+                                <li class="social-item">
+                                    <a href="#" class="social-link">
+                                        <img src="./images/svg/fb-red.svg" alt="" class="social-icon">
+                                    </a>
+                                </li>
+                                <li class="social-item">
+                                    <a href="#" class="social-link">
+                                        <img src="./images/svg/insta-red.svg" alt="" class="social-icon">
+                                    </a>
+                                </li>
+                                <li class="social-item">
+                                    <a href="#" class="social-link">
+                                        <img src="./images/svg/ytb-red.svg" alt="" class="social-icon">
+                                    </a>
+                                </li>
+                                <li class="social-item">
+                                    <a href="#" class="social-link">
+                                        <img src="./images/svg/tiktok-red.svg" alt="" class="social-icon">
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                        <!-- end right -->
+                    </div>
+                    <!-- end content -->
+                    
+                    <!-- menu -->
+                    <ul class="footer-menu__list d-3xl-grid col-4 pb-40">
+                        <li class="footer-menu__item fs-14 text-white uppercase fw-500">
+                            <a href="#" class="color-inherit">Chùa trực tuyến</a>
+                        </li>
+                        <li class="footer-menu__item fs-14 text-white uppercase fw-500">
+                            <a href="#" class="color-inherit">Chùa trực tuyến</a>
+                        </li>
+                        <li class="footer-menu__item fs-14 text-white uppercase fw-500">
+                            <a href="#" class="color-inherit">Chùa trực tuyến</a>
+                        </li>
+                        <li class="footer-menu__item fs-14 text-white uppercase fw-500">
+                            <a href="#" class="color-inherit">Chùa trực tuyến</a>
+                        </li>
+                        <li class="footer-menu__item fs-14 text-white uppercase fw-500">
+                            <a href="#" class="color-inherit">Chùa trực tuyến</a>
+                        </li>
+                        <li class="footer-menu__item fs-14 text-white uppercase fw-500">
+                            <a href="#" class="color-inherit">Chùa trực tuyến</a>
+                        </li>
+                        <li class="footer-menu__item fs-14 text-white uppercase fw-500">
+                            <a href="#" class="color-inherit">Chùa trực tuyến</a>
+                        </li>
+                        <li class="footer-menu__item fs-14 text-white uppercase fw-500">
+                            <a href="#" class="color-inherit">Chùa trực tuyến</a>
+                        </li>
+                    </ul>
+                    <!-- end menu -->
+
+                    <div class="footer-note text-center fs-14 text-white mb-16">
+                        <p>Mọi sự copy, sao chép từ <a href="#" class="fw-700 color-inherit">Phatgiao.org.vn</a> đều không cần trích dẫn và được hoan nghênh!</p>
+                        <p>@Phát triển và vận hành bởi VBmedia.org</p>
+                    </div>
+
+                    <div class="dcma d-3xl-flex items-center justify-center mb-16">
+                        <a href="#">
+                            <img src="./images/dmca.png" alt="" style="height: 40px;width: auto;">
+                        </a>
+                    </div>
+
+                    <div class="download-app d-3xl-flex items-center justify-center flex-column text-white fs-14">
+                        <h3>TẢI ỨNG DỤNG PHẬT GIÁO</h3>
+                        <div class="d-3xl-flex items-center justify-center gap-24 mt-16">
+                            <a href="#">
+                                <img src="./images/svg/ios.svg" alt="" style="height: 36px;width: auto;">
+                            </a>
+                            <a href="#">
+                                <img src="./images/svg/android.svg" alt="" style="height: 36px;width: auto;">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end footer top -->
+
+            <!-- footer bot -->
+            <div class="footer-bot w-wrapper relative z-20">
+                <div class="footer-bot__container w-1220">
+                    <ul class="list d-3xl-flex items-center justify-center gap-24">
+                        <li class="item fs-14 text-white">
+                            <a href="#" class="link color-inherit py-10 px-8 d-3xl-inline-block">Trải nghiệm du lịch tâm linh</a>
+                        </li>
+                        <li class="item fs-14 text-white">
+                            <a href="#" class="link color-inherit py-10 px-8 d-3xl-inline-block">An cung hoàn</a>
+                        </li>
+                        <li class="item fs-14 text-white">
+                            <a href="#" class="link color-inherit py-10 px-8 d-3xl-inline-block">Vật phẩm Phật Giáo</a>
+                        </li>
+                        <li class="item fs-14 text-white">
+                            <a href="#" class="link color-inherit py-10 px-8 d-3xl-inline-block">Đạo Phật trong trái tim tôi</a>
+                        </li>
+                        <li class="item fs-14 text-white">
+                            <a href="#" class="link color-inherit py-10 px-8 d-3xl-inline-block">Phật giáo Lá Bối</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- end footer bot -->
+
+
+        </footer>
+        <!-- end footer -->
+        <script src="./lib/swiper/swiper-bundle.min.js"></script>
+        <script src="./js/main.js"></script>
+    </body>
+</html>
